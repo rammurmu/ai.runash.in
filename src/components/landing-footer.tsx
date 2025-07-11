@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="font-semibold">RunAsh AI</span>
             </div>
             <p className="text-sm text-gray-400">
-              Open-source live video streaming 
+              Live video streaming 
               <br />
               platform 
             </p>
