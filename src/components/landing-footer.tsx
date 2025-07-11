@@ -9,12 +9,12 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <div className="flex items-center space-x-2 mb-4">
               <Video className="w-6 h-6" />
-              <span className="font-semibold">fal.ai</span>
+              <span className="font-semibold">RunAsh AI</span>
             </div>
             <p className="text-sm text-gray-400">
-              Open-source AI video developer
+              Open-source live video streaming 
               <br />
-              starter kit.
+              platform 
             </p>
           </div>
 
@@ -23,7 +23,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link
-                  href="https://fal.ai/models"
+                  href="https://runash.in/ai/models"
                   className="hover:text-white transition-colors"
                 >
                   AI Models
@@ -31,7 +31,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://docs.fal.ai"
+                  href="https://docs.runash.in"
                   className="hover:text-white transition-colors"
                 >
                   API Reference
@@ -39,10 +39,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://blog.fal.ai"
+                  href="https://blog.runash.in"
                   className="hover:text-white transition-colors"
                 >
-                  fal Blog
+                   Blog
                 </Link>
               </li>
             </ul>
@@ -53,7 +53,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link
-                  href="https://github.com/fal-ai-community/video-starter-kit"
+                  href="https://github.com/runash/community"
                   className="hover:text-white transition-colors"
                 >
                   GitHub
@@ -61,7 +61,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://discord.gg/fal-ai"
+                  href="https://discord.gg/runash"
                   className="hover:text-white transition-colors"
                 >
                   Discord
@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://x.com/fal"
+                  href="https://x.com/runash.ai"
                   target="_blank"
                   className="hover:text-white transition-colors"
                 >
