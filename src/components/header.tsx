@@ -17,7 +17,7 @@ export default function Header({
       <nav className="flex flex-row items-center justify-end gap-1">
         <Button variant="ghost" size="sm" asChild>
           <a href="https://ai.runash.in" target="_blank" rel="noopener noreferrer">
-           r.ai
+          ai
           </a>
         </Button>
         <Button variant="ghost" size="sm" asChild>
@@ -31,14 +31,14 @@ export default function Header({
         </Button>
         {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
           <Button
-            variant="ghost"
+            variant="true"
             size="icon"
             className="relative"
             onClick={openKeyDialog}
           >
             {typeof localStorage !== "undefined" &&
               !localStorage?.getItem("falKey") && (
-                <span className="dark:bg-orange-400 bg-orange-600 w-2 h-2 rounded-full absolute top-1 right-1">Settings</span>
+                <span className="dark:bg-orange-400 bg-orange-600 w-2 h-2 rounded-full absolute top-1 right-1"></span>
               )}
             <SettingsIcon className="w-6 h-6" />
           </Button>
