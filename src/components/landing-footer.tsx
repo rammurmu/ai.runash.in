@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="font-semibold">RunAsh AI</span>
             </div>
             <p className="text-sm text-gray-400">
-              Live video streaming 
+              Open-source live video streaming 
               <br />
               platform 
             </p>
@@ -42,7 +42,7 @@ export default function Footer() {
                   href="https://blog.runash.in"
                   className="hover:text-white transition-colors"
                 >
-                   Blog
+                  RunAsh Blog
                 </Link>
               </li>
             </ul>
