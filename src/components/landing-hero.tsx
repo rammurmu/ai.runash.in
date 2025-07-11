@@ -28,7 +28,7 @@ export default function Hero() {
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
             A powerful, open-source AI live video streaming generator and editor built for creators. Create
-            stunning videos with our intuitive tools, or develop your own AI
+            stunning live videos demonstration with our intuitive tools, or develop your own AI
             video product using our platform.
           </p>
 
