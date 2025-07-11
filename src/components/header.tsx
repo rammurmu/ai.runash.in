@@ -16,13 +16,13 @@ export default function Header({
       </h1>
       <nav className="flex flex-row items-center justify-end gap-1">
         <Button variant="ghost" size="sm" asChild>
-          <a href="https://fal.ai" target="_blank" rel="noopener noreferrer">
-            fal.ai
+          <a href="https://ai.runash.in" target="_blank" rel="noopener noreferrer">
+            RunAsh AI
           </a>
         </Button>
         <Button variant="ghost" size="sm" asChild>
           <a
-            href="https://github.com/fal-ai-community/video-starter-kit"
+            href="https://github.com/runash-ai-community"
             target="_blank"
             rel="noopener noreferrer"
           >
