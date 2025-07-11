@@ -31,7 +31,7 @@ export default function Header({
         </Button>
         {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
           <Button
-            variant="true"
+            variant="ghost"
             size="icon"
             className="relative"
             onClick={openKeyDialog}
