@@ -9,12 +9,10 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <div className="flex items-center space-x-2 mb-4">
               <Video className="w-6 h-6" />
-              <span className="font-semibold">RunAsh AI</span>
+              <span className="font-semibold">RunAsh AI<br/>Live Video Streaming Platform</span>
             </div>
             <p className="text-sm text-gray-400">
-              Open-source live video streaming 
-              <br />
-              platform 
+              © {new Date().getFullYear()} RunAsh AI. All rights reserved.
             </p>
           </div>
 
@@ -42,7 +40,7 @@ export default function Footer() {
                   href="https://blog.runash.in"
                   className="hover:text-white transition-colors"
                 >
-                  RunAsh Blog
+                  RunAsh AI Blog
                 </Link>
               </li>
             </ul>
