@@ -10,7 +10,7 @@ export default function Hero() {
      <div className="container relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
-            <span className="text-gray-400">New</span>
+            <span className="text-gray-400"></span>
             <span className="ml-3 h-4 w-px bg-white/20" />
             <a
               href="https://github.com/runash-ai-community"
@@ -34,13 +34,14 @@ export default function Hero() {
                 size="lg"
                 className="bg-white text-black hover:bg-gray-200 min-w-[200px]"
               >
-                Try it now
+                Get Demo
               </Button>
             </Link>
             <Link href="https://github.com/runash-ai-community">
               <Button size="lg" variant="outline" className="min-w-[200px]">
+                Learn More 
                 <ArrowRight className="mr-2 h-5 w-5" />
-                Learn more 
+                
               </Button>
             </Link>
           </div>
@@ -49,7 +50,7 @@ export default function Hero() {
       
       
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center relative h-screen flex items-center justify-center overflow-hidden mb-16">
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
             <span className="text-gray-400">Now Open Source</span>
             <span className="ml-3 h-4 w-px bg-white/20" />
@@ -100,7 +101,7 @@ export default function Hero() {
               width={1200}
               height={800}
               alt="Live Video treaming "
-              className="w-full h-auto transform-3d translate-z-8 rotate-x-50 rotate-z-45"
+              className="w-full h-auto transform-flat translate-z-8 rotate-x-50 rotate-z-45"
               priority
             />
           </LaptopMockup>
