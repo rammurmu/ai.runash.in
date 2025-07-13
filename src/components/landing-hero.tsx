@@ -7,6 +7,47 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24">
+     <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
+            <span className="text-gray-400">New</span>
+            <span className="ml-3 h-4 w-px bg-white/20" />
+            <a
+              href="https://github.com/runash-ai-community"
+              className="ml-3 flex items-center text-white hover:text-gray-300"
+            >
+              Introducing <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+            RunAsh 
+            <br />
+            AI
+          </h1>
+
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
+            A Live video streaming generation multimodel as creating realistic and imagenative live streaming demonstration video from text. 
+          </p>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
+            <Link href="/app">
+              <Button
+                size="lg"
+                className="bg-white text-black hover:bg-gray-200 min-w-[200px]"
+              >
+                Try it now
+              </Button>
+            </Link>
+            <Link href="https://github.com/runash-ai-community">
+              <Button size="lg" variant="outline" className="min-w-[200px]">
+                <Github className="mr-2 h-5 w-5" />
+                Learn more 
+              </Button>
+            </Link>
+          </div>
+        </div>
+      
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
@@ -59,7 +100,7 @@ export default function Hero() {
               width={1200}
               height={800}
               alt="Live Video treaming "
-              className="w-full h-auto"
+              className="w-full h-auto transform-3d translate-z-8 rotate-x-50 rotate-z-45"
               priority
             />
           </LaptopMockup>
