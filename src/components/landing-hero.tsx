@@ -10,10 +10,10 @@ export default function Hero() {
      <div className="container relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
-            <span className="text-gray-400"></span>
+            <span className="text-gray-400">New</span>
             <span className="ml-3 h-4 w-px bg-white/20" />
             <a
-              href="https://github.com/runash-ai-community"
+              href="https://runash.in/blog"
               className="ml-3 flex items-center text-white hover:text-gray-300"
             >
               Introducing <ArrowRight className="ml-1 h-4 w-4" />
@@ -25,7 +25,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-            A Live video streaming generation multimodel as creating realistic and imagenative live streaming demonstration video from text. 
+           Live video streaming generation multimodel as creating ral-time live streaming demonstration video from text. 
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
@@ -51,7 +51,7 @@ export default function Hero() {
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
+          <div className="inline-flex mt-8 items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
             <span className="text-gray-400">Now Open Source</span>
             <span className="ml-3 h-4 w-px bg-white/20" />
             <a
