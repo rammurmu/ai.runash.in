@@ -47,6 +47,8 @@ export default function Hero() {
             </Link>
           </div>
         </div>
+       </div>
+      
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
