@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24">
-     <div className="container "relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
+     <div className="container relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
             <span className="text-gray-400">New</span>
