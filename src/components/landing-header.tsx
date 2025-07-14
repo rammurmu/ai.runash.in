@@ -41,6 +41,13 @@ export default function Header() {
             </Button>
           </Link>
         </div>
+        <div className="flex flex-1 justify-end items-center space-x-4">
+          <Link href="/get-started">
+            <Button className="bg-black text-white hover:bg-gray-200">
+              Get Started 
+            </Button>
+          </Link>
+        </div>
       </div>
     </header>
   );
