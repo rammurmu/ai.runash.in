@@ -41,9 +41,9 @@ export default function Header() {
             </Button>
           </Link>
         </div>
-        <div className="flex flex-1 justify-end items-center space-x-4">
+        <div className="flex flex-1 justify-end items-center space-x-2">
           <Link href="/get-started">
-            <Button className="bg-black text-white hover:bg-gray-200">
+            <Button className="bg-black text-white hover:bg-white">
               Get Started 
             </Button>
           </Link>
