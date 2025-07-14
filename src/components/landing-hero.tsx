@@ -12,7 +12,7 @@ export default function Hero() {
           <div>
          <div className="inline-flex items-center rounded-full  px-3 py-1 text-sm mb-8">
             <span className="text-gray-400 animate-ping">✨</span>
-            <span className="ml-3 h-4 w-px bg-white/20" />
+            
             <a
               href=""
               className="ml-3 flex items-center text-white hover:text-gray-300"
@@ -23,7 +23,7 @@ export default function Hero() {
           </div>
           
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
-            <span className="text-gray-400">🖐️Hi there</span>
+            <span className="text-gray-400 bg-green-300 bg-text-green-700">New</span>
             <span className="ml-3 h-4 w-px bg-white/20" />
             <a
               href="https://runash.in/blog"
@@ -38,7 +38,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-          AI live video streaming generation model as creating real-time live streaming demonstration video from text. 
+          AI live video streaming generation model as creating live streaming demonstration video from text
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
@@ -83,7 +83,7 @@ export default function Hero() {
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
             A powerful, AI live video streaming generator and editor built for creators. Create
-            stunning live video demonstrations with our intuitive tools.
+            stunning live video demonstrations with our intuitive tools
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
@@ -105,7 +105,7 @@ export default function Hero() {
         </div>
 
         {/* App Screenshot */}
-        <div className="relative group max-w-6xl mx-auto transform-flat translate-z-8 rotate-x-50 rotate-z-45 ">
+        <div className="relative group max-w-6xl mx-auto ">
           <div className="absolute transform-flat translate-z-8 rotate-x-50 rotate-z-45 inset-0 bg-gradient-to-r from-purple-500/40 to-blue-500/40 blur-3xl opacity-20" />
           <LaptopMockup>
             <Image
