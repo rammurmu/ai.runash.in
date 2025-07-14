@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex flex-1">
           <Link href="/" className="flex items-center space-x-2">
-            <Video className="w-6 h-6" />
+            {/* <Video className="w-6 h-6" /> */}
             <span className="font-semibold">RunAsh AI</span>
           </Link>
         </div>
@@ -32,12 +32,13 @@ export default function Header() {
           >
             GitHub
           </Link>
+          
         </nav>
 
         <div className="flex flex-1 justify-end items-center space-x-4">
-          <Link href="/app">
+          <Link href="/get-started">
             <Button className="bg-white text-black hover:bg-gray-200">
-              Try it now
+              Get Started 
             </Button>
           </Link>
         </div>
