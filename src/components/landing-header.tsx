@@ -32,18 +32,13 @@ export default function Header() {
           >
             GitHub
           </Link>
-          <Link
-            href="/get-started"
-            className="text-sm text-gray-400 hover:text-white transition-colors space-x-4"
-          >
-            Get started 
-          </Link>
+          
         </nav>
 
         <div className="flex flex-1 justify-end items-center space-x-4">
-          <Link href="/app">
+          <Link href="/get-started">
             <Button className="bg-white text-black hover:bg-gray-200">
-              Try it now
+              Get Started 
             </Button>
           </Link>
         </div>
