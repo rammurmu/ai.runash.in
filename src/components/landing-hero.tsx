@@ -9,8 +9,19 @@ export default function Hero() {
     <section className="pt-32 pb-16 md:pt-40 md:pb-24">
      <div className="container relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
         <div className="text-center mb-16">
+         <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
+            <span className="text-gray-400 animate-ping">✨</span>
+            <span className="ml-3 h-4 w-px bg-white/20" />
+            <a
+              href="https://runash.in/blog"
+              className="ml-3 flex items-center text-white hover:text-gray-300"
+            >
+               <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+          </div>
+          
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
-            <span className="text-gray-400">New</span>
+            <span className="text-gray-400">🖐️Hi there</span>
             <span className="ml-3 h-4 w-px bg-white/20" />
             <a
               href="https://runash.in/blog"
@@ -25,7 +36,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-           Live video streaming generation multimodel as creating ral-time live streaming demonstration video from text. 
+          AI live video streaming generation model as creating real-time live streaming demonstration video from text. 
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
@@ -63,13 +74,13 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-8 text-4xl md:text-6xl font-bold tracking-tight mb-8 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
-            Live Video Streaming 
+            AI Live Video Streaming 
             <br />
             Platform 
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-            A powerful, live video streaming generation and editor built for creators. Create
+            A powerful, AI live video streaming generator and editor built for creators. Create
             stunning live video demonstrations with our intuitive tools.
           </p>
 
@@ -92,7 +103,7 @@ export default function Hero() {
         </div>
 
         {/* App Screenshot */}
-        <div className="relative group max-w-6xl mx-auto">
+        <div className="relative group max-w-6xl mx-auto transform-flat translate-z-8 rotate-x-50 rotate-z-45 ">
           <div className="absolute transform-flat translate-z-8 rotate-x-50 rotate-z-45 inset-0 bg-gradient-to-r from-purple-500/40 to-blue-500/40 blur-3xl opacity-20" />
           <LaptopMockup>
             <Image
@@ -100,7 +111,7 @@ export default function Hero() {
               width={1200}
               height={800}
               alt="Live Video treaming "
-              className="w-full h-auto "
+              className="w-full h-auto rotate-x-15 -rotate-y-30 -skew-y-12 transform-flat translate-z-8 rotate-x-50 rotate-z-45"
               priority
             />
           </LaptopMockup>
