@@ -9,15 +9,10 @@ export default function Hero() {
     <section className="pt-32 pb-16 md:pt-40 md:pb-24">
      <div className="container relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
         <div className="text-center mb-16">
-         <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
-            <span className="text-gray-400 animate-ping">✨</span>
-            <span className="ml-3 h-4 w-px bg-white/20" />
-            <a
-              href="https://runash.in/blog"
-              className="ml-3 flex items-center text-white hover:text-gray-300"
-            >
-               <ArrowRight className="ml-1 h-4 w-4" />
-            </a>
+         <div className="inline-flex items-center rounded-full px-3 py-1 text-lg mb-8">
+            <span className="text-gray-400 animate-ping">✨</spann>
+             <span assName="ml-3 h-4 w-px bg-white/20" />
+           </div>       
           </div>
           
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
