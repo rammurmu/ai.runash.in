@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex flex-1">
           <Link href="/" className="flex items-center space-x-2">
-            <Video className="w-6 h-6" />
+            {/* <Video className="w-6 h-6" /> */}
             <span className="font-semibold">RunAsh AI</span>
           </Link>
         </div>
@@ -32,19 +32,18 @@ export default function Header() {
           >
             GitHub
           </Link>
+          <Link
+            href="/get-started"
+            className="text-sm text-gray-400 hover:text-white transition-colors space-x-4"
+          >
+            Get started 
+          </Link>
         </nav>
 
         <div className="flex flex-1 justify-end items-center space-x-4">
           <Link href="/app">
             <Button className="bg-white text-black hover:bg-gray-200">
               Try it now
-            </Button>
-          </Link>
-        </div>
-        <div className="flex flex-1 justify-end items-center space-x-2">
-          <Link href="/get-started">
-            <Button className="bg-black text-white hover:bg-white">
-              Get Started 
             </Button>
           </Link>
         </div>
