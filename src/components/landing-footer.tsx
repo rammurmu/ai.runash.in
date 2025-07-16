@@ -9,12 +9,43 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <div className="flex items-center space-x-2 mb-4">
               <Video className="w-6 h-6" />
-              <span className="font-semibold">RunAsh AI<br/>Live Video Streaming Platform</span>
+              <span className="font-semibold">RunAsh AI</span>
             </div>
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} RunAsh AI. All rights reserved.
+              © {new Date().getFullYear()}  All rights reserved.
             </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+            <h4 className="font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>
+                <Link
+                  href="https://runash.in/ai/models"
+                  className="hover:text-white transition-colors"
+                >
+                  About 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://docs.runash.in"
+                  className="hover:text-white transition-colors"
+                >
+                  Contact 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://blog.runash.in"
+                  className="hover:text-white transition-colors"
+                >
+                  Career 
+                </Link>
+              </li>
+            </ul>
           </div>
+
+          
 
           <div className="flex flex-col items-center text-center">
             <h4 className="font-semibold mb-4">Resources</h4>
@@ -40,7 +71,7 @@ export default function Footer() {
                   href="https://blog.runash.in"
                   className="hover:text-white transition-colors"
                 >
-                  RunAsh AI Blog
+                  Blog
                 </Link>
               </li>
             </ul>
