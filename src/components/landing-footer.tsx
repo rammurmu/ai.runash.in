@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="font-semibold">RunAsh AI</span>
             </div>
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()}  All rights reserved.
+             
             </p>
             </div>
             <div className="flex flex-col items-center text-center">
@@ -109,6 +109,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <p className="text-sm text-gray-400">
+          © {new Date().getFullYear()} RunAsh AI. All rights reserved.
+        </p>
     </footer>
   );
 }
