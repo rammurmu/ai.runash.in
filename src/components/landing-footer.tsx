@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="font-semibold">RunAsh AI</span>
             </div>
             <p className="text-sm text-gray-400">
-             
+             Video Classification 
             </p>
             </div>
             <div className="flex flex-col items-center text-center">
@@ -20,7 +20,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link
-                  href="https://runash.in/ai/models"
+                  href="https://runash.in/ai/about"
                   className="hover:text-white transition-colors"
                 >
                   About 
@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://docs.runash.in"
+                  href="https://"
                   className="hover:text-white transition-colors"
                 >
                   Contact 
@@ -36,7 +36,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://blog.runash.in"
+                  href="https://runash.in/ai/about"
                   className="hover:text-white transition-colors"
                 >
                   Career 
@@ -109,9 +109,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <div classNe="flex items-center text-center">
       <p className="text-sm text-gray-400">
           © {new Date().getFullYear()} RunAsh AI. All rights reserved.
         </p>
+      </div>
     </footer>
   );
 }
