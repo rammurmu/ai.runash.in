@@ -3,8 +3,7 @@ import { Video } from "lucide-react";
 
 export default function Footer() {
   return (
-     {/* Footer */}
-      <footer className="py-12 bg-white dark:bg-gray-950 border-t border-gray-200/50 dark:border-gray-900/30">
+       <footer className="py-12 bg-white dark:bg-gray-950 border-t border-gray-200/50 dark:border-gray-900/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
@@ -137,5 +136,5 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-  );
+  )
 }
