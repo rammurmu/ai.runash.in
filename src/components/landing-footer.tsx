@@ -105,6 +105,35 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+          <div className="flex flex-col items-center text-center">
+            <h4 className="font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>
+                <Link
+                  href="https://runash.in/ai/terms"
+                  className="hover:text-white transition-colors"
+                >
+                  Terms 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://runash.in/ai/terms"
+                  className="hover:text-white transition-colors"
+                >
+                  Security 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://runash.in/ai/privacy"
+                  className="hover:text-white transition-colors"
+                >
+                  Privacy 
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
