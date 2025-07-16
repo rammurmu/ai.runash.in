@@ -25,7 +25,7 @@ export default function Footer() {
                   href="https://runash.in/ai/about"
                   className="hover:text-white transition-colors"
                 >
-                  About 
+                  RunAsh
                 </Link>
               </li>
               <li>
@@ -46,10 +46,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://runash.in/ai/models"
+                  href="https://runash.in/ai/careers"
                   className="hover:text-white transition-colors"
                 >
-                  AI Models
+                  Careers 
                 </Link>
               </li>
               <li>
@@ -57,7 +57,7 @@ export default function Footer() {
                   href="https://runash.in/ai/api"
                   className="hover:text-white transition-colors"
                 >
-                  API 
+                  API Reference 
                 </Link>
               </li>
               <li>
@@ -65,7 +65,7 @@ export default function Footer() {
                   href="https://runash.in/ai/careers"
                   className="hover:text-white transition-colors"
                 >
-                  Careers 
+                  AI Models
                 </Link>
               </li>
             </ul>
@@ -114,10 +114,8 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-    <div className="max-w-2xl mx-auto text-center container mx-auto px-4">
-      <p className="text-sm text-gray-400">
-          © {new Date().getFullYear()} RunAsh AI. All rights reserved.
-        </p>
-   </div>
+    
+      
+   
   );
 }
