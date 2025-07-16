@@ -113,11 +113,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex container mx-auto px-4 items-center text-center">
+    </footer>
+    <div className="max-w-2xl mx-auto text-center container mx-auto px-4"
       <p className="text-sm text-gray-400">
           © {new Date().getFullYear()} RunAsh AI. All rights reserved.
         </p>
-      </div>
-    </footer>
+   </div>
   );
 }
