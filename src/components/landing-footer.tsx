@@ -3,139 +3,139 @@ import { Video } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t flex w-full border-white/10 py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 max-w-screen-md md:grid-cols-3 gap-8 mx-auto">
-          <div className="flex flex-col items-start">
-            <div className="flex items-center space-x-2 mb-4">
-              {/* <Video className="w-6 h-6" /> */}
-              <span className="font-semibold">RunAsh AI</span>
+     {/* Footer */}
+      <footer className="py-12 bg-white dark:bg-gray-950 border-t border-gray-200/50 dark:border-gray-900/30">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-orange-600 to-yellow-600 dark:from-orange-400 dark:to-yellow-400 text-transparent bg-clip-text">
+                Company
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/careers"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/press"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Press
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} All rights reserved.
-            </p>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 dark:from-yellow-400 dark:to-orange-400 text-transparent bg-clip-text">
+                Product
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/pricing"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-orange-600 to-yellow-600 dark:from-orange-400 dark:to-yellow-400 text-transparent bg-clip-text">
+                Resources
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/docs"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 dark:from-yellow-400 dark:to-orange-400 text-transparent bg-clip-text">
+                Connect
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Discord
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div className="flex flex-col items-center text-center">
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="https://runash.in/ai/models"
-                  className="hover:text-white transition-colors"
-                >
-                  AI Models
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://docs.runash.in"
-                  className="hover:text-white transition-colors"
-                >
-                  API Reference
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://blog.runash.in"
-                  className="hover:text-white transition-colors"
-                >
-                  RunAsh AI Blog
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="https://runash.in/ai/about"
-                  className="hover:text-white transition-colors"
-                >
-                  RunAsh AI
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/contact"
-                  className="hover:text-white transition-colors"
-                >
-                  Contact 
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/docs"
-                  className="hover:text-white transition-colors"
-                >
-                  Documents 
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col items-center text-center">
-            <h4 className="font-semibold mb-4">Community</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="https://github.com/runash/community"
-                  className="hover:text-white transition-colors"
-                >
-                  GitHub
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://discord.gg/runash"
-                  className="hover:text-white transition-colors"
-                >
-                  Discord
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://x.com/runash.ai"
-                  target="_blank"
-                  className="hover:text-white transition-colors"
-                >
-                  Twitter
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <h4 className="font-semibold mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="https://runash.in/ai/terms"
-                  className="hover:text-white transition-colors"
-                >
-                  Terms 
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/terms"
-                  className="hover:text-white transition-colors"
-                >
-                  Security 
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/privacy"
-                  className="hover:text-white transition-colors"
-                >
-                  Privacy 
-                </Link>
-              </li>
-            </ul>
+          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-gray-500">
+            <p>© {new Date().getFullYear()} RunAsh. All rights reserved.</p>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   );
 }
