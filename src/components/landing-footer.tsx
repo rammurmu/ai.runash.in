@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 max-w-screen-md md:grid-cols-3 gap-8 mx-auto">
           <div className="flex flex-col items-start">
             <div className="flex items-center space-x-2 mb-4">
-              <Video className="w-6 h-6" />
+              {/* <Video className="w-6 h-6" /> */}
               <span className="font-semibold">RunAsh AI</span>
             </div>
             <p className="text-sm text-gray-400">
@@ -22,30 +22,6 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link
-                  href="https://runash.in/ai/models"
-                  className="hover:text-white transition-colors"
-                >
-                  AI Models
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://docs.runash.in"
-                  className="hover:text-white transition-colors"
-                >
-                  API Reference
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://blog.runash.in"
-                  className="hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="https://runash.in/ai/about"
                   className="hover:text-white transition-colors"
                 >
@@ -54,7 +30,15 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://"
+                  href="https://runash.in/ai/blog"
+                  className="hover:text-white transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://runash.in/ai/contact"
                   className="hover:text-white transition-colors"
                 >
                   Contact 
@@ -62,10 +46,26 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://runash.in/ai/about"
+                  href="https://runash.in/ai/models"
                   className="hover:text-white transition-colors"
                 >
-                  Career 
+                  AI Models
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://runash.in/ai/api"
+                  className="hover:text-white transition-colors"
+                >
+                  API 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://runash.in/ai/careers"
+                  className="hover:text-white transition-colors"
+                >
+                  Careers 
                 </Link>
               </li>
             </ul>
@@ -99,11 +99,21 @@ export default function Footer() {
                   Twitter
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="https://linkedin.com/in/runash.ai"
+                  target="_blank"
+                  className="hover:text-white transition-colors"
+                >
+                  LinkedIn 
+                </Link>
+              </li>
+              
             </ul>
           </div>
         </div>
       </div>
-      <div className="flex items-center text-center">
+      <div className="flex container mx-auto px-4 items-center text-center">
       <p className="text-sm text-gray-400">
           © {new Date().getFullYear()} RunAsh AI. All rights reserved.
         </p>
