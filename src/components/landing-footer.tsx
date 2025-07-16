@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div classNeme="flex items-center text-center">
+      <div className="flex items-center text-center">
       <p className="text-sm text-gray-400">
           © {new Date().getFullYear()} RunAsh AI. All rights reserved.
         </p>
