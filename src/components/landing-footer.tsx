@@ -3,119 +3,168 @@ import { Video } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t flex w-full border-white/10 py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 max-w-screen-md md:grid-cols-3 gap-8 mx-auto">
-          <div className="flex flex-col items-start">
-            <div className="flex items-center space-x-2 mb-4">
-              {/* <Video className="w-6 h-6" /> */}
-              <span className="font-semibold">RunAsh AI</span>
+       <footer className="py-12 bg-white dark:bg-black border-t border-white/10 dark:border-white/10">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
+                Company
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/careers"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Careers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/press"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Press
+                  </Link>
+                </li>
+              </ul>
             </div>
-            <p className="text-sm text-gray-400">
-             AI live video stream generation model
-            </p>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
+                Product
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/pricing"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://runash.in/ai/api"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    API Reference 
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://runash.in/ai/models"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    AI Models 
+                  </a>
+                </li>
+              </ul>
             </div>
-            
-
-          <div className="flex flex-col items-center text-center">
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="https://runash.in/ai/about"
-                  className="hover:text-white transition-colors"
-                >
-                  About 
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/contact"
-                  className="hover:text-white transition-colors"
-                >
-                  Contact 
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/contact"
-                  className="hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/careers"
-                  className="hover:text-white transition-colors"
-                >
-                  Docs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/api"
-                  className="hover:text-white transition-colors"
-                >
-                  
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://runash.in/ai/careers"
-                  className="hover:text-white transition-colors"
-                >
-                  
-                </Link>
-              </li>
-            </ul>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
+                Resources
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/docs"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
+                Connect
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/runash-ai"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    GitHub 
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://x.com/runash-ai"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://discord.gg/runash-ai"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
+                  >
+                    Discord
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div className="flex flex-col items-center text-center">
-            <h4 className="font-semibold mb-4">Community</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <Link
-                  href="https://github.com/runash/community"
-                  className="hover:text-white transition-colors"
-                >
-                  GitHub
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://discord.gg/runash"
-                  className="hover:text-white transition-colors"
-                >
-                  Discord
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://x.com/runash.ai"
-                  target="_blank"
-                  className="hover:text-white transition-colors"
-                >
-                  Twitter
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://linkedin.com/in/runash.ai"
-                  target="_blank"
-                  className="hover:text-white transition-colors"
-                >
-                  LinkedIn 
-                </Link>
-              </li>
-              
-            </ul>
-          </div>
+          <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
+              <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Live video stream generation model
+              </p>
+              <div className="items-center gap-2 mb-0">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
+                    All systems operational
+                  </a>
+                </span>
+              <div className="text-center text-sm text-white dark:text-gray-400">
+                 <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
+           </div>
+           </div>
         </div>
-      </div>
-    </footer>
-    
-      
-   
-  );
+        </div>  
+      </footer>
+  )
 }
