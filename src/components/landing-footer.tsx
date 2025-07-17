@@ -4,23 +4,6 @@ import { Video } from "lucide-react";
 export default function Footer() {
   return (
        <footer className="py-12 bg-white dark:bg-black border-t border-white/10 dark:border-white/10">
-
-         <div className="lg:col-span-2">
-              <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Live video stream generation model
-              </p>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span className="text-sm text-gray-600 dark:text-gray-400">
-                  <a href="/status" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
-                    All systems operational
-                  </a>
-                </span>
-              </div>
-           </div>
-       
-          
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
@@ -165,8 +148,20 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
-            <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
-          </div>
+              <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Live video stream generation model
+              </p>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  <a href="/status" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+                    All systems operational
+                  </a>
+                </span>
+                 <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
+            </div>
+           </div>
         </div>
       </footer>
   )
