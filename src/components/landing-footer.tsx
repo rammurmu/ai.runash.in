@@ -166,13 +166,13 @@ export default function Footer() {
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                    © {new Date().getFullYear()} RunAsh AI. All rights reserved.
+                   <p> © {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
               
                   </a>
                 </span>
             
            </div>
-              
+             
               
         </div>
       </footer>
