@@ -8,7 +8,7 @@ export default function Footer() {
          <div className="lg:col-span-2">
               <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Focusing on live video streaming innovation
+                Live video stream generation model
               </p>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
@@ -165,7 +165,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
-            <p>© {new Date().getFullYear()} RunAsh. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
           </div>
         </div>
       </footer>
