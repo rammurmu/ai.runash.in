@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-white-600 to-grey-600 dark:from-black-400 dark:to-black-400 text-transparent bg-clip-text">
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
                 Company
               </h3>
               <ul className="space-y-2">
@@ -38,7 +38,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 dark:from-yellow-400 dark:to-orange-400 text-transparent bg-clip-text">
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
                 Product
               </h3>
               <ul className="space-y-2">
@@ -66,10 +66,18 @@ export default function Footer() {
                     API Reference 
                   </Link>
                 </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    AI Models 
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-orange-600 to-yellow-600 dark:from-orange-400 dark:to-yellow-400 text-transparent bg-clip-text">
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
                 Resources
               </h3>
               <ul className="space-y-2">
@@ -86,7 +94,7 @@ export default function Footer() {
                     href="/"
                     className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
                   >
-                    AI Models
+                    
                   </Link>
                 </li>
                 <li>
@@ -100,7 +108,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-lg mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 dark:from-yellow-400 dark:to-orange-400 text-transparent bg-clip-text">
+              <h3 className="font-bold text-lg mb-4 bg-white dark:black text-transparent bg-clip-text">
                 Connect
               </h3>
               <ul className="space-y-2">
@@ -111,6 +119,14 @@ export default function Footer() {
                   >
                     Contact
                   </Link>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                  >
+                    GitHub 
+                  </a>
                 </li>
                 <li>
                   <a
@@ -131,7 +147,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-gray-500">
+          <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
             <p>© {new Date().getFullYear()} RunAsh. All rights reserved.</p>
           </div>
         </div>
