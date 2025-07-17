@@ -159,8 +159,8 @@ export default function Footer() {
                     All systems operational
                   </a>
                 </span>
-                </div>
-            </div>
+              
+           </div>
               
             <div className="flex items-center gap-2 mb-4">
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
@@ -170,8 +170,8 @@ export default function Footer() {
               
                   </a>
                 </span>
-                </div>
-            </div>
+            
+           </div>
               
               
         </div>
