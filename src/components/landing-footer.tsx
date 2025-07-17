@@ -8,7 +8,7 @@ export default function Footer() {
          <div className="lg:col-span-2">
               <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
-                RunAsh AI as an AI Research and Development Company focusing on live streaming innovation
+                Focusing on live video streaming innovation
               </p>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
