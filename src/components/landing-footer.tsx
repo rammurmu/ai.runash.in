@@ -152,7 +152,7 @@ export default function Footer() {
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 Live video stream generation model
               </p>
-              <div className="items-center gap-2 mb-4">
+              <div className="items-center gap-2 mb-0">
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
