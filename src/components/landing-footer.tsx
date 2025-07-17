@@ -4,6 +4,23 @@ import { Video } from "lucide-react";
 export default function Footer() {
   return (
        <footer className="py-12 bg-white dark:bg-black border-t border-white/10 dark:border-white/10">
+
+         <div className="lg:col-span-2">
+              <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                RunAsh AI as an AI Research and Development Company focusing on live streaming innovation
+              </p>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  <a href="/status" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+                    All systems operational
+                  </a>
+                </span>
+              </div>
+           </div>
+       
+          
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
@@ -14,7 +31,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     About
                   </Link>
@@ -22,7 +39,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/careers"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Careers
                   </Link>
@@ -30,7 +47,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/press"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Press
                   </Link>
@@ -45,7 +62,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/features"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Features
                   </Link>
@@ -53,23 +70,23 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/pricing"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Pricing
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    href="https://runash.in/ai/api"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     API Reference 
                   </Link>
                 </li>
                 <li>
                   <a
-                    href="#"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    href="https://runash.in/ai/models"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     AI Models 
                   </a>
@@ -84,7 +101,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/docs"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Documentation
                   </Link>
@@ -92,7 +109,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     
                   </Link>
@@ -100,7 +117,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/blog"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Blog
                   </Link>
@@ -115,31 +132,31 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Contact
                   </Link>
                 </li>
                 <li>
                   <a
-                    href="#"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    href="https://github.com/runash-ai"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     GitHub 
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    href="https://x.com/runash-ai"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Twitter
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
-                    className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition-colors"
+                    href="https://discord.gg/runash-ai"
+                    className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Discord
                   </a>
