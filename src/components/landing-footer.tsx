@@ -159,8 +159,8 @@ export default function Footer() {
                     All systems operational
                   </a>
                 </span>
+              </div>
                  <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
-            </div>
            </div>
         </div>
       </footer>
