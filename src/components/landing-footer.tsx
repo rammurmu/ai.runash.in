@@ -155,12 +155,13 @@ export default function Footer() {
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm text-gray-600 dark:text-gray-400">
-                  <a href="/status" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+                  <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
                     All systems operational
                   </a>
                 </span>
-              <br />
+              <div className="text-center text-sm text-white dark:text-gray-400">
                  <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
+           </div>
            </div>
         </div>
         </div>
