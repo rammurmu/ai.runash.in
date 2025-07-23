@@ -3,7 +3,148 @@ import { Video } from "lucide-react";
 
 export default function Footer() {
   return (
-       <footer className="py-12 bg-white dark:bg-black border-t border-white/10 dark:border-white/10">
+        <footer className="py-16 bg-white dark:bg-gray-900 border-t border-orange-100 dark:border-orange-900/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 mb-8">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                RunAsh AI as an AI Research and Development Company focusing on live streaming innovation
+              </p>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  <a href="/status" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+                    All systems operational
+                  </a>
+                </span>
+              </div>
+
+              {/* Language and Country Selector */}
+              <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                <LanguageSelector />
+                <CountrySelector />
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">Platform</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/ai"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    AI
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/chat"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    RunAshChat
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/store"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                   Agent
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/become-seller"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Customer 
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">Product</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/stream"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    AI Studio
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/ios"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    iOS App 
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/android"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Android App 
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/web"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Web App 
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">Resources</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/doc"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/tutorials"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Tutorials
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/learn"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Learn 
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/community"
+                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                  >
+                    Community 
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+       <div className="py-12 bg-white dark:bg-black border-t border-white/10 dark:border-white/10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
@@ -148,7 +289,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
-              <h3 className="font-bold text-xl mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
+              <h3 className="font-bold text-sm mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 Live video stream generation model
               </p>
@@ -165,6 +306,8 @@ export default function Footer() {
            </div>
         </div>
         </div>  
+       
+
       </footer>
   )
 }
