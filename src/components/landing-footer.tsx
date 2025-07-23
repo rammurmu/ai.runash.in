@@ -142,9 +142,11 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+          </div>
+          </div>
+          </footer>
 
-
-       <div className="py-12 bg-white dark:bg-black border-t border-white/10 dark:border-white/10">
+       <footer className="py-12 bg-white dark:bg-black border-t border-white/10 dark:border-white/10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
