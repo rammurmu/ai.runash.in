@@ -3,7 +3,7 @@ import { Video } from "lucide-react";
 
 export default function Footer() {
   return (
-        <footer className="py-16 bg-white dark:bg-gray-900 border-t border-orange-100 dark:border-orange-900/20">
+        <footer className="py-16 bg-white dark:bg-black border-t border-white/10 dark:border-white/20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 mb-8">
             {/* Company Info */}
@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm text-gray-600 dark:text-gray-400">
-                  <a href="/status" className="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+                  <a href="/status" className="hover:text-orange-600 dark:hover:text-white transition-colors">
                     All systems operational
                   </a>
                 </span>
@@ -35,7 +35,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/ai"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     AI
                   </a>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/chat"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     RunAshChat
                   </a>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/store"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                    Agent
                   </a>
@@ -59,7 +59,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/become-seller"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Customer 
                   </a>
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/stream"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     AI Studio
                   </a>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/ios"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     iOS App 
                   </a>
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/android"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Android App 
                   </a>
@@ -97,7 +97,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/web"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Web App 
                   </a>
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/doc"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Documentation
                   </a>
@@ -119,7 +119,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/tutorials"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Tutorials
                   </a>
@@ -127,7 +127,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/learn"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Learn 
                   </a>
@@ -135,7 +135,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/community"
-                    className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Community 
                   </a>
@@ -171,7 +171,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/press"
+                    href="mailto:admin@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Press
@@ -233,7 +233,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="/docs"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     
@@ -256,7 +256,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/contact"
+                    href="mailto:admin@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Contact
@@ -272,7 +272,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://x.com/runash-ai"
+                    href="https://x.runash-ai"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Twitter
@@ -291,11 +291,10 @@ export default function Footer() {
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
               <h3 className="font-bold text-sm mb-4 text-gray-900 dark:text-white">RunAsh AI</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Live video stream generation model
+              <p className="text-gray-600 dark:text-gray-400 mb-2">
+                Live Video Streaming Generation Model
               </p>
               <div className="items-center gap-2 mb-0">
-                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
                     All systems operational
