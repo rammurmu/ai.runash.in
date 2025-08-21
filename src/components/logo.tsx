@@ -1,10 +1,10 @@
 export function Logo() {
   return (
     <>
-      <span className="text-cyan-600">a</span>
-      <span className="text-teal-400">i</span>
+      <span className="text-white">A</span>
+      <span className="text-white-400">I</span>
       <span className="mx-1">&middot;</span>
-      <span>vstudio</span>
+      <span>vStudio</span>
     </>
   );
 }
