@@ -295,15 +295,11 @@ export default function Footer() {
                 Live Video Streaming Generation Model
               </p>
               <div className="items-center gap-2 mb-0">
-
-                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse">
-
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                    Made by RunAsh AI Research Lab 
+                    Made by RunAsh A AI Research Lab 
                   </a>
                 </span>
-                  </div>
               <div className="text-center text-sm text-white dark:text-gray-400">
                  <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
            </div>
