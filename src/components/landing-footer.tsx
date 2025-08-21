@@ -42,7 +42,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/chat"
+                    href="/"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     RunAshChat
@@ -50,7 +50,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/store"
+                    href="/"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                    Agent
@@ -171,7 +171,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="mailto:admin@runash.in"
+                    href="mailto:career@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Press
@@ -256,7 +256,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="mailto:admin@runash.in"
+                    href="mailto:contact@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Contact
@@ -272,7 +272,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://x.runash-ai"
+                    href="https://x.runash_ai"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Twitter
@@ -297,7 +297,7 @@ export default function Footer() {
               <div className="items-center gap-2 mb-0">
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                    Made by RunAsh 
+                    Made by RunAsh AI Research Lab 
                   </a>
                 </span>
               <div className="text-center text-sm text-white dark:text-gray-400">
