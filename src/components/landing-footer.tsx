@@ -42,7 +42,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/chat"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     RunAshChat
@@ -50,7 +50,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/agent"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                    Agent
