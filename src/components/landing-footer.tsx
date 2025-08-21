@@ -194,10 +194,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/pricing"
+                    href="/ai.runash.in/app"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
-                    Pricing
+                    AI Editor 
                   </Link>
                 </li>
                 <li>
@@ -225,10 +225,10 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/docs"
+                    href="/pricing"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
-                    Documentation
+                    Pricing 
                   </Link>
                 </li>
                 <li>
@@ -290,20 +290,16 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
-              <h3 className="font-bold text-sm mb-4 text-gray-900 dark:text-white">Try RunAsh AI Now</h3>
+            {/* <h3 className="font-bold text-sm mb-4 text-gray-900 dark:text-white">Try Now</h3> */}
               <p className="text-gray-600 text:sm dark:text-gray-400 mb-0">
-                Live Video Streaming Generation Model
+                RunAsh AI
               </p>
               <div className="items-center gap-2 mb-0">
-
-                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse">
-
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                    Made by RunAsh AI Research Lab 
+                    By RunAsh AI Research Lab 
                   </a>
                 </span>
-                  </div>
               <div className="text-center text-sm text-white dark:text-gray-400">
                  <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
            </div>
