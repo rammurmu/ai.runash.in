@@ -272,7 +272,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://x.runash_ai"
+                    href="https://x.runash-ai"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Twitter
