@@ -171,9 +171,6 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-
-                    href="mailto:admin@runash.in"
-
                     href="mailto:career@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
@@ -259,9 +256,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                <Link
-                    href="mailto:admin@runash.in"
-
-                    href="mailto:contact@runash.i
+                    href="mailto:contact@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Contact
