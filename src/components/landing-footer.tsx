@@ -171,6 +171,9 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+
+                    href="mailto:admin@runash.in"
+
                     href="mailto:career@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
@@ -236,7 +239,7 @@ export default function Footer() {
                     href="/docs"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
-                    
+                    Forum 
                   </Link>
                 </li>
                 <li>
@@ -255,8 +258,10 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <Link
-                    href="mailto:contact@runash.in"
+               <Link
+                    href="mailto:admin@runash.in"
+
+                    href="mailto:contact@runash.i
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Contact
@@ -295,11 +300,15 @@ export default function Footer() {
                 Live Video Streaming Generation Model
               </p>
               <div className="items-center gap-2 mb-0">
+
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse">
+
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
                     Made by RunAsh AI Research Lab 
                   </a>
                 </span>
+                  </div>
               <div className="text-center text-sm text-white dark:text-gray-400">
                  <p>© {new Date().getFullYear()} RunAsh AI. All rights reserved.</p>
            </div>
