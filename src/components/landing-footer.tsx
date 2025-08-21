@@ -290,14 +290,14 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 dark:border-white-800 text-center text-gray-500">
-              <h3 className="font-bold text-sm mb-4 text-gray-900 dark:text-white">Try RunAsh AI Now</h3>
+              <h3 className="font-bold text-sm mb-4 text-gray-900 dark:text-white">Try Now</h3>
               <p className="text-gray-600 text:sm dark:text-gray-400 mb-0">
-                Live Video Streaming Generation Model
+                RunAsh AI
               </p>
               <div className="items-center gap-2 mb-0">
                 <span className="text-sm text-gray-600 dark:text-gray-400">
                   <a href="/status" className="hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                    Made by RunAsh A AI Research Lab 
+                    Made by RunAsh AI Research Lab 
                   </a>
                 </span>
               <div className="text-center text-sm text-white dark:text-gray-400">
