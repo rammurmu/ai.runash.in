@@ -2,7 +2,7 @@ import Header from "@/components/landing-header";
 import LoginForm from "@/components/login-form";
 import Footer from "@/components/landing-footer";
 
-export default function IndexPage() {
+export default function LoginPage() {
   return (
     <div className="min-h-screen bg-black text-white relative">
       <Header />
