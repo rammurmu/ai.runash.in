@@ -1,5 +1,5 @@
 import Header from "@/components/landing-header";
-import LoginForm from "@/components/login-form";
+import LoginForm from "@/components/auth/login-form";
 import Footer from "@/components/landing-footer";
 
 export default function LoginPage() {
