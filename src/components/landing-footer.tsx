@@ -61,7 +61,7 @@ export default function Footer() {
                     href="/creator"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
-                    Customer 
+                    Creator 
                   </a>
                 </li>
               </ul>
