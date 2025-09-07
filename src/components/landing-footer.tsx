@@ -58,7 +58,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/become-creator"
+                    href="/creator"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Customer 
@@ -163,7 +163,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="mailto:career@rumash.in"
+                    href="mailto:career@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Careers
@@ -194,7 +194,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/ai.runash.in/app"
+                    href="https://ai.runash.in/app"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     AI Editor 
