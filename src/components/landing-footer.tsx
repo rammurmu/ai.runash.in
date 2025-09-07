@@ -58,7 +58,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/become-seller"
+                    href="/become-creator"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     Customer 
@@ -72,7 +72,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="/stream"
+                    href="/app"
                     className="text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors"
                   >
                     AI Studio
@@ -163,7 +163,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/careers"
+                    href="mailto:career@rumash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Careers
@@ -171,7 +171,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="mailto:career@runash.in"
+                    href="mailto:press@runash.in"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Press
@@ -202,7 +202,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://runash.in/ai/api"
+                    href="https://ai.runash.in/ai/api"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     API Reference 
@@ -210,7 +210,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://runash.in/ai/models"
+                    href="https://ai.runash.in/ai/models"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     AI Models 
@@ -272,7 +272,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://x.runash_ai"
+                    href="https://x.com/runash_ai"
                     className="text-gray-600 hover:text-white-600 dark:text-gray-400 dark:hover:text-white-400 transition-colors"
                   >
                     Twitter
