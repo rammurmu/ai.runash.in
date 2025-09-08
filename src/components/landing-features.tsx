@@ -17,9 +17,8 @@ import {
   Database,
   Cpu,
   Scissors,
-  Wand2,
-  Share2, 
-  Code, } from "lucide-react";
+  Wand2, 
+  Code } from "lucide-react";
 
 const features = [
   {
