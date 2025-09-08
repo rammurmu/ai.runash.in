@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Logo } from "./logo";
 
-export default function Header() ({
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showBanner, setShowBanner] = useState(true)
   openKeyDialog,
@@ -136,8 +136,9 @@ export default function Header() ({
                   <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 w-full">
                     Try Now
                   </Button>
+                  </Link>
                   {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
-          <Button
+           <Button
             variant="ghost"
             size="icon"
             className="relative"
@@ -150,7 +151,7 @@ export default function Header() ({
             <SettingsIcon className="w-6 h-6" />
           </Button>
         )}
-                </Link>
+                
               </nav>
             </div>
           )}
