@@ -1,4 +1,4 @@
-import { Scissors, Wand2, Share2, Zap, Users, Code } from "lucide-react";
+import { Scissors, Wand2, Share2, Zap, Users, Code, Video, Zap  } from "lucide-react";
 
 const features = [
   {
@@ -24,12 +24,12 @@ const features = [
     description: "Built on open-source technologies and available to everyone.",
   },
   {
-    icon: Code,
+    icon: Video,
     title: "AI Video Generation",
     description: "Create professional videos from text prompts using advanced AI models.",
   },
   {
-    icon: Code,
+    icon: Zap,
     title: "Lightning Fast",
     description: "Generate videos in seconds, not hours. Optimized for speed and quality.",
   },
@@ -41,7 +41,7 @@ export default function Features() {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">
-            Powerful features for modern creators
+            AI features for modern creators
           </h2>
           <p className="text-gray-400">
             Everything you need to create professional-quality videos, available
@@ -62,6 +62,7 @@ export default function Features() {
           ))}
         </div>
       </div>
+      
     </section>
   );
 }
