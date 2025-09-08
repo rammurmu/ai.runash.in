@@ -1,3 +1,26 @@
+
+import { 
+  Video,
+  Zap,
+  Palette,
+  Cloud,
+  Shield,
+  Users,
+  Sparkles,
+  Globe,
+  Mic,
+  Edit,
+  Share2,
+  BarChart3,
+  Monitor,
+  Camera,
+  Wifi,
+  Database,
+  Cpu,
+  Scissors,
+  Wand2, 
+  Code } from "lucide-react";
+
 import { Scissors, Wand2, Share2, Zap, Users, Code, Video  } from "lucide-react";
 
 const features = [
@@ -29,7 +52,10 @@ const features = [
     description: "Create professional videos from text prompts using advanced AI models.",
   },
   {
+
+    icon: Wifi,
     icon: Zap,
+
     title: "Lightning Fast",
     description: "Generate videos in seconds, not hours. Optimized for speed and quality.",
   },
