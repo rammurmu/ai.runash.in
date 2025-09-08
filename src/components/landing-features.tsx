@@ -29,10 +29,7 @@ const features = [
     description: "Create professional videos from text prompts using advanced AI models.",
   },
   {
-
-    icon: Wifi,
     icon: Zap,
-
     title: "Lightning Fast",
     description: "Generate videos in seconds, not hours. Optimized for speed and quality.",
   },
