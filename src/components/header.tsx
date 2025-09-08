@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Github, Menu, X, Bell } from "lucide-react"
 import Link from "next/link"
@@ -139,5 +137,5 @@ export default function Header() {
       </header>
     </>
   )
-          }
+}
           
