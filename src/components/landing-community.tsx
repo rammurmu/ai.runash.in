@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Github, MessageCircle, Users, Star, GitFork, Eye, Twitter, DiscIcon as Discord } from "lucide-react"
 import Link from "next/link"
