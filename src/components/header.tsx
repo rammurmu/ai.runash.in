@@ -1,16 +1,18 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Menu, X, Bell } from "lucide-react"
+import { Github, Menu, X, Bell, SettingsIcon } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 import { Logo } from "./logo";
-import { SettingsIcon } from "lucide-react";
 
-export default function Header() {
+export default function Header() ({
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showBanner, setShowBanner] = useState(true)
-
+  openKeyDialog,
+  }: {
+  openKeyDialog?: () => void;
+}) {
   return (
     <>
       {/* Top Banner */}
@@ -41,6 +43,7 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">R</span>
+                <Logo />
               </div>
               <span className="text-xl font-bold text-black dark:text-white">RunAsh AI</span>
             </Link>
@@ -133,44 +136,7 @@ export default function Header() {
                   <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 w-full">
                     Try Now
                   </Button>
-                </Link>
-              </nav>
-            </div>
-          )}
-        </div>
-      </header>
-    </>
-  )
-      }
-      
-
-
-{/*export default function Header({
-  openKeyDialog,
-}: {
-  openKeyDialog?: () => void;
-}) {
-  return (
-    <header className="px-4 py-2 flex justify-between items-center border-b border-border">
-      <h1 className="text-lg font-medium">
-        <Logo />
-      </h1>
-      <nav className="flex flex-row items-center justify-end gap-1">
-        <Button variant="ghost" size="sm" asChild>
-          <a href="https://ai.runash.in" target="_blank" rel="noopener noreferrer">
-          RunAsh AI
-          </a>
-        </Button>
-        <Button variant="ghost" size="sm" asChild>
-          <a
-            href="https://github.com/runash-ai-community"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </Button>
-        {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
+                  {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
           <Button
             variant="ghost"
             size="icon"
@@ -184,7 +150,16 @@ export default function Header() {
             <SettingsIcon className="w-6 h-6" />
           </Button>
         )}
-      </nav>
-    </header>
-  );
-} */}
+                </Link>
+              </nav>
+            </div>
+          )}
+        </div>
+      </header>
+    </>
+  )
+      }
+      
+
+
+
