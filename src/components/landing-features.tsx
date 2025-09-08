@@ -20,8 +20,18 @@ const features = [
   },
   {
     icon: Code,
-    title: "Open-Source",
+    title: "Open-source",
     description: "Built on open-source technologies and available to everyone.",
+  },
+  {
+    icon: Code,
+    title: "AI Video Generation",
+    description: "Create professional videos from text prompts using advanced AI models.",
+  },
+  {
+    icon: Code,
+    title: "Lightning Fast",
+    description: "Generate videos in seconds, not hours. Optimized for speed and quality.",
   },
 ];
 
