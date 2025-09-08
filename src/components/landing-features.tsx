@@ -23,6 +23,16 @@ const features = [
     title: "Open-Source",
     description: "Built on open-source technologies and available to everyone.",
   },
+  {
+    icon: Code,
+    title: "Open-Source",
+    description: "Built on open-source technologies and available to everyone.",
+  },
+  {
+    icon: Code,
+    title: "Open-Source",
+    description: "Built on open-source technologies and available to everyone.",
+  },
 ];
 
 export default function Features() {
