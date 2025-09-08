@@ -1,4 +1,5 @@
-import { Video,
+import { 
+  Video,
   Zap,
   Palette,
   Cloud,
@@ -18,7 +19,7 @@ import { Video,
   Scissors,
   Wand2,
   Share2, 
-  Code } from "lucide-react";
+  Code, } from "lucide-react";
 
 const features = [
   {
