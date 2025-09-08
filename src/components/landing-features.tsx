@@ -1,4 +1,4 @@
-import { Scissors, Wand2, Share2, Zap, Users, Code, Video, Zap  } from "lucide-react";
+import { Scissors, Wand2, Share2, Zap, Users, Code, Video  } from "lucide-react";
 
 const features = [
   {
