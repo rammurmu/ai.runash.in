@@ -9,10 +9,7 @@ import { Logo } from "./logo";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showBanner, setShowBanner] = useState(true)
-  openKeyDialog,
-  }: {
-  openKeyDialog?: () => void;
-}) {
+  // ...other logic
   return (
     <>
       {/* Top Banner */}
@@ -132,25 +129,20 @@ export default function Header() {
                   <Github className="w-5 h-5" />
                   <span>GitHub</span>
                 </Link>
-                <Link href="/app">
-                  <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 w-full">
-                    Try Now
-                  </Button>
-                  </Link>
-                  {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
-           <Button
-            variant="ghost"
-            size="icon"
-            className="relative"
-            onClick={openKeyDialog}
-          >
-            {typeof localStorage !== "undefined" &&
-              !localStorage?.getItem("falKey") && (
-                <span className="dark:bg-orange-400 bg-orange-600 w-2 h-2 rounded-full absolute top-1 right-1"></span>
-              )}
-            <SettingsIcon className="w-6 h-6" />
-          </Button>
-        )}
+                <Link href="/try">
+      <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 w-full">
+        Try Now
+      </Button>
+    </Link>
+    {process.env.NEXT_PUBLIC_CUSTOM_KEY && openKeyDialog && (
+      <Button
+        variant="ghost"
+        onClick={openKeyDialog}
+      >
+        <SettingsIcon className="w-6 h-6" />
+      </Button>
+    )}
+    // ...other JSX
                 
               </nav>
             </div>
