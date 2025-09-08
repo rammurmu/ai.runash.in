@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Github, Menu, X, Bell } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { Logo } from "./logo";
+import { SettingsIcon } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -141,13 +143,9 @@ export default function Header() {
   )
       }
       
-"use client";
 
-{/* import { Button } from "@/components/ui/button";
-import { Logo } from "./logo";
-import { SettingsIcon } from "lucide-react";
 
-export default function Header({
+{/*export default function Header({
   openKeyDialog,
 }: {
   openKeyDialog?: () => void;
