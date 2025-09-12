@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import Sidebar from "@/components/sidebar";
+import Navbar from "@/components/navbar";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "AI Video Developer Starter Kit | fal.ai",
@@ -13,9 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased dark">
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <Sidebar />
+          <div className="pt-16 pl-0 md:pl-56 transition-all">
+            {children}
+          </div>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
