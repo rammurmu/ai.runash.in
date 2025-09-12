@@ -21,9 +21,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <Sidebar />
-          <div className="pt-16 pl-0 md:pl-56 transition-all">
-            {children}
-          </div>
+          <div className="pt-16 pl-0 md:pl-56 transition-all">{children}</div>
         </ThemeProvider>
         <Analytics />
       </body>

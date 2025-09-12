@@ -1,6 +1,5 @@
-
-import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
+import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export function CompanyHero() {
   return (
@@ -11,10 +10,13 @@ export function CompanyHero() {
             <Badge className="mb-4" variant="secondary">
               Our Mission
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">RunAsh AI Residency</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              RunAsh AI Residency
+            </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our 6-month program is designed to cultivate exceptional researchers from diverse backgrounds. Residents
-              work closely with our research team to advance the field of AI.
+              Our 6-month program is designed to cultivate exceptional
+              researchers from diverse backgrounds. Residents work closely with
+              our research team to advance the field of AI.
             </p>
           </div>
 
@@ -28,12 +30,16 @@ export function CompanyHero() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-8 left-8 text-white">
-              <h3 className="text-2xl font-bold mb-2">Building the Future Together</h3>
-              <p className="text-lg opacity-90">Our diverse team of researchers and engineers</p>
+              <h3 className="text-2xl font-bold mb-2">
+                Building the Future Together
+              </h3>
+              <p className="text-lg opacity-90">
+                Our diverse team of researchers and engineers
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

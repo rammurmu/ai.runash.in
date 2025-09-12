@@ -1,6 +1,9 @@
-
-
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const faqs = [
   {
@@ -33,7 +36,7 @@ const faqs = [
     answer:
       "Many residents go on to join our full-time research team, pursue advanced degrees, or take on leadership roles at other AI research organizations. We provide ongoing mentorship and career support.",
   },
-]
+];
 
 export function FAQSection() {
   return (
@@ -42,19 +45,29 @@ export function FAQSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-8">FAQ</h2>
-            <p className="text-xl text-muted-foreground">Frequently asked questions about our Residency program</p>
+            <p className="text-xl text-muted-foreground">
+              Frequently asked questions about our Residency program
+            </p>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg px-6">
-                <AccordionTrigger className="text-left font-semibold">{faq.question}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pt-4">{faq.answer}</AccordionContent>
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border rounded-lg px-6"
+              >
+                <AccordionTrigger className="text-left font-semibold">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pt-4">
+                  {faq.answer}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
       </div>
     </section>
-  )
+  );
 }

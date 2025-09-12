@@ -20,14 +20,18 @@ export default function Navbar() {
 
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-6 h-16">
-      <Link href="/" className="font-bold text-xl">Runash AI</Link>
+      <Link href="/" className="font-bold text-xl">
+        Runash AI
+      </Link>
       <nav className="flex gap-4">
-        {navLinks.map(link => (
+        {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
             className={
-              (pathname === link.href ? "underline font-semibold" : "hover:underline") + " transition-colors"
+              (pathname === link.href
+                ? "underline font-semibold"
+                : "hover:underline") + " transition-colors"
             }
           >
             {link.label}

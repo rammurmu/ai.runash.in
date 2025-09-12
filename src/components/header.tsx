@@ -16,8 +16,12 @@ export default function Header({
       </h1>
       <nav className="flex flex-row items-center justify-end gap-1">
         <Button variant="ghost" size="sm" asChild>
-          <a href="https://ai.runash.in" target="_blank" rel="noopener noreferrer">
-          RunAsh AI
+          <a
+            href="https://ai.runash.in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RunAsh AI
           </a>
         </Button>
         <Button variant="ghost" size="sm" asChild>

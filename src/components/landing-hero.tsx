@@ -7,23 +7,23 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24">
-     <div className="container relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
+      <div className="container relative h-screen flex items-center justify-center overflow-hidden mx-auto px-4">
         <div className="text-center mb-16">
           <div>
-         <div className="inline-flex items-center rounded-full  px-3 py-1 text-sm mb-8">
-            <span className="text-gray-400 animate-ping">✨</span>
-            
-            <a
-              href=""
-              className="ml-3 flex items-center text-white hover:text-gray-300"
-            >
-              
-            </a>
-           </div>
+            <div className="inline-flex items-center rounded-full  px-3 py-1 text-sm mb-8">
+              <span className="text-gray-400 animate-ping">✨</span>
+
+              <a
+                href=""
+                className="ml-3 flex items-center text-white hover:text-gray-300"
+              ></a>
+            </div>
           </div>
-          
+
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
-            <span className="text-black bg-white rounded-full px-3 py-1">New</span>
+            <span className="text-black bg-white rounded-full px-3 py-1">
+              New
+            </span>
             <span className="ml-3 h-4 w-px bg-white/20" />
             <a
               href="https://runash.in/blog"
@@ -38,7 +38,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-          AI live video streaming generation model as creating live streaming demonstration video from text
+            AI live video streaming generation model as creating live streaming
+            demonstration video from text
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">
@@ -52,16 +53,14 @@ export default function Hero() {
             </Link>
             <Link href="https://github.com/runash-ai-community">
               <Button size="lg" variant="outline" className="min-w-[200px]">
-                Learn More 
+                Learn More
                 <ArrowRight className="mr-2 h-5 w-5" />
-                
               </Button>
             </Link>
           </div>
         </div>
-       </div>
-      
-      
+      </div>
+
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex mt-8 items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
@@ -76,14 +75,15 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-8 text-4xl md:text-6xl font-bold tracking-tight mb-8 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
-            AI Live Video Streaming 
+            AI Live Video Streaming
             <br />
-            Platform 
+            Platform
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-            A powerful, AI live video streaming generator and editor built for creators. Create
-            stunning live video demonstrations with our intuitive tools
+            A powerful, AI live video streaming generator and editor built for
+            creators. Create stunning live video demonstrations with our
+            intuitive tools
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-16">

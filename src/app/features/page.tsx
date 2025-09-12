@@ -16,9 +16,9 @@ import {
   Wifi,
   Database,
   Cpu,
-} from "lucide-react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+} from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const featuresData = {
   core: [
@@ -27,107 +27,201 @@ const featuresData = {
       title: "AI Video Generation",
       description:
         "Create professional videos from text prompts using advanced AI models trained on millions of video samples",
-      features: ["Text-to-video generation", "Multiple aspect ratios", "HD quality output", "Custom duration control"],
+      features: [
+        "Text-to-video generation",
+        "Multiple aspect ratios",
+        "HD quality output",
+        "Custom duration control",
+      ],
     },
     {
       icon: Zap,
       title: "Lightning Fast Processing",
       description:
         "Generate videos in seconds with our optimized cloud infrastructure and cutting-edge AI acceleration",
-      features: ["Sub-30 second generation", "Parallel processing", "GPU acceleration", "Real-time preview"],
+      features: [
+        "Sub-30 second generation",
+        "Parallel processing",
+        "GPU acceleration",
+        "Real-time preview",
+      ],
     },
     {
       icon: Palette,
       title: "Advanced Customization",
-      description: "Fine-tune every aspect of your videos with comprehensive styling and branding options",
-      features: ["Custom color schemes", "Brand templates", "Font selection", "Logo integration"],
+      description:
+        "Fine-tune every aspect of your videos with comprehensive styling and branding options",
+      features: [
+        "Custom color schemes",
+        "Brand templates",
+        "Font selection",
+        "Logo integration",
+      ],
     },
     {
       icon: Edit,
       title: "Professional Editing",
-      description: "Built-in video editor with timeline, transitions, effects, and professional-grade tools",
-      features: ["Timeline editing", "Transition effects", "Audio mixing", "Color grading"],
+      description:
+        "Built-in video editor with timeline, transitions, effects, and professional-grade tools",
+      features: [
+        "Timeline editing",
+        "Transition effects",
+        "Audio mixing",
+        "Color grading",
+      ],
     },
   ],
   streaming: [
     {
       icon: Wifi,
       title: "Live Streaming",
-      description: "Stream directly to popular platforms with optimized encoding and adaptive bitrate",
-      features: ["Multi-platform streaming", "Adaptive bitrate", "Low latency", "Stream scheduling"],
+      description:
+        "Stream directly to popular platforms with optimized encoding and adaptive bitrate",
+      features: [
+        "Multi-platform streaming",
+        "Adaptive bitrate",
+        "Low latency",
+        "Stream scheduling",
+      ],
     },
     {
       icon: Camera,
       title: "Multi-Camera Support",
-      description: "Connect multiple cameras and switch between angles seamlessly during live streams",
-      features: ["Up to 8 camera inputs", "Scene switching", "Picture-in-picture", "Green screen support"],
+      description:
+        "Connect multiple cameras and switch between angles seamlessly during live streams",
+      features: [
+        "Up to 8 camera inputs",
+        "Scene switching",
+        "Picture-in-picture",
+        "Green screen support",
+      ],
     },
     {
       icon: Mic,
       title: "Audio Enhancement",
-      description: "Professional audio processing with noise reduction, echo cancellation, and voice enhancement",
-      features: ["Noise reduction", "Echo cancellation", "Voice enhancement", "Multi-track audio"],
+      description:
+        "Professional audio processing with noise reduction, echo cancellation, and voice enhancement",
+      features: [
+        "Noise reduction",
+        "Echo cancellation",
+        "Voice enhancement",
+        "Multi-track audio",
+      ],
     },
     {
       icon: Monitor,
       title: "Screen Recording",
-      description: "Capture your screen, applications, or specific windows with high-quality recording",
-      features: ["Full screen capture", "Window selection", "Cursor highlighting", "System audio"],
+      description:
+        "Capture your screen, applications, or specific windows with high-quality recording",
+      features: [
+        "Full screen capture",
+        "Window selection",
+        "Cursor highlighting",
+        "System audio",
+      ],
     },
   ],
   collaboration: [
     {
       icon: Users,
       title: "Team Collaboration",
-      description: "Work together with your team in real-time on video projects with role-based permissions",
-      features: ["Real-time collaboration", "Role management", "Comment system", "Version control"],
+      description:
+        "Work together with your team in real-time on video projects with role-based permissions",
+      features: [
+        "Real-time collaboration",
+        "Role management",
+        "Comment system",
+        "Version control",
+      ],
     },
     {
       icon: Share2,
       title: "Easy Sharing",
-      description: "Share your videos instantly with customizable privacy settings and embed options",
-      features: ["One-click sharing", "Privacy controls", "Embed codes", "Social media integration"],
+      description:
+        "Share your videos instantly with customizable privacy settings and embed options",
+      features: [
+        "One-click sharing",
+        "Privacy controls",
+        "Embed codes",
+        "Social media integration",
+      ],
     },
     {
       icon: BarChart3,
       title: "Analytics & Insights",
-      description: "Track video performance with detailed analytics and audience engagement metrics",
-      features: ["View analytics", "Engagement metrics", "Audience insights", "Performance reports"],
+      description:
+        "Track video performance with detailed analytics and audience engagement metrics",
+      features: [
+        "View analytics",
+        "Engagement metrics",
+        "Audience insights",
+        "Performance reports",
+      ],
     },
     {
       icon: Database,
       title: "Asset Management",
-      description: "Organize and manage your video assets, templates, and media files efficiently",
-      features: ["Media library", "Asset tagging", "Search & filter", "Bulk operations"],
+      description:
+        "Organize and manage your video assets, templates, and media files efficiently",
+      features: [
+        "Media library",
+        "Asset tagging",
+        "Search & filter",
+        "Bulk operations",
+      ],
     },
   ],
   technical: [
     {
       icon: Cloud,
       title: "Cloud Infrastructure",
-      description: "Scalable cloud processing with global CDN for fast delivery and reliable performance",
-      features: ["Global CDN", "Auto-scaling", "99.9% uptime", "Edge computing"],
+      description:
+        "Scalable cloud processing with global CDN for fast delivery and reliable performance",
+      features: [
+        "Global CDN",
+        "Auto-scaling",
+        "99.9% uptime",
+        "Edge computing",
+      ],
     },
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "Bank-level security with end-to-end encryption, SOC2 compliance, and data protection",
-      features: ["End-to-end encryption", "SOC2 compliance", "GDPR compliant", "Regular security audits"],
+      description:
+        "Bank-level security with end-to-end encryption, SOC2 compliance, and data protection",
+      features: [
+        "End-to-end encryption",
+        "SOC2 compliance",
+        "GDPR compliant",
+        "Regular security audits",
+      ],
     },
     {
       icon: Cpu,
       title: "AI Optimization",
-      description: "Continuously improving AI models with machine learning optimization and performance tuning",
-      features: ["Model optimization", "Performance tuning", "Quality enhancement", "Speed improvements"],
+      description:
+        "Continuously improving AI models with machine learning optimization and performance tuning",
+      features: [
+        "Model optimization",
+        "Performance tuning",
+        "Quality enhancement",
+        "Speed improvements",
+      ],
     },
     {
       icon: Globe,
       title: "Global Availability",
-      description: "Available worldwide with multi-language support and localized content delivery",
-      features: ["Multi-language UI", "Global servers", "Local compliance", "Regional optimization"],
+      description:
+        "Available worldwide with multi-language support and localized content delivery",
+      features: [
+        "Multi-language UI",
+        "Global servers",
+        "Local compliance",
+        "Regional optimization",
+      ],
     },
   ],
-}
+};
 
 export default function FeaturesPage() {
   return (
@@ -156,7 +250,9 @@ export default function FeaturesPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-4 py-2 text-sm mb-8">
             <Sparkles className="w-4 h-4 text-purple-600 mr-2" />
-            <span className="text-gray-600 dark:text-gray-400">All Features</span>
+            <span className="text-gray-600 dark:text-gray-400">
+              All Features
+            </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Everything you need for
@@ -166,8 +262,9 @@ export default function FeaturesPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover all the powerful features that make RunAsh AI the ultimate platform for creating, editing, and
-            streaming videos with artificial intelligence
+            Discover all the powerful features that make RunAsh AI the ultimate
+            platform for creating, editing, and streaming videos with artificial
+            intelligence
           </p>
           <Link href="/app">
             <Button
@@ -183,7 +280,9 @@ export default function FeaturesPage() {
       {/* Core Features */}
       <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Core Features</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Core Features
+          </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
             Essential tools for creating professional videos with AI
           </p>
@@ -197,10 +296,15 @@ export default function FeaturesPage() {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">{feature.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  {feature.description}
+                </p>
                 <ul className="space-y-2">
                   {feature.features.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                    >
                       <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3" />
                       {item}
                     </li>
@@ -215,7 +319,9 @@ export default function FeaturesPage() {
       {/* Streaming Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Live Streaming</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Live Streaming
+          </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
             Professional live streaming capabilities for content creators
           </p>
@@ -229,10 +335,15 @@ export default function FeaturesPage() {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">{feature.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  {feature.description}
+                </p>
                 <ul className="space-y-2">
                   {feature.features.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                    >
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3" />
                       {item}
                     </li>
@@ -247,7 +358,9 @@ export default function FeaturesPage() {
       {/* Collaboration Features */}
       <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Collaboration & Sharing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Collaboration & Sharing
+          </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
             Work together and share your creations with the world
           </p>
@@ -261,10 +374,15 @@ export default function FeaturesPage() {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">{feature.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  {feature.description}
+                </p>
                 <ul className="space-y-2">
                   {feature.features.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                    >
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3" />
                       {item}
                     </li>
@@ -279,9 +397,12 @@ export default function FeaturesPage() {
       {/* Technical Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Technical Excellence</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            Technical Excellence
+          </h2>
           <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Enterprise-grade infrastructure and security for reliable performance
+            Enterprise-grade infrastructure and security for reliable
+            performance
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuresData.technical.map((feature, index) => (
@@ -293,10 +414,15 @@ export default function FeaturesPage() {
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">{feature.description}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  {feature.description}
+                </p>
                 <ul className="space-y-2">
                   {feature.features.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                    >
                       <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3" />
                       {item}
                     </li>
@@ -311,9 +437,12 @@ export default function FeaturesPage() {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to create amazing videos?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to create amazing videos?
+          </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of creators who are already using RunAsh AI to bring their ideas to life
+            Join thousands of creators who are already using RunAsh AI to bring
+            their ideas to life
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/app">
@@ -337,6 +466,5 @@ export default function FeaturesPage() {
         </div>
       </section>
     </div>
-  )
-  }
-        
+  );
+}

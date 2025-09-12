@@ -1,4 +1,3 @@
-
 import Hero from "@/components/landing-hero";
 import Features from "@/components/landing-features";
 import Community from "@/components/landing-community";
@@ -12,7 +11,11 @@ export default function IndexPage() {
         </div>
         <div className="flex-1 hidden md:block">
           {/* Add a beautiful illustration or screenshot here */}
-          <img src="/screenshot.webp" alt="App screenshot" className="rounded-xl shadow-lg w-full" />
+          <img
+            src="/screenshot.webp"
+            alt="App screenshot"
+            className="rounded-xl shadow-lg w-full"
+          />
         </div>
       </section>
       <section>

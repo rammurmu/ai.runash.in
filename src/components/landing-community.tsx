@@ -9,9 +9,9 @@ export default function Community() {
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Join our community</h2>
           <p className="text-gray-400 mb-8">
-           AI live video streaming platform  is built by RunAsh, for
-            creater. Join our growing community and help shape the future of
-            video generation and editing.
+            AI live video streaming platform is built by RunAsh, for creater.
+            Join our growing community and help shape the future of video
+            generation and editing.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

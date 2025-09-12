@@ -2,7 +2,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Home, BarChart3, User, Settings, Info, Phone, Star } from "lucide-react";
+import {
+  Home,
+  BarChart3,
+  User,
+  Settings,
+  Info,
+  Phone,
+  Star,
+} from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },

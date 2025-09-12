@@ -1,4 +1,4 @@
-import { Pool } from '@neondatabase/serverless';
+import { Pool } from "@neondatabase/serverless";
 
 // Use environment variables for security
 const pool = new Pool({

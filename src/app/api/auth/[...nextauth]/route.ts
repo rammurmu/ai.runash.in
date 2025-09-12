@@ -1,4 +1,3 @@
-
 import NextAuth, { type AuthOptions, type Session } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { z } from "zod";
@@ -27,7 +26,7 @@ export const authOptions: AuthOptions = {
         // Query Neon for user
         const { rows } = await pool.query(
           "SELECT * FROM users WHERE email = $1",
-          [email]
+          [email],
         );
         const user = rows[0];
         if (!user) return null;
