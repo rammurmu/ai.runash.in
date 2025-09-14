@@ -30,7 +30,7 @@ export default function Footer() {
             {/* Language and Country Selector */}
             <div className="flex flex-col sm:flex-row gap-3 mt-4">
               {/* <LanguageSelector /> */}
-              {/* <CountrySelector /> */}
+              {/* <CountrySelector />  */}
             </div>
           </div>
 
