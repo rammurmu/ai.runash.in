@@ -16,10 +16,10 @@ export default function StreamRealTime() {
       "Streaming data chunk 1...",
       "Streaming data chunk 2...",
       "Streaming data chunk 3...",
-      "Done!"
+      "Done!",
     ];
     const interval = setInterval(() => {
-      setOutput(prev => [...prev, messages[i]]);
+      setOutput((prev) => [...prev, messages[i]]);
       i++;
       if (i >= messages.length) {
         clearInterval(interval);

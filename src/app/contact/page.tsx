@@ -1,5 +1,9 @@
 "use client";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -7,13 +11,16 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   return (
     <div className="p-8 max-w-2xl mx-auto">
-      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Contact Us</h1>
+      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        Contact Us
+      </h1>
       <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
-        We'd love to hear from you! Fill out the form below or use the popover for quick contact options.
+        We'd love to hear from you! Fill out the form below or use the popover
+        for quick contact options.
       </p>
       <form
         className="bg-white dark:bg-gray-900 rounded-xl shadow p-6 flex flex-col gap-4 mb-8"
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           setSubmitted(true);
         }}
@@ -22,7 +29,7 @@ export default function ContactPage() {
           className="p-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
           placeholder="Your Name"
           value={form.name}
-          onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+          onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
           required
         />
         <input
@@ -30,7 +37,7 @@ export default function ContactPage() {
           placeholder="Your Email"
           type="email"
           value={form.email}
-          onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+          onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
           required
         />
         <textarea
@@ -38,7 +45,7 @@ export default function ContactPage() {
           placeholder="Your Message"
           rows={4}
           value={form.message}
-          onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+          onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
           required
         />
         <button
@@ -58,10 +65,36 @@ export default function ContactPage() {
           </PopoverTrigger>
           <PopoverContent className="text-sm">
             <div className="mb-2 font-bold text-blue-600">Social & Direct</div>
-            <div className="mb-1">Email: <a href="mailto:hello@runash.ai" className="text-blue-500 hover:underline">hello@runash.ai</a></div>
-            <div className="mb-1">Twitter: <a href="https://twitter.com/runashai" className="text-blue-500 hover:underline">@runashai</a></div>
-            <div className="mb-1">GitHub: <a href="https://github.com/runash-ai-community" className="text-blue-500 hover:underline">runash-ai-community</a></div>
-            <div className="mt-2 text-xs text-gray-500">We usually reply within 24 hours.</div>
+            <div className="mb-1">
+              Email:{" "}
+              <a
+                href="mailto:hello@runash.ai"
+                className="text-blue-500 hover:underline"
+              >
+                hello@runash.ai
+              </a>
+            </div>
+            <div className="mb-1">
+              Twitter:{" "}
+              <a
+                href="https://twitter.com/runashai"
+                className="text-blue-500 hover:underline"
+              >
+                @runashai
+              </a>
+            </div>
+            <div className="mb-1">
+              GitHub:{" "}
+              <a
+                href="https://github.com/runash-ai-community"
+                className="text-blue-500 hover:underline"
+              >
+                runash-ai-community
+              </a>
+            </div>
+            <div className="mt-2 text-xs text-gray-500">
+              We usually reply within 24 hours.
+            </div>
           </PopoverContent>
         </Popover>
       </div>

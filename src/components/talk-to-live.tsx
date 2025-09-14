@@ -10,8 +10,8 @@ export default function TalkToLive() {
       <h2 className="text-2xl font-bold mb-4">Talk to Live AI</h2>
       <div className="mb-4 w-full flex flex-col items-center">
         <button
-          className={`px-6 py-2 rounded bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold transition mb-2 ${listening ? 'opacity-70' : ''}`}
-          onClick={() => setListening(l => !l)}
+          className={`px-6 py-2 rounded bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold transition mb-2 ${listening ? "opacity-70" : ""}`}
+          onClick={() => setListening((l) => !l)}
         >
           {listening ? "Stop Listening" : "Start Talking"}
         </button>
@@ -20,7 +20,7 @@ export default function TalkToLive() {
           rows={3}
           placeholder="Your speech transcript will appear here..."
           value={transcript}
-          onChange={e => setTranscript(e.target.value)}
+          onChange={(e) => setTranscript(e.target.value)}
         />
       </div>
       <div className="w-full text-left text-gray-500 text-sm">

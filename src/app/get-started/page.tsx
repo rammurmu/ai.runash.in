@@ -1,15 +1,28 @@
 "use client";
 import { useState } from "react";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 export default function GetStartedPage() {
   const [openDialog, setOpenDialog] = useState(false);
   return (
     <div className="max-w-lg mx-auto mt-20 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
-      <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Get Started</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        Get Started
+      </h1>
       <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
-        Welcome! Follow these steps to create your account and start using RunAsh AI.
+        Welcome! Follow these steps to create your account and start using
+        RunAsh AI.
       </p>
       <ol className="list-decimal pl-6 mb-8 text-gray-700 dark:text-gray-200 space-y-2">
         <li>Sign up with your email or social account</li>
@@ -36,7 +49,10 @@ export default function GetStartedPage() {
         </Popover>
         <Dialog open={openDialog} onOpenChange={setOpenDialog}>
           <DialogTrigger asChild>
-            <button className="px-4 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold shadow hover:from-blue-600 hover:to-purple-600 transition" onClick={() => setOpenDialog(true)}>
+            <button
+              className="px-4 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold shadow hover:from-blue-600 hover:to-purple-600 transition"
+              onClick={() => setOpenDialog(true)}
+            >
               See Registration Demo
             </button>
           </DialogTrigger>

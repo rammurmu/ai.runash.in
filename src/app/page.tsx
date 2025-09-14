@@ -1,4 +1,3 @@
-
 import Hero from "@/components/landing-hero";
 import Features from "@/components/landing-features";
 import Community from "@/components/landing-community";
@@ -17,7 +16,9 @@ export default function IndexPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="text-3xl font-bold mb-6 text-center">AI Features & Live Demos</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">
+          AI Features & Live Demos
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <LiveStreamVideo />
           <ImageGeneration />

@@ -23,7 +23,7 @@ export default function PromptEnhance() {
         className="w-full p-2 rounded border border-gray-300 dark:border-gray-700 mb-4 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
         placeholder="Enter your prompt..."
         value={prompt}
-        onChange={e => setPrompt(e.target.value)}
+        onChange={(e) => setPrompt(e.target.value)}
       />
       <button
         className="px-6 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition mb-4"

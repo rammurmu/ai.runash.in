@@ -5,7 +5,13 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { ToastProvider, Toast, ToastTitle, ToastDescription, ToastViewport } from "@/components/ui/toast";
+import {
+  ToastProvider,
+  Toast,
+  ToastTitle,
+  ToastDescription,
+  ToastViewport,
+} from "@/components/ui/toast";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -76,7 +82,9 @@ export default function Navbar() {
       </header>
       <Toast open={showToast} onOpenChange={setShowToast}>
         <ToastTitle>Logged out</ToastTitle>
-        <ToastDescription>You have been logged out. Redirecting...</ToastDescription>
+        <ToastDescription>
+          You have been logged out. Redirecting...
+        </ToastDescription>
       </Toast>
       <ToastViewport />
     </ToastProvider>

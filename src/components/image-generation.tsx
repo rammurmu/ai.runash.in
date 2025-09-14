@@ -23,7 +23,7 @@ export default function ImageGeneration() {
         className="w-full p-2 rounded border border-gray-300 dark:border-gray-700 mb-4 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
         placeholder="Describe your image..."
         value={prompt}
-        onChange={e => setPrompt(e.target.value)}
+        onChange={(e) => setPrompt(e.target.value)}
       />
       <button
         className="px-6 py-2 rounded bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-semibold hover:from-pink-600 hover:to-yellow-600 transition mb-4"
@@ -33,7 +33,11 @@ export default function ImageGeneration() {
         {loading ? "Generating..." : "Generate Image"}
       </button>
       {imageUrl && (
-        <img src={imageUrl} alt="Generated" className="rounded-lg shadow w-64 h-64 object-cover" />
+        <img
+          src={imageUrl}
+          alt="Generated"
+          className="rounded-lg shadow w-64 h-64 object-cover"
+        />
       )}
     </div>
   );

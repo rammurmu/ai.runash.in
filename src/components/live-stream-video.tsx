@@ -6,10 +6,17 @@ export default function LiveStreamVideo() {
   // Placeholder for video stream URL or state
   return (
     <div className="bg-black rounded-xl p-6 shadow-lg flex flex-col items-center w-full max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4 text-white">Live Video Generation</h2>
+      <h2 className="text-2xl font-bold mb-4 text-white">
+        Live Video Generation
+      </h2>
       <div className="w-full aspect-video bg-gray-900 rounded-lg flex items-center justify-center mb-4 border border-gray-700">
         {isStreaming ? (
-          <video src="#" controls autoPlay className="w-full h-full rounded-lg" />
+          <video
+            src="#"
+            controls
+            autoPlay
+            className="w-full h-full rounded-lg"
+          />
         ) : (
           <span className="text-gray-400">Live stream will appear here</span>
         )}

@@ -21,9 +21,25 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/ui/carousel";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { ToastProvider, Toast, ToastTitle, ToastDescription, ToastViewport } from "@/components/ui/toast";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import {
+  ToastProvider,
+  Toast,
+  ToastTitle,
+  ToastDescription,
+  ToastViewport,
+} from "@/components/ui/toast";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 
@@ -236,22 +252,30 @@ export default function FeaturesPage() {
     <div className="flex flex-col items-center justify-center h-full" key="c1">
       <Video className="w-12 h-12 text-purple-500 mb-2" />
       <div className="font-bold text-lg mb-1">AI Video Generation</div>
-      <div className="text-gray-500 text-sm text-center">Create videos from text prompts in seconds.</div>
+      <div className="text-gray-500 text-sm text-center">
+        Create videos from text prompts in seconds.
+      </div>
     </div>,
     <div className="flex flex-col items-center justify-center h-full" key="c2">
       <Wifi className="w-12 h-12 text-blue-500 mb-2" />
       <div className="font-bold text-lg mb-1">Live Streaming</div>
-      <div className="text-gray-500 text-sm text-center">Stream to any platform with low latency.</div>
+      <div className="text-gray-500 text-sm text-center">
+        Stream to any platform with low latency.
+      </div>
     </div>,
     <div className="flex flex-col items-center justify-center h-full" key="c3">
       <Users className="w-12 h-12 text-green-500 mb-2" />
       <div className="font-bold text-lg mb-1">Team Collaboration</div>
-      <div className="text-gray-500 text-sm text-center">Work together in real time on projects.</div>
+      <div className="text-gray-500 text-sm text-center">
+        Work together in real time on projects.
+      </div>
     </div>,
     <div className="flex flex-col items-center justify-center h-full" key="c4">
       <Shield className="w-12 h-12 text-orange-500 mb-2" />
       <div className="font-bold text-lg mb-1">Enterprise Security</div>
-      <div className="text-gray-500 text-sm text-center">Bank-level security and compliance.</div>
+      <div className="text-gray-500 text-sm text-center">
+        Bank-level security and compliance.
+      </div>
     </div>,
   ];
 
@@ -264,272 +288,300 @@ export default function FeaturesPage() {
   return (
     <ToastProvider>
       <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">R</span>
-              </div>
-              <span className="text-xl font-bold">RunAsh AI</span>
-            </Link>
-            <Link href="/app">
-              <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200">
-                Try Now
+        {/* Header */}
+        <header className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between h-16">
+              <Link href="/" className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">R</span>
+                </div>
+                <span className="text-xl font-bold">RunAsh AI</span>
+              </Link>
+              <Link href="/app">
+                <Button className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200">
+                  Try Now
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </header>
+
+        {/* Hero Section with Carousel */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-4xl text-center">
+            <div className="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-4 py-2 text-sm mb-8">
+              <Sparkles className="w-4 h-4 text-purple-600 mr-2" />
+              <span className="text-gray-600 dark:text-gray-400">
+                All Features
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Everything you need for
+              <br />
+              <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                video creation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover all the powerful features that make RunAsh AI the
+              ultimate platform for creating, editing, and streaming videos with
+              artificial intelligence
+            </p>
+            <div className="mb-8">
+              <Carousel items={carouselItems} />
+            </div>
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-4">
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="outline">What makes us unique?</Button>
+                </PopoverTrigger>
+                <PopoverContent className="text-sm max-w-xs">
+                  <div className="font-bold mb-2 text-purple-600">
+                    Tech Innovations
+                  </div>
+                  <ul className="list-disc pl-4 text-left text-gray-700 dark:text-gray-300">
+                    <li>Real-time AI video streaming</li>
+                    <li>Multi-modal content generation</li>
+                    <li>Open-source, privacy-first</li>
+                    <li>Enterprise-grade security</li>
+                  </ul>
+                </PopoverContent>
+              </Popover>
+              <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+                <DialogTrigger asChild>
+                  <Button
+                    onClick={() => setOpenDialog(true)}
+                    variant="secondary"
+                  >
+                    See a Demo
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogTitle>Live Demo Preview</DialogTitle>
+                  <DialogDescription>
+                    Watch a short demo of RunAsh AI's real-time video generation
+                    and streaming capabilities.
+                  </DialogDescription>
+                  <div className="aspect-video w-full bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center mt-4">
+                    <span className="text-gray-500">
+                      [Demo Video Placeholder]
+                    </span>
+                  </div>
+                </DialogContent>
+              </Dialog>
+              <Button onClick={() => setShowToast(true)} variant="default">
+                Copy Feature List
               </Button>
-            </Link>
+            </div>
+            <Toast open={showToast} onOpenChange={setShowToast}>
+              <ToastTitle>Copied!</ToastTitle>
+              <ToastDescription>
+                Feature list copied to clipboard.
+              </ToastDescription>
+            </Toast>
+            <ToastViewport />
           </div>
-        </div>
-      </header>
+        </section>
 
-      {/* Hero Section with Carousel */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-4 py-2 text-sm mb-8">
-            <Sparkles className="w-4 h-4 text-purple-600 mr-2" />
-            <span className="text-gray-600 dark:text-gray-400">All Features</span>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Everything you need for
-            <br />
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">video creation</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover all the powerful features that make RunAsh AI the ultimate platform for creating, editing, and streaming videos with artificial intelligence
-          </p>
-          <div className="mb-8">
-            <Carousel items={carouselItems} />
-          </div>
-          <div className="flex flex-col md:flex-row gap-4 justify-center mb-4">
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button variant="outline">What makes us unique?</Button>
-              </PopoverTrigger>
-              <PopoverContent className="text-sm max-w-xs">
-                <div className="font-bold mb-2 text-purple-600">Tech Innovations</div>
-                <ul className="list-disc pl-4 text-left text-gray-700 dark:text-gray-300">
-                  <li>Real-time AI video streaming</li>
-                  <li>Multi-modal content generation</li>
-                  <li>Open-source, privacy-first</li>
-                  <li>Enterprise-grade security</li>
-                </ul>
-              </PopoverContent>
-            </Popover>
-            <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-              <DialogTrigger asChild>
-                <Button onClick={() => setOpenDialog(true)} variant="secondary">See a Demo</Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogTitle>Live Demo Preview</DialogTitle>
-                <DialogDescription>
-                  Watch a short demo of RunAsh AI's real-time video generation and streaming capabilities.
-                </DialogDescription>
-                <div className="aspect-video w-full bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center mt-4">
-                  <span className="text-gray-500">[Demo Video Placeholder]</span>
+        <Separator className="my-12" />
+
+        {/* Core Features */}
+        <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              Core Features
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+              Essential tools for creating professional videos with AI
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {featuresData.core.map((feature, index) => (
+                <div
+                  key={index}
+                  className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.features.map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </DialogContent>
-            </Dialog>
-            <Button onClick={() => setShowToast(true)} variant="default">Copy Feature List</Button>
+              ))}
+            </div>
           </div>
-          <Toast open={showToast} onOpenChange={setShowToast}>
-            <ToastTitle>Copied!</ToastTitle>
-            <ToastDescription>Feature list copied to clipboard.</ToastDescription>
-          </Toast>
-          <ToastViewport />
-        </div>
-      </section>
+        </section>
 
-      <Separator className="my-12" />
-
-      {/* Core Features */}
-      <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Core Features
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Essential tools for creating professional videos with AI
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuresData.core.map((feature, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6 text-white" />
+        {/* Streaming Features */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              Live Streaming
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+              Professional live streaming capabilities for content creators
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {featuresData.streaming.map((feature, index) => (
+                <div
+                  key={index}
+                  className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.features.map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
-                    >
-                      <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mr-3" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Streaming Features */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Live Streaming
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Professional live streaming capabilities for content creators
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuresData.streaming.map((feature, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6 text-white" />
+        {/* Collaboration Features */}
+        <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              Collaboration & Sharing
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+              Work together and share your creations with the world
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {featuresData.collaboration.map((feature, index) => (
+                <div
+                  key={index}
+                  className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.features.map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
-                    >
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Collaboration Features */}
-      <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Collaboration & Sharing
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Work together and share your creations with the world
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuresData.collaboration.map((feature, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6 text-white" />
+        {/* Technical Features */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+              Technical Excellence
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+              Enterprise-grade infrastructure and security for reliable
+              performance
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {featuresData.technical.map((feature, index) => (
+                <div
+                  key={index}
+                  className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-6">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.features.map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+                      >
+                        <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
-                    >
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-3" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Technical Features */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Technical Excellence
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Enterprise-grade infrastructure and security for reliable
-            performance
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuresData.technical.map((feature, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-2xl bg-white dark:bg-black border border-gray-200 dark:border-gray-800"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center text-sm text-gray-600 dark:text-gray-400"
-                    >
-                      <div className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-3" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to create amazing videos?
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of creators who are already using RunAsh AI to
+              bring their ideas to life
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/app">
+                <Button
+                  size="lg"
+                  className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 px-8 py-4 text-lg min-w-[200px]"
+                >
+                  Start Creating
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-gray-300 dark:border-gray-600 text-black dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-4 text-lg min-w-[200px] bg-transparent"
+                >
+                  Back to Home
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to create amazing videos?
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of creators who are already using RunAsh AI to bring
-            their ideas to life
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/app">
-              <Button
-                size="lg"
-                className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 px-8 py-4 text-lg min-w-[200px]"
-              >
-                Start Creating
-              </Button>
-            </Link>
-            <Link href="/">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-gray-300 dark:border-gray-600 text-black dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 px-8 py-4 text-lg min-w-[200px] bg-transparent"
-              >
-                Back to Home
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
       </div>
     </ToastProvider>
   );

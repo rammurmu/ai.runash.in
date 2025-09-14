@@ -1,6 +1,12 @@
 "use client";
 import { useState } from "react";
-import { ToastProvider, Toast, ToastTitle, ToastDescription, ToastViewport } from "@/components/ui/toast";
+import {
+  ToastProvider,
+  Toast,
+  ToastTitle,
+  ToastDescription,
+  ToastViewport,
+} from "@/components/ui/toast";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -19,14 +25,15 @@ export default function ForgotPasswordPage() {
       <div className="max-w-md mx-auto mt-20 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
         <h1 className="text-2xl font-bold mb-4 text-center">Forgot Password</h1>
         <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
-          Enter your email address and we'll send you instructions to reset your password.
+          Enter your email address and we'll send you instructions to reset your
+          password.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="email"
             placeholder="Email address"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
             required
           />
@@ -42,7 +49,8 @@ export default function ForgotPasswordPage() {
       <Toast open={showToast} onOpenChange={setShowToast}>
         <ToastTitle>Check your email</ToastTitle>
         <ToastDescription>
-          If an account exists for {email}, you will receive a password reset link shortly.
+          If an account exists for {email}, you will receive a password reset
+          link shortly.
         </ToastDescription>
       </Toast>
       <ToastViewport />

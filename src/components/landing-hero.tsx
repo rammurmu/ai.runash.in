@@ -10,9 +10,14 @@ export default function Hero() {
       <div className="container relative flex flex-col items-center justify-center mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm mb-8">
-            <span className="text-black bg-white rounded-full px-3 py-1">New</span>
+            <span className="text-black bg-white rounded-full px-3 py-1">
+              New
+            </span>
             <span className="ml-3 h-4 w-px bg-white/20" />
-            <a href="https://runash.in/blog" className="ml-3 flex items-center text-white hover:text-gray-300">
+            <a
+              href="https://runash.in/blog"
+              className="ml-3 flex items-center text-white hover:text-gray-300"
+            >
               Introducing <ArrowRight className="ml-1 h-4 w-4" />
             </a>
           </div>
@@ -20,11 +25,16 @@ export default function Hero() {
             RunAsh AI
           </h1>
           <p className="text-gray-400 text-lg md:text-2xl max-w-2xl mx-auto mb-8">
-            The next-gen platform for AI-powered live video streaming, image generation, and real-time chat. Create, stream, and interact with AI in ways never before possible.
+            The next-gen platform for AI-powered live video streaming, image
+            generation, and real-time chat. Create, stream, and interact with AI
+            in ways never before possible.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <Link href="/app">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-200 min-w-[200px]">
+              <Button
+                size="lg"
+                className="bg-white text-black hover:bg-gray-200 min-w-[200px]"
+              >
                 Watch Demo
               </Button>
             </Link>
@@ -42,17 +52,26 @@ export default function Hero() {
           <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/10 rounded-xl p-6 shadow-lg flex flex-col items-center">
             <span className="text-4xl mb-2">🎥</span>
             <h3 className="font-bold text-lg mb-1">Live Video Generation</h3>
-            <p className="text-gray-400 text-sm text-center">Generate and stream AI-powered videos in real time from your prompts.</p>
+            <p className="text-gray-400 text-sm text-center">
+              Generate and stream AI-powered videos in real time from your
+              prompts.
+            </p>
           </div>
           <div className="bg-gradient-to-br from-pink-600/20 to-yellow-500/10 rounded-xl p-6 shadow-lg flex flex-col items-center">
             <span className="text-4xl mb-2">🖼️</span>
             <h3 className="font-bold text-lg mb-1">AI Image Generation</h3>
-            <p className="text-gray-400 text-sm text-center">Create stunning images instantly with advanced AI models and prompt enhancement.</p>
+            <p className="text-gray-400 text-sm text-center">
+              Create stunning images instantly with advanced AI models and
+              prompt enhancement.
+            </p>
           </div>
           <div className="bg-gradient-to-br from-green-600/20 to-cyan-500/10 rounded-xl p-6 shadow-lg flex flex-col items-center">
             <span className="text-4xl mb-2">💬</span>
             <h3 className="font-bold text-lg mb-1">Real-Time Chat & Talk</h3>
-            <p className="text-gray-400 text-sm text-center">Interact with AI via chat or voice, and get instant responses and live feedback.</p>
+            <p className="text-gray-400 text-sm text-center">
+              Interact with AI via chat or voice, and get instant responses and
+              live feedback.
+            </p>
           </div>
         </div>
 

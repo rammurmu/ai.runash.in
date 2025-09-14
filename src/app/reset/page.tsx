@@ -1,6 +1,12 @@
 "use client";
 import { useState } from "react";
-import { ToastProvider, Toast, ToastTitle, ToastDescription, ToastViewport } from "@/components/ui/toast";
+import {
+  ToastProvider,
+  Toast,
+  ToastTitle,
+  ToastDescription,
+  ToastViewport,
+} from "@/components/ui/toast";
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState("");
@@ -34,7 +40,7 @@ export default function ResetPasswordPage() {
             type="password"
             placeholder="New password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
             required
           />
@@ -42,7 +48,7 @@ export default function ResetPasswordPage() {
             type="password"
             placeholder="Confirm new password"
             value={confirm}
-            onChange={e => setConfirm(e.target.value)}
+            onChange={(e) => setConfirm(e.target.value)}
             className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
             required
           />
@@ -55,10 +61,16 @@ export default function ResetPasswordPage() {
           </button>
         </form>
       </div>
-      <Toast open={showToast} onOpenChange={setShowToast} variant={error ? "destructive" : undefined}>
+      <Toast
+        open={showToast}
+        onOpenChange={setShowToast}
+        variant={error ? "destructive" : undefined}
+      >
         <ToastTitle>{error ? "Error" : "Success"}</ToastTitle>
         <ToastDescription>
-          {error ? error : "Your password has been reset. You can now log in with your new password."}
+          {error
+            ? error
+            : "Your password has been reset. You can now log in with your new password."}
         </ToastDescription>
       </Toast>
       <ToastViewport />
