@@ -1,3 +1,4 @@
+"use client";
 import {
   Video,
   Zap,
@@ -19,6 +20,12 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Carousel } from "@/components/ui/carousel";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { ToastProvider, Toast, ToastTitle, ToastDescription, ToastViewport } from "@/components/ui/toast";
+import { Separator } from "@/components/ui/separator";
+import { useState } from "react";
 
 const featuresData = {
   core: [
@@ -224,8 +231,39 @@ const featuresData = {
 };
 
 export default function FeaturesPage() {
+  // Carousel items: highlight top features
+  const carouselItems = [
+    <div className="flex flex-col items-center justify-center h-full" key="c1">
+      <Video className="w-12 h-12 text-purple-500 mb-2" />
+      <div className="font-bold text-lg mb-1">AI Video Generation</div>
+      <div className="text-gray-500 text-sm text-center">Create videos from text prompts in seconds.</div>
+    </div>,
+    <div className="flex flex-col items-center justify-center h-full" key="c2">
+      <Wifi className="w-12 h-12 text-blue-500 mb-2" />
+      <div className="font-bold text-lg mb-1">Live Streaming</div>
+      <div className="text-gray-500 text-sm text-center">Stream to any platform with low latency.</div>
+    </div>,
+    <div className="flex flex-col items-center justify-center h-full" key="c3">
+      <Users className="w-12 h-12 text-green-500 mb-2" />
+      <div className="font-bold text-lg mb-1">Team Collaboration</div>
+      <div className="text-gray-500 text-sm text-center">Work together in real time on projects.</div>
+    </div>,
+    <div className="flex flex-col items-center justify-center h-full" key="c4">
+      <Shield className="w-12 h-12 text-orange-500 mb-2" />
+      <div className="font-bold text-lg mb-1">Enterprise Security</div>
+      <div className="text-gray-500 text-sm text-center">Bank-level security and compliance.</div>
+    </div>,
+  ];
+
+  // Toast state
+  const [showToast, setShowToast] = useState(false);
+
+  // Dialog state
+  const [openDialog, setOpenDialog] = useState(false);
+
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
+    <ToastProvider>
+      <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10">
         <div className="container mx-auto px-4">
@@ -245,37 +283,64 @@ export default function FeaturesPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section with Carousel */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-4 py-2 text-sm mb-8">
             <Sparkles className="w-4 h-4 text-purple-600 mr-2" />
-            <span className="text-gray-600 dark:text-gray-400">
-              All Features
-            </span>
+            <span className="text-gray-600 dark:text-gray-400">All Features</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Everything you need for
             <br />
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              video creation
-            </span>
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">video creation</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover all the powerful features that make RunAsh AI the ultimate
-            platform for creating, editing, and streaming videos with artificial
-            intelligence
+            Discover all the powerful features that make RunAsh AI the ultimate platform for creating, editing, and streaming videos with artificial intelligence
           </p>
-          <Link href="/app">
-            <Button
-              size="lg"
-              className="bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 px-8 py-4 text-lg"
-            >
-              Start Creating
-            </Button>
-          </Link>
+          <div className="mb-8">
+            <Carousel items={carouselItems} />
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 justify-center mb-4">
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button variant="outline">What makes us unique?</Button>
+              </PopoverTrigger>
+              <PopoverContent className="text-sm max-w-xs">
+                <div className="font-bold mb-2 text-purple-600">Tech Innovations</div>
+                <ul className="list-disc pl-4 text-left text-gray-700 dark:text-gray-300">
+                  <li>Real-time AI video streaming</li>
+                  <li>Multi-modal content generation</li>
+                  <li>Open-source, privacy-first</li>
+                  <li>Enterprise-grade security</li>
+                </ul>
+              </PopoverContent>
+            </Popover>
+            <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+              <DialogTrigger asChild>
+                <Button onClick={() => setOpenDialog(true)} variant="secondary">See a Demo</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogTitle>Live Demo Preview</DialogTitle>
+                <DialogDescription>
+                  Watch a short demo of RunAsh AI's real-time video generation and streaming capabilities.
+                </DialogDescription>
+                <div className="aspect-video w-full bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center mt-4">
+                  <span className="text-gray-500">[Demo Video Placeholder]</span>
+                </div>
+              </DialogContent>
+            </Dialog>
+            <Button onClick={() => setShowToast(true)} variant="default">Copy Feature List</Button>
+          </div>
+          <Toast open={showToast} onOpenChange={setShowToast}>
+            <ToastTitle>Copied!</ToastTitle>
+            <ToastDescription>Feature list copied to clipboard.</ToastDescription>
+          </Toast>
+          <ToastViewport />
         </div>
       </section>
+
+      <Separator className="my-12" />
 
       {/* Core Features */}
       <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
@@ -465,6 +530,7 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </ToastProvider>
   );
 }

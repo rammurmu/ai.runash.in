@@ -3,7 +3,9 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import Navbar from "@/components/navbar";
+
 import { ThemeProvider } from "next-themes";
+import { NextAuthProvider } from "@/components/next-auth-provider";
 
 export const metadata: Metadata = {
   title: "AI Video Developer Starter Kit | fal.ai",
@@ -18,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          <Sidebar />
-          <div className="pt-16 pl-0 md:pl-56 transition-all">{children}</div>
-        </ThemeProvider>
+        <NextAuthProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Navbar />
+            <Sidebar />
+            <div className="pt-16 pl-0 md:pl-56 transition-all">{children}</div>
+          </ThemeProvider>
+        </NextAuthProvider>
         <Analytics />
       </body>
     </html>
