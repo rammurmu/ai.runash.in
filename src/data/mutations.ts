@@ -1,4 +1,4 @@
-import { fal } from "@/lib/fal";
+import { getFalClient } from "@/lib/fal";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { db } from "./db";
 import { queryKeys } from "./queries";
@@ -41,10 +41,15 @@ export const useJobCreator = ({
 }: JobCreatorParams) => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: () =>
-      fal.queue.submit(endpointId, {
+    mutationFn: () => {
+      const fal = getFalClient();
+      if (!fal) {
+        throw new Error("Fal client not available");
+      }
+      return fal.queue.submit(endpointId, {
         input,
-      }),
+      });
+    },
     onSuccess: async (data) => {
       await db.media.create({
         projectId,

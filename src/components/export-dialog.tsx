@@ -13,7 +13,7 @@ import {
   useProject,
   useVideoComposition,
 } from "@/data/queries";
-import { fal } from "@/lib/fal";
+import { getFalClient } from "@/lib/fal";
 import { Button } from "./ui/button";
 import { useProjectId, useVideoProjectStore } from "@/data/store";
 import { LoadingIcon } from "./ui/icons";
@@ -54,6 +54,10 @@ export function ExportDialog({ onOpenChange, ...props }: ExportDialogProps) {
       }));
       if (videoData.length === 0) {
         throw new Error("No tracks to export");
+      }
+      const fal = getFalClient();
+      if (!fal) {
+        throw new Error("Fal client not available");
       }
       const { data } = await fal.subscribe("fal-ai/ffmpeg-api/compose", {
         input: {

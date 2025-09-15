@@ -22,7 +22,7 @@ import {
 } from "react";
 import { WithTooltip } from "../ui/tooltip";
 import { useProjectId, useVideoProjectStore } from "@/data/store";
-import { fal } from "@/lib/fal";
+import { getFalClient } from "@/lib/fal";
 
 type VideoTrackRowProps = {
   data: VideoTrack;
@@ -74,6 +74,10 @@ function AudioWaveform({ data }: AudioWaveformProps) {
     queryFn: async () => {
       if (data.metadata?.waveform && Array.isArray(data.metadata.waveform)) {
         return data.metadata.waveform;
+      }
+      const fal = getFalClient();
+      if (!fal) {
+        throw new Error("Fal client not available");
       }
       const { data: waveformInfo } = await fal.subscribe(
         "fal-ai/ffmpeg-api/waveform",

@@ -1,5 +1,5 @@
 import { VideoProject } from "@/data/schema";
-import { fal } from "./fal";
+import { getFalClient } from "./fal";
 import { extractJson } from "./utils";
 
 const SYSTEM_PROMPT = `
@@ -31,6 +31,11 @@ type ProjectSuggestion = {
 };
 
 export async function createProjectSuggestion() {
+  const fal = getFalClient();
+  if (!fal) {
+    throw new Error("Fal client not available");
+  }
+  
   const { data } = await fal.subscribe("fal-ai/any-llm", {
     input: {
       system_prompt: SYSTEM_PROMPT,

@@ -2,7 +2,7 @@ import { db } from "@/data/db";
 import { queryKeys } from "@/data/queries";
 import type { MediaItem } from "@/data/schema";
 import { useProjectId, useVideoProjectStore } from "@/data/store";
-import { fal } from "@/lib/fal";
+import { getFalClient } from "@/lib/fal";
 import { cn, resolveMediaUrl, trackIcons } from "@/lib/utils";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { formatDistanceToNow } from "date-fns";
@@ -47,6 +47,10 @@ export function MediaItemRow({
     queryKey: queryKeys.projectMedia(projectId, data.id),
     queryFn: async () => {
       if (data.kind === "uploaded") return null;
+      const fal = getFalClient();
+      if (!fal) {
+        throw new Error("Fal client not available");
+      }
       const queueStatus = await fal.queue.status(data.endpointId, {
         requestId: data.requestId,
       });

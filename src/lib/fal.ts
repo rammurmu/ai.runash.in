@@ -1,11 +1,18 @@
-"use client";
-
 import { createFalClient } from "@fal-ai/client";
 
-export const fal = createFalClient({
-  credentials: () => localStorage?.getItem("falKey") as string,
-  proxyUrl: "/api/fal",
-});
+let falInstance: ReturnType<typeof createFalClient> | null = null;
+export function getFalClient() {
+  if (typeof window === "undefined") {
+    throw new Error("fal client can only be used in the browser");
+  }
+  if (!falInstance) {
+    falInstance = createFalClient({
+      credentials: () => localStorage?.getItem("falKey") as string,
+      proxyUrl: "/api/fal",
+    });
+  }
+  return falInstance;
+}
 
 export type InputAsset =
   | "video"

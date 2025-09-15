@@ -1,5 +1,5 @@
 import type { VideoProject } from "@/data/schema";
-import { fal } from "./fal";
+import { getFalClient } from "./fal";
 
 type EnhancePromptOptions = {
   type: "image" | "video" | "music" | "voiceover";
@@ -38,6 +38,10 @@ export async function enhancePrompt(
   `.trim();
   const promptInfo = !prompt.trim() ? "" : `User prompt: ${prompt}`;
 
+  const fal = getFalClient();
+  if (!fal) {
+    throw new Error("Fal client not available");
+  }
   const { data } = await fal.subscribe("fal-ai/any-llm", {
     input: {
       system_prompt: SYSTEM_PROMPT,
