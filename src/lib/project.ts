@@ -35,7 +35,7 @@ export async function createProjectSuggestion() {
   if (!fal) {
     throw new Error("Fal client not available");
   }
-  
+
   const { data } = await fal.subscribe("fal-ai/any-llm", {
     input: {
       system_prompt: SYSTEM_PROMPT,
