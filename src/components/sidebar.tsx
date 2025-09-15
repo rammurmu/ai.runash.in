@@ -15,11 +15,11 @@ import {
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/dashboard", label: "Dashboard", icon: BarChart3 },
-  { href: "/profile", label: "Profile", icon: User },
-  { href: "/settings", label: "Settings", icon: Settings },
+  { href: "/", label: "Profile", icon: User },
+  { href: "/", label: "Settings", icon: Settings },
   { href: "/features", label: "Features", icon: Star },
-  { href: "/about", label: "About", icon: Info },
-  { href: "/contact", label: "Contact", icon: Phone },
+  { href: "/", label: "About", icon: Info },
+  { href: "/", label: "Contact", icon: Phone },
 ];
 
 export default function Sidebar() {
