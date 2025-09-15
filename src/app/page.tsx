@@ -1,7 +1,6 @@
 import Hero from "@/components/landing-hero";
 import Features from "@/components/landing-features";
 import Community from "@/components/landing-community";
-import Footer from "@/components/landing-footer";
 import LiveStreamVideo from "@/components/live-stream-video";
 import ImageGeneration from "@/components/image-generation";
 import TalkToLive from "@/components/talk-to-live";
@@ -21,12 +20,7 @@ export default function IndexPage() {
           
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* <LiveStreamVideo /> */}
-         {/* <ImageGeneration /> */}
-         {/* <TalkToLive /> *//}
-         {/* <PromptEnhance /> */}
-         {/* <StreamRealTime /> */}
-         {/* <Chat /> */}
+    
         </div>
       </section>
 
@@ -35,7 +29,7 @@ export default function IndexPage() {
       </section>
       <section>
         <Community />
-        <Footer />
+        
       </section>
     </main>
   );
