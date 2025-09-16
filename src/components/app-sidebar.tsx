@@ -36,7 +36,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Logo } from "@/components/logo"
+{/* import { Logo } from "@/components/logo" */}
 import { useAuthContext } from "@/components/auth/auth-provider"
 
 // This is sample data.
@@ -134,7 +134,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenuButton size="lg" asChild>
               <a href="/">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <Logo />
+                  {/* <Logo /> */}
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">RunAsh AI</span>
