@@ -57,7 +57,7 @@ export default function AboutPage() {
           Together.
 
           
-        [Contact Us](https://ai.runash.in/contact) | [Careers]() | [Research]()
+        [Contact Us] | [Careers] | [Research]
 
         
         </p>
@@ -71,6 +71,7 @@ export default function AboutPage() {
           interactive, and ethical technology.
         </p>
       </section>
+      </div>
       <section>
         <h2 className="text-2xl font-bold mb-4 text-gray-900">
           Team
@@ -106,5 +107,6 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
+  
   );
 }
