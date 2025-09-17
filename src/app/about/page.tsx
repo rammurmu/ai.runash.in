@@ -12,10 +12,9 @@ export default function AboutPage() {
         <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
           Building the future of retail and creative automation through Human-AI collaboration.
           RunAsh AI is an applied research lab on the frontier of retail automation, empowering developers, creators, and businesses to harness AI not just as a tool, but as a true partner.
-          <br /><br />
           We believe the future of retail and creation is co-designed by humans and AI, where the Human-AI Programmer directs entire systems with a thought, iterates at the speed of judgment, and turns complexity into clarity.
         </p>
-        <ul className="list-disc ml-6 text-lg text-gray-700 dark:text-gray-300 space-y-2"></ul>
+        <ul className="list-disc ml-6 text-lg text-gray-700 dark:text-gray-300 space-y-2">
           <li>Invent foundational software and intelligence layers for creators.</li>
           <li>Design models, interfaces, and infrastructures that keep humans at the center.</li>
           <li>Make advanced AI video, image, and media generation accessible, ethical, and interactive.</li>
@@ -33,7 +32,6 @@ export default function AboutPage() {
             RunAsh AI began as a passion project to democratize next-gen AI for real-time creative tasks. Today, our global team pioneers breakthroughs in retail, media, and interactive technology, always with a focus on empowering people and maintaining ethical standards.
           </p>
         </div>
-      </section>
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
           We’re a tight-knit team of researchers, engineers, and tinkerers, obsessed with building not only better software, but better creators. Our work improves the daily lives of millions of programmers and creative professionals around the world.
         </p>
@@ -75,7 +73,7 @@ export default function AboutPage() {
             <div className="text-sm text-gray-500">Product Designer</div>
           </div>
         </div>
-      </section>
+    
 
       <section className="mb-12 text-center">
         <h2 className="text-3xl font-bold mb-3 text-gray-900">Join Us</h2>
