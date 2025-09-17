@@ -23,7 +23,7 @@ export default function AboutPage() {
       </div>
 
       {/* Intro and Story */}
-      <section className="max-w-2xl mx-auto mt-16 px-6">
+      {/*  <section className="max-w-2xl mx-auto mt-16 px-6">
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
           RunAsh AI is an applied research lab working at the frontier of retail and creative automation. Our approach is to build the engineer of the future: a human–AI programmer that's an order of magnitude more effective than any one programmer.
         </p>
@@ -40,6 +40,52 @@ export default function AboutPage() {
           — <Link href="https://github.com/rammurmu" className="underline">Ram Murmu</Link>, Vaibhav Murmu, P K Murmu, and the entire RunAsh AI team
         </p>
         <hr className="border-gray-800 mb-8"/>
+      </section> */}
+      
+      {/* Inspired intro and story from previous contents */}
+      <section className="max-w-2xl mx-auto mt-16 px-6">
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          RunAsh AI is an applied research lab on the frontier of retail automation, building not just better tools but better creators.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          The future of retail isn’t just automated. It’s co-created. At its heart is a new kind of engineer: the Human-AI Programmer. This isn’t another AI assistant. It’s a symbiotic partner—an order-of-magnitude force multiplier that fuses human intuition with AI’s scale, speed, and precision.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          Our Human-AI Programmer doesn’t type code. They think in systems. They don’t debug line by line—they direct entire architectures with a thought. No low-entropy keystrokes. No context switches. No friction between idea and execution. They iterate at the speed of judgment—even inside the most complex, high-stakes retail ecosystems.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          We believe the best AI systems aren’t those that replace humans—but those that elevate them beyond what was once imaginable. A pure-AI system can optimize. A Human-AI Programmer can invent.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          Empower creators and developers with cutting-edge AI tools for live video, image, and real-time interaction. We believe in open-source, transparency, and the power of community-driven innovation.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          To invent the foundational software and intelligence layers that enable this new breed of creator—engineers who wield AI not as a tool, but as an extension of their own intellect. We build models, interfaces, and infrastructures that turn ambiguity into action, and complexity into clarity—all while keeping the human at the center.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          We’re a tight-knit team of researchers, engineers, and tinkerers obsessed with the edge case—where what’s possible meets what’s useful. We don’t chase trends. We chase breakthroughs.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          Our work has already improved the daily lives of millions of programmers worldwide—making them faster, more confident, and more creative.
+        </p>
+        <p className="mb-8">
+          We don’t just build software. We build the next generation of human potential.
+        </p>
+        <p className="mb-8">
+          If you believe the future belongs to those who think beyond automation—to those who dare to co-create with machines—we want to hear from you.
+        </p>
+        <p className="mb-16 text-gray-400">
+          — <Link href="https://github.com/rammurmu" className="underline">Ram Murmu</Link>, Vaibhav Murmu, P K Murmu, and the entire RunAsh AI team
+        </p>
+        <hr className="border-gray-800 mb-8"/>
+      </section>
+
+      {/* Story Section */}
+      <section className="max-w-2xl mx-auto px-6 mb-16">
+        <h2 className="text-2xl font-bold mb-3 text-gray-100">Story</h2>
+        <p className="text-lg text-gray-300 mb-4">
+          RunAsh AI started as a passion project to make advanced AI video and media generation accessible to everyone. Today, we are a global team building the future of creative AI, with a focus on real-time, interactive, and ethical technology.
+        </p>
       </section>
 
       {/* Careers Section */}
