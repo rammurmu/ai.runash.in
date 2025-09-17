@@ -10,22 +10,22 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold mb-2 text-gray-900">RunAsh AI</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
           We are RunAsh AI — an applied research lab on the frontier of retail automation, building not just better tools but better creators.
-
+          <br />
           The future of retail isn’t just automated. It’s co-created.
           And at its heart is a new kind of engineer: the Human-AI Programmer.
-
+          <br />
           This isn’t another AI assistant.
           It’s a symbiotic partner — an order-of-magnitude force multiplier that fuses human intuition with AI’s scale, speed, and precision.
-
+           <br />
           Our Human-AI Programmer doesn’t type code. They think in systems.
           They don’t debug line by line — they direct entire architectures with a thought.
           No low-entropy keystrokes. No context switches. No friction between idea and execution.
           They iterate at the speed of judgment — even inside the most complex, high-stakes retail ecosystems.
-
+          <br />
           We believe the best AI systems aren’t those that replace humans — but those that elevate them beyond what was once imaginable.
           A pure-AI system can optimize.
           A Human-AI Programmer can invent.
-          
+          <br />
           Empower creators and developers with cutting-edge AI tools for live video, image, and real-time interaction. We believe in open-source,
           transparency, and the power of community-driven innovation.
         </p>
