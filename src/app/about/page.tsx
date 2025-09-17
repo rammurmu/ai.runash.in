@@ -25,10 +25,10 @@ export default function AboutPage() {
       {/* Intro and Story */}
         <section className="max-w-2xl mx-auto mt-16 px-6">
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
-          RunAsh AI is an applied research lab working at the frontier of retail and creative automation. Our approach is to build the engineer of the future: a human–AI programmer that's an order of magnitude more effective than any one programmer.
+          RunAsh AI is an applied research lab working at the frontier of retail and creative automation. Our approach is to build the creator of the future: a human–AI creator that's an order of magnitude more effective than any one creator.
         </p>
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
-          This hybrid engineer will have effortless control over their codebase and no low-entropy keystrokes. They will iterate at the speed of their judgment, even in the most complex systems. Using a combination of AI and human ingenuity, they will out-smart and out-engineer the best pure-AI system.
+          This hybrid creator will have effortless control over their contents and no low-entropy keystrokes. They will iterate at the speed of their judgment, even in the most complex systems. Using a combination of AI and human ingenuity, they will out-smart and out-creator the best pure-AI system.
         </p>
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
           We are a group of researchers and engineers. We build software and models to invent at the edge of what's useful and what's possible. Our <Link href="/work" className="underline text-blue-400 hover:text-blue-600">work</Link> has already improved the lives of millions of programmers.
