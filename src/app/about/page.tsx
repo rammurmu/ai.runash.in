@@ -17,7 +17,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#15181E]"></div>
         <div className="absolute w-full bottom-12 flex justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-            Engineering Genius
+            Retail Automation 
           </h1>
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function AboutPage() {
       {/* Inspired intro and story from previous contents */}
       <section className="max-w-2xl mx-auto mt-16 px-6">
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
-          RunAsh AI is an applied research lab on the frontier of retail automation, building not just better tools but better creators.
+          RunAsh AI is an applied research lab working at the frontier of retail  and creative automation, Our approach is to building the future retail not just better tools but better creators.
         </p>
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
           The future of retail isn’t just automated. It’s co-created. At its heart is a new kind of engineer: the Human-AI Programmer. This isn’t another AI assistant. It’s a symbiotic partner—an order-of-magnitude force multiplier that fuses human intuition with AI’s scale, speed, and precision.
@@ -81,12 +81,12 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="max-w-2xl mx-auto px-6 mb-16">
+      {/*  <section className="max-w-2xl mx-auto px-6 mb-16">
         <h2 className="text-2xl font-bold mb-3 text-gray-100">Story</h2>
         <p className="text-lg text-gray-300 mb-4">
           RunAsh AI started as a passion project to make advanced AI video and media generation accessible to everyone. Today, we are a global team building the future of creative AI, with a focus on real-time, interactive, and ethical technology.
         </p>
-      </section>
+      </section> */}
 
       {/* Careers Section */}
       <section className="max-w-2xl mx-auto px-4 mb-16">
