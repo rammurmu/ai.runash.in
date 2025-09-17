@@ -7,7 +7,7 @@ export default function AboutPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">RunAsh AI</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          We are RunAsh AI — an applied research lab on the frontier of retail automation, building not just better tools… but better creators.
+          We are RunAsh AI — an applied research lab on the frontier of retail automation, building not just better tools but better creators.
 
           The future of retail isn’t just automated. It’s co-created.
           And at its heart is a new kind of engineer: the Human-AI Programmer.
@@ -24,11 +24,11 @@ export default function AboutPage() {
           A pure-AI system can optimize.
           A Human-AI Programmer can invent.
           
-          Empower creators and developers with cutting-edge AI tools for live
-          video, image, and real-time interaction. We believe in open-source,
+          Empower creators and developers with cutting-edge AI tools for live video, image, and real-time interaction. We believe in open-source,
           transparency, and the power of community-driven innovation.
         </p>
       </section>
+      
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">Our Mission</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -36,6 +36,7 @@ export default function AboutPage() {
           We build models, interfaces, and infrastructures that turn ambiguity into action, and complexity into clarity — all while keeping the human at the center.
         </p>
       </section>
+      
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">Who We Are</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -47,6 +48,7 @@ export default function AboutPage() {
           We build the next generation of human potential.
         </p>
       </section>
+      
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">Join Us</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -54,7 +56,7 @@ export default function AboutPage() {
           If you believe the future belongs to those who think beyond automation — to those who dare to co-create with machines — we want to hear from you.
 
           Let’s build the creators of tomorrow.
-          Together.<br />
+          Together.
 
           
         Contact Us | Careers | Research
@@ -62,6 +64,8 @@ export default function AboutPage() {
         
         </p>
       </section>
+      
+    
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">Story</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -71,7 +75,8 @@ export default function AboutPage() {
           interactive, and ethical technology.
         </p>
       </section>
-      
+      </div>
+    
       <section>
         <h2 className="text-2xl font-bold mb-4 text-gray-900">
           Team
@@ -84,8 +89,9 @@ export default function AboutPage() {
               className="w-20 h-20 rounded-full mb-3 border-4 border-gray-900"
             />
             <div className="font-semibold text-lg">Ram Murmu.</div>
-            <div className="text-sm text-gray-500">Founder & AI Engineer</div>
+            <div className="text-sm text-gray-500">Founder & AI Developer</div>
           </div>
+    
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
             <img
               src="https://github.com/rammurmu/ai.runash.in/blob/69d73ad50cb1c4599cca89aae5a0bbbcf6191bf0/public/vaibhav.png"
@@ -95,6 +101,7 @@ export default function AboutPage() {
             <div className="font-semibold text-lg"Vaibhav Murmu .</div>
             <div className="text-sm text-gray-500">Developer</div>
           </div>
+    
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
             <img
               src=""
@@ -104,9 +111,9 @@ export default function AboutPage() {
             <div className="font-semibold text-lg">P K Murmu.</div>
             <div className="text-sm text-gray-500">Product Designer</div>
           </div>
-        
+         </div>
       </section>
-    </div>
+    
   
   );
 }
