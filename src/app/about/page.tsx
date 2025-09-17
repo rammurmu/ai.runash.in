@@ -1,119 +1,111 @@
 "use client";
 import Image from "next/image";
-import Link xfrom "next/link";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-        About AI
-      </h1>
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-2 text-gray-900">RunAsh AI</h2>
+    <div className="p-8 max-w-5xl mx-auto">
+      <header className="mb-12 text-center">
+        <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          About RunAsh AI
+        </h1>
+        <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+          Building the future of retail and creative automation through Human-AI collaboration.
+        </p>
+      </header>
+
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-3 text-gray-900">Our Vision</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          We are RunAsh AI — an applied research lab on the frontier of retail automation, building not just better tools but better creators.
-          <br />
-          The future of retail isn’t just automated. It’s co-created.
-          And at its heart is a new kind of engineer: the Human-AI Programmer.
-          <br />
-          This isn’t another AI assistant.
-          It’s a symbiotic partner — an order-of-magnitude force multiplier that fuses human intuition with AI’s scale, speed, and precision.
-           <br />
-          Our Human-AI Programmer doesn’t type code. They think in systems.
-          They don’t debug line by line — they direct entire architectures with a thought.
-          No low-entropy keystrokes. No context switches. No friction between idea and execution.
-          They iterate at the speed of judgment — even inside the most complex, high-stakes retail ecosystems.
-          <br />
-          We believe the best AI systems aren’t those that replace humans — but those that elevate them beyond what was once imaginable.
-          A pure-AI system can optimize.
-          A Human-AI Programmer can invent.
-          <br />
-          Empower creators and developers with cutting-edge AI tools for live video, image, and real-time interaction. We believe in open-source,
-          transparency, and the power of community-driven innovation.
+          RunAsh AI is an applied research lab on the frontier of retail automation, empowering developers, creators, and businesses to harness AI not just as a tool, but as a true partner.
+          <br /><br />
+          We believe the future of retail and creation is co-designed by humans and AI, where the Human-AI Programmer directs entire systems with a thought, iterates at the speed of judgment, and turns complexity into clarity.
         </p>
       </section>
-      
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-2 text-gray-900">Our Mission</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
-          To invent the foundational software and intelligence layers that enable this new breed of creator — engineers who wield AI not as a tool, but as an extension of their own intellect.
-          We build models, interfaces, and infrastructures that turn ambiguity into action, and complexity into clarity — all while keeping the human at the center.
-        </p>
+
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-3 text-gray-900">Mission</h2>
+        <ul className="list-disc ml-6 text-lg text-gray-700 dark:text-gray-300 space-y-2">
+          <li>Invent foundational software and intelligence layers for creators.</li>
+          <li>Design models, interfaces, and infrastructures that keep humans at the center.</li>
+          <li>Make advanced AI video, image, and media generation accessible, ethical, and interactive.</li>
+          <li>Champion open-source, transparency, and community-driven innovation.</li>
+        </ul>
       </section>
-      
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-2 text-gray-900">Who We Are</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
-          We’re a tight-knit team of researchers, engineers, and tinkerers obsessed with the edge case — where what’s possible meets what’s useful.
-          We don’t chase trends. We chase breakthroughs.
-          Our work has already improved the daily lives of millions of programmers worldwide — making them faster, more confident, and more creative.
-          <br />
-          We don’t just build software.
-          We build the next generation of human potential.
-        </p>
+
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-3 text-gray-900">Our Story</h2>
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          <Image
+            src="/runash-story.jpg"
+            alt="RunAsh AI Story"
+            width={320}
+            height={180}
+            className="rounded-lg shadow"
+          />
+          <p className="text-lg text-gray-700 dark:text-gray-300">
+            RunAsh AI began as a passion project to democratize next-gen AI for real-time creative tasks. Today, our global team pioneers breakthroughs in retail, media, and interactive technology, always with a focus on empowering people and maintaining ethical standards.
+          </p>
+        </div>
       </section>
-      
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-2 text-gray-900">Join Us</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
-          If you believe the future belongs to those who think beyond automation — to those who dare to co-create with machines — we want to hear from you.
-           <br />
-          Let’s build the creators of tomorrow.
-          Together.
-          <br />
-           Contact Us | Careers | Research |
+
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold mb-3 text-gray-900">Who We Are</h2>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+          We’re a tight-knit team of researchers, engineers, and tinkerers, obsessed with building not only better software, but better creators. Our work improves the daily lives of millions of programmers and creative professionals around the world.
         </p>
-      </section>
-      
-    
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold mb-2 text-gray-900">Story</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
-          RunAsh AI started as a passion project to make advanced AI video and
-          media generation accessible to everyone. Today, we are a global team
-          building the future of creative AI, with a focus on real-time,
-          interactive, and ethical technology.
-        </p>
-      </section>
-      </div>
-    
-      <section>
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">
-          Team
-        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
-            <img
-              src="https://github.com/rammurmu/ai.runash.in/blob/69d73ad50cb1c4599cca89aae5a0bbbcf6191bf0/public/ram.png"
-              alt="Team member"
-              className="w-20 h-20 rounded-full mb-3 border-4 border-gray-900"
+            <Image
+              src="/ram.png"
+              alt="Ram Murmu"
+              width={80}
+              height={80}
+              className="rounded-full mb-3 border-4 border-gray-900"
             />
-            <div className="font-semibold text-lg">Ram Murmu.</div>
+            <div className="font-semibold text-lg">Ram Murmu</div>
             <div className="text-sm text-gray-500">Founder & AI Developer</div>
+            <a href="https://github.com/rammurmu" target="_blank" rel="noopener" className="mt-2 text-blue-600 hover:underline text-sm">GitHub</a>
           </div>
-    
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
-            <img
-              src="https://github.com/rammurmu/ai.runash.in/blob/69d73ad50cb1c4599cca89aae5a0bbbcf6191bf0/public/vaibhav.png"
-              alt="Team member"
-              className="w-20 h-20 rounded-full mb-3 border-4 border-gray-900"
+            <Image
+              src="/vaibhav.png"
+              alt="Vaibhav Murmu"
+              width={80}
+              height={80}
+              className="rounded-full mb-3 border-4 border-gray-900"
             />
-            <div className="font-semibold text-lg"Vaibhav Murmu .</div>
+            <div className="font-semibold text-lg">Vaibhav Murmu</div>
             <div className="text-sm text-gray-500">Developer</div>
+            <a href="https://github.com/vaibhavmurmu" target="_blank" rel="noopener" className="mt-2 text-blue-600 hover:underline text-sm">GitHub</a>
           </div>
-    
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
-            <img
-              src="https://"
-              alt="Team member"
-              className="w-20 h-20 rounded-full mb-3 border-4 border-gray-900"
+            <Image
+              src="/default.png"
+              alt="P K Murmu"
+              width={80}
+              height={80}
+              className="rounded-full mb-3 border-4 border-gray-900"
             />
-            <div className="font-semibold text-lg">P K Murmu.</div>
+            <div className="font-semibold text-lg">P K Murmu</div>
             <div className="text-sm text-gray-500">Product Designer</div>
           </div>
-         </div>
+        </div>
       </section>
-    
-  
+
+      <section className="mb-12 text-center">
+        <h2 className="text-3xl font-bold mb-3 text-gray-900">Join Us</h2>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+          If you believe the future belongs to those who go beyond automation and co-create with intelligent systems, RunAsh AI wants to hear from you.
+          <br />
+          <span className="font-semibold">Let’s build the creators of tomorrow. Together.</span>
+        </p>
+        <div className="flex justify-center gap-4">
+          <Link href="/contact" className="px-5 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">Contact Us</Link>
+          <Link href="/careers" className="px-5 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700">Careers</Link>
+          <Link href="/research" className="px-5 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700">Research</Link>
+        </div>
+      </section>
+    </div>
   );
-}
+        }
