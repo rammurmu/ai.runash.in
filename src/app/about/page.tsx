@@ -4,90 +4,121 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="p-8 max-w-5xl mx-auto">
-      <header className="mb-12 text-center">
-        <h1 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-black-500 to-white-600 bg-clip-text text-transparent">
-          RunAsh AI
-        </h1>
-        <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-          Building the future of retail and creative automation through Human-AI collaboration.
-          RunAsh AI is an applied research lab on the frontier of retail automation, empowering developers, creators, and businesses to harness AI not just as a tool, but as a true partner.
-          We believe the future of retail and creation is co-designed by humans and AI, where the Human-AI Programmer directs entire systems with a thought, iterates at the speed of judgment, and turns complexity into clarity.
-        </p>
-        <ul className="list-disc ml-6 text-lg text-gray-700 dark:text-gray-300 space-y-2">
-          <li>Invent foundational software and intelligence layers for creators.</li>
-          <li>Design models, interfaces, and infrastructures that keep humans at the center.</li>
-          <li>Make advanced AI video, image, and media generation accessible, ethical, and interactive.</li>
-          <li>Champion open-source, transparency, and community-driven innovation.</li>
-        </ul>
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <Image
-            src="/runash-story.jpg"
-            alt="RunAsh AI Story"
-            width={320}
-            height={180}
-            className="rounded-lg shadow"
-          />
-          <p className="text-lg text-gray-700 dark:text-gray-300">
-            RunAsh AI began as a passion project to democratize next-gen AI for real-time creative tasks. Today, our global team pioneers breakthroughs in retail, media, and interactive technology, always with a focus on empowering people and maintaining ethical standards.
-          </p>
+    <div className="min-h-screen bg-[#15181E] text-gray-100 font-serif">
+      {/* Hero Section */}
+      <div className="relative w-full h-[420px] md:h-[540px] overflow-hidden">
+        <Image
+          src="/about-hero.jpg" // Place your uploaded hero image in public/about-hero.jpg
+          alt="RunAsh AI Hero"
+          fill
+          priority
+          className="object-cover object-top brightness-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#15181E]"></div>
+        <div className="absolute w-full bottom-12 flex justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+            Engineering Genius
+          </h1>
         </div>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-          We’re a tight-knit team of researchers, engineers, and tinkerers, obsessed with building not only better software, but better creators. Our work improves the daily lives of millions of programmers and creative professionals around the world.
-        </p>
-    </header>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
-            <Image
-              src="/ram.png"
-              alt="Ram Murmu"
-              width={80}
-              height={80}
-              className="rounded-full mb-3 border-4 border-gray-900"
-            />
-            <div className="font-semibold text-lg">Ram Murmu</div>
-            <div className="text-sm text-gray-500">Founder & AI Developer</div>
-            <a href="https://github.com/rammurmu" target="_blank" rel="noopener" className="mt-2 text-blue-600 hover:underline text-sm">GitHub</a>
-          </div>
-          <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
-            <Image
-              src="/vaibhav.png"
-              alt="Vaibhav Murmu"
-              width={80}
-              height={80}
-              className="rounded-full mb-3 border-4 border-gray-900"
-            />
-            <div className="font-semibold text-lg">Vaibhav Murmu</div>
-            <div className="text-sm text-gray-500">Developer</div>
-            <a href="https://github.com/vaibhavmurmu" target="_blank" rel="noopener" className="mt-2 text-blue-600 hover:underline text-sm">GitHub</a>
-          </div>
-          <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
-            <Image
-              src="/pkmurmu.png"
-              alt="P K Murmu"
-              width={80}
-              height={80}
-              className="rounded-full mb-3 border-4 border-gray-900"
-            />
-            <div className="font-semibold text-lg">P K Murmu</div>
-            <div className="text-sm text-gray-500">Product Designer</div>
-          </div>
-        </div>
-    
+      </div>
 
-      <section className="mb-12 text-center">
-        <h2 className="text-3xl font-bold mb-3 text-gray-900">Join Us</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-          If you believe the future belongs to those who go beyond automation and co-create with intelligent systems, RunAsh AI wants to hear from you.
-          <br />
-          <span className="font-semibold">Let’s build the creators of tomorrow. Together.</span>
+      {/* Intro and Story */}
+      <section className="max-w-2xl mx-auto mt-16 px-6">
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          RunAsh AI is an applied research lab working at the frontier of retail and creative automation. Our approach is to build the engineer of the future: a human–AI programmer that's an order of magnitude more effective than any one programmer.
         </p>
-        <div className="flex justify-center gap-4">
-          <Link href="/contact" className="px-5 py-2 bg-black text-white rounded-lg font-medium hover:bg-blue-700">Contact Us</Link>
-          <Link href="/careers" className="px-5 py-2 bg-black text-white rounded-lg font-medium hover:bg-green-700">Careers</Link>
-          <Link href="/research" className="px-5 py-2 bg-black text-white rounded-lg font-medium hover:bg-purple-700">Research</Link>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          This hybrid engineer will have effortless control over their codebase and no low-entropy keystrokes. They will iterate at the speed of their judgment, even in the most complex systems. Using a combination of AI and human ingenuity, they will out-smart and out-engineer the best pure-AI system.
+        </p>
+        <p className="text-lg mb-6 leading-relaxed text-gray-300">
+          We are a group of researchers and engineers. We build software and models to invent at the edge of what's useful and what's possible. Our <Link href="/work" className="underline text-blue-400 hover:text-blue-600">work</Link> has already improved the lives of millions of programmers.
+        </p>
+        <p className="mb-8">
+          If this excites you, we'd love to hear from you.
+        </p>
+        <p className="mb-16 text-gray-400">
+          — <Link href="https://github.com/rammurmu" className="underline">Ram Murmu</Link>, Vaibhav Murmu, P K Murmu, and the entire RunAsh AI team
+        </p>
+        <hr className="border-gray-800 mb-8"/>
+      </section>
+
+      {/* Careers Section */}
+      <section className="max-w-2xl mx-auto px-4 mb-16">
+        <h2 className="text-2xl font-semibold mb-6">Careers</h2>
+        <div className="mb-10">
+          <h3 className="text-lg font-semibold mb-2">Engineering</h3>
+          <div className="divide-y divide-gray-800">
+            <CareerRow title="Infrastructure Engineer" location="Remote / Global" />
+            <CareerRow title="Research Engineer" location="Remote / Global" />
+            <CareerRow title="Product Engineer" location="Remote / Global" />
+            <CareerRow title="Enterprise Product Engineer" location="Remote / Global" />
+            <CareerRow title="Growth Data Scientist" location="Remote / Global" />
+          </div>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-2">Go-to-Market</h3>
+          <div className="divide-y divide-gray-800">
+            <CareerRow title="Account Executive" location="Remote / Global" />
+            <CareerRow title="Technical Account Manager" location="Remote / Global" />
+            <CareerRow title="Field Engineer" location="Remote / Global" />
+            <CareerRow title="Technical Support Engineer" location="Remote / Global" />
+          </div>
         </div>
       </section>
+
+      {/* Team Section */}
+      <section className="max-w-3xl mx-auto px-4 mb-20">
+        <h2 className="text-2xl font-semibold mb-8">Meet Our Team</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <TeamCard
+            name="Ram Murmu"
+            role="Founder & AI Developer"
+            image="/ram.png"
+            github="https://github.com/rammurmu"
+          />
+          <TeamCard
+            name="Vaibhav Murmu"
+            role="Developer"
+            image="/vaibhav.png"
+            github="https://github.com/vaibhavmurmu"
+          />
+          <TeamCard
+            name="P K Murmu"
+            role="Product Designer"
+            image="/default.png"
+          />
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// Team card component
+function TeamCard({ name, role, image, github }: { name: string, role: string, image: string, github?: string }) {
+  return (
+    <div className="flex flex-col items-center bg-[#171A23] rounded-xl shadow p-6 border border-gray-800">
+      <Image
+        src={image}
+        alt={name}
+        width={80}
+        height={80}
+        className="rounded-full mb-3 border-4 border-gray-900"
+      />
+      <div className="font-semibold text-lg">{name}</div>
+      <div className="text-sm text-gray-400 mb-2">{role}</div>
+      {github && (
+        <a href={github} target="_blank" rel="noopener" className="text-blue-400 hover:underline text-sm">GitHub</a>
+      )}
+    </div>
+  );
+}
+
+// Career row component
+function CareerRow({ title, location }: { title: string, location: string }) {
+  return (
+    <div className="flex justify-between py-2">
+      <Link href={`/careers/${title.toLowerCase().replace(/ /g, "-")}`} className="text-gray-200 hover:underline">{title}</Link>
+      <span className="text-gray-400 text-sm">{location}</span>
     </div>
   );
         }
