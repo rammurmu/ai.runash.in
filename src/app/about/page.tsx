@@ -1,10 +1,12 @@
 "use client";
+import Image from "next/image";
+import Link xfrom "next/link";
 
 export default function AboutPage() {
   return (
     <div className="p-8 max-w-4xl mx-auto">
       <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-        About
+        About AI
       </h1>
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">RunAsh AI</h2>
