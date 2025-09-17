@@ -6,35 +6,21 @@ export default function AboutPage() {
   return (
     <div className="p-8 max-w-5xl mx-auto">
       <header className="mb-12 text-center">
-        <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-          About RunAsh AI
+        <h1 className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-black-500 to-white-600 bg-clip-text text-transparent">
+          RunAsh AI
         </h1>
         <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
           Building the future of retail and creative automation through Human-AI collaboration.
-        </p>
-      </header>
-
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-3 text-gray-900">Our Vision</h2>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
           RunAsh AI is an applied research lab on the frontier of retail automation, empowering developers, creators, and businesses to harness AI not just as a tool, but as a true partner.
           <br /><br />
           We believe the future of retail and creation is co-designed by humans and AI, where the Human-AI Programmer directs entire systems with a thought, iterates at the speed of judgment, and turns complexity into clarity.
         </p>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-3 text-gray-900">Mission</h2>
-        <ul className="list-disc ml-6 text-lg text-gray-700 dark:text-gray-300 space-y-2">
+        <ul className="list-disc ml-6 text-lg text-gray-700 dark:text-gray-300 space-y-2"></ul>
           <li>Invent foundational software and intelligence layers for creators.</li>
           <li>Design models, interfaces, and infrastructures that keep humans at the center.</li>
           <li>Make advanced AI video, image, and media generation accessible, ethical, and interactive.</li>
           <li>Champion open-source, transparency, and community-driven innovation.</li>
         </ul>
-      </section>
-
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-3 text-gray-900">Our Story</h2>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <Image
             src="/runash-story.jpg"
@@ -48,12 +34,10 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-3 text-gray-900">Who We Are</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
           We’re a tight-knit team of researchers, engineers, and tinkerers, obsessed with building not only better software, but better creators. Our work improves the daily lives of millions of programmers and creative professionals around the world.
         </p>
+    </header>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
             <Image
@@ -81,7 +65,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
             <Image
-              src="/default.png"
+              src="/pkmurmu.png"
               alt="P K Murmu"
               width={80}
               height={80}
@@ -101,9 +85,9 @@ export default function AboutPage() {
           <span className="font-semibold">Let’s build the creators of tomorrow. Together.</span>
         </p>
         <div className="flex justify-center gap-4">
-          <Link href="/contact" className="px-5 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">Contact Us</Link>
-          <Link href="/careers" className="px-5 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700">Careers</Link>
-          <Link href="/research" className="px-5 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700">Research</Link>
+          <Link href="/contact" className="px-5 py-2 bg-black text-white rounded-lg font-medium hover:bg-blue-700">Contact Us</Link>
+          <Link href="/careers" className="px-5 py-2 bg-black text-white rounded-lg font-medium hover:bg-green-700">Careers</Link>
+          <Link href="/research" className="px-5 py-2 bg-black text-white rounded-lg font-medium hover:bg-purple-700">Research</Link>
         </div>
       </section>
     </div>
