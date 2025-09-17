@@ -1,3 +1,5 @@
+"use client";
+
 export default function AboutPage() {
   return (
     <div className="p-8 max-w-4xl mx-auto">
@@ -43,7 +45,7 @@ export default function AboutPage() {
           We’re a tight-knit team of researchers, engineers, and tinkerers obsessed with the edge case — where what’s possible meets what’s useful.
           We don’t chase trends. We chase breakthroughs.
           Our work has already improved the daily lives of millions of programmers worldwide — making them faster, more confident, and more creative.
-
+          <br />
           We don’t just build software.
           We build the next generation of human potential.
         </p>
@@ -52,16 +54,12 @@ export default function AboutPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-2 text-gray-900">Join Us</h2>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          
           If you believe the future belongs to those who think beyond automation — to those who dare to co-create with machines — we want to hear from you.
-
+           <br />
           Let’s build the creators of tomorrow.
           Together.
-
-          
-        Contact Us | Careers | Research
-
-        
+          <br />
+           Contact Us | Careers | Research |
         </p>
       </section>
       
@@ -104,7 +102,7 @@ export default function AboutPage() {
     
           <div className="flex flex-col items-center bg-white dark:bg-gray-900 rounded-xl shadow p-6">
             <img
-              src=""
+              src="https://"
               alt="Team member"
               className="w-20 h-20 rounded-full mb-3 border-4 border-gray-900"
             />
