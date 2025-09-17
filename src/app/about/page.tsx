@@ -23,7 +23,7 @@ export default function AboutPage() {
       </div>
 
       {/* Intro and Story */}
-      {/*  <section className="max-w-2xl mx-auto mt-16 px-6">
+        <section className="max-w-2xl mx-auto mt-16 px-6">
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
           RunAsh AI is an applied research lab working at the frontier of retail and creative automation. Our approach is to build the engineer of the future: a human–AI programmer that's an order of magnitude more effective than any one programmer.
         </p>
@@ -40,10 +40,10 @@ export default function AboutPage() {
           — <Link href="https://github.com/rammurmu" className="underline">Ram Murmu</Link>, Vaibhav Murmu, P K Murmu, and the entire RunAsh AI team
         </p>
         <hr className="border-gray-800 mb-8"/>
-      </section> */}
+      </section> 
       
       {/* Inspired intro and story from previous contents */}
-      <section className="max-w-2xl mx-auto mt-16 px-6">
+      {/*  <section className="max-w-2xl mx-auto mt-16 px-6">
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
           RunAsh AI is an applied research lab working at the frontier of retail  and creative automation, Our approach is to building the future retail not just better tools but better creators.
         </p>
@@ -78,7 +78,7 @@ export default function AboutPage() {
           — <Link href="https://github.com/rammurmu" className="underline">Ram Murmu</Link>, Vaibhav Murmu, P K Murmu, and the entire RunAsh AI team
         </p>
         <hr className="border-gray-800 mb-8"/>
-      </section>
+      </section> */}
 
       {/* Story Section */}
       {/*  <section className="max-w-2xl mx-auto px-6 mb-16">
