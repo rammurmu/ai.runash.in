@@ -54,10 +54,10 @@ export default function AboutPage() {
           If you believe the future belongs to those who think beyond automation — to those who dare to co-create with machines — we want to hear from you.
 
           Let’s build the creators of tomorrow.
-          Together.
+          Together.<br />
 
           
-        [Contact Us] | [Careers] | [Research]
+        Contact Us | Careers | Research
 
         
         </p>
@@ -71,7 +71,7 @@ export default function AboutPage() {
           interactive, and ethical technology.
         </p>
       </section>
-      </div>
+      
       <section>
         <h2 className="text-2xl font-bold mb-4 text-gray-900">
           Team
@@ -104,7 +104,7 @@ export default function AboutPage() {
             <div className="font-semibold text-lg">P K Murmu.</div>
             <div className="text-sm text-gray-500">Product Designer</div>
           </div>
-        </div>
+        
       </section>
     </div>
   
