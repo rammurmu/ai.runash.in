@@ -1,18 +1,20 @@
 "use client";
+import { useState } from "react";
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
-import { useState } from "react";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <div className="p-8 max-w-2xl mx-auto">
-      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-        Contact Us
+    <div className="p-8 max-w-2xl mx-auto relative">
+      <h1 className="text-3xl font-extrabold mb-6  text-black dark:text-white">
+        Contact
       </h1>
       <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
         We'd love to hear from you! Fill out the form below or use the popover
@@ -49,7 +51,7 @@ export default function ContactPage() {
           required
         />
         <button
-          className="px-6 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
+          className="px-6 py-2 rounded bg-gradient-to-r from-black to-gray-800 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-900 transition"
           type="submit"
           disabled={submitted}
         >
@@ -68,28 +70,28 @@ export default function ContactPage() {
             <div className="mb-1">
               Email:{" "}
               <a
-                href="mailto:hello@runash.ai"
+                href="mailto:hello@ai.runash.ai"
                 className="text-blue-500 hover:underline"
               >
-                hello@runash.ai
+                hello@ai.runash.in
               </a>
             </div>
             <div className="mb-1">
               Twitter:{" "}
               <a
-                href="https://twitter.com/runashai"
+                href="https://twitter.com/runash_ai"
                 className="text-blue-500 hover:underline"
               >
-                @runashai
+                @runash_ai
               </a>
             </div>
             <div className="mb-1">
               GitHub:{" "}
               <a
-                href="https://github.com/runash-ai-community"
+                href="https://github.com/runash-ai"
                 className="text-blue-500 hover:underline"
               >
-                runash-ai-community
+                runash-ai
               </a>
             </div>
             <div className="mt-2 text-xs text-gray-500">
@@ -97,7 +99,40 @@ export default function ContactPage() {
             </div>
           </PopoverContent>
         </Popover>
+        <button
+          className="px-4 py-2 rounded bg-gradient-to-r from-gray-800 to-gray-600 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-700 transition"
+          onClick={() => setModalOpen(true)}
+        >
+          Support Contact
+        </button>
       </div>
+
+      {/* Modal Contact Box */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+          <div className="relative w-full max-w-xl mx-auto rounded-xl bg-gray-900 p-8 shadow-xl border border-gray-800">
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white text-lg"
+              aria-label="Close"
+            >
+              &#10005;
+            </button>
+            <h2 className="text-2xl font-semibold mb-4 px-4 py-2 text-gray-400">
+              Contact Us
+            </h2>
+            <p className="mb-4 text-gray-300">
+              For all support inquiries, including billing issues, receipts, and general assistance, please email
+            </p>
+            <a
+              href="mailto:hi@runash.in"
+              className="text-blue-400 underline font-medium"
+            >
+              hi@runash.in
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
-}
+          }
