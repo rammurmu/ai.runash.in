@@ -17,9 +17,12 @@ export default function ForgotPasswordPage() {
   const [loading, setLoading] = useState(false);
 
   // Replace with your API call to send reset email
-  const handleReset = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setSubmitted(true);
+    setShowToast(true);
+    // Here you would trigger your forgot password API
     // Example: await fetch("/api/auth/forgot-password", { ... });
     // Simulate request:
     setTimeout(() => {
@@ -28,12 +31,6 @@ export default function ForgotPasswordPage() {
     }, 1200);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setShowToast(true);
-    // Here you would trigger your forgot password API
-  };
 
   return (
     <ToastProvider>
