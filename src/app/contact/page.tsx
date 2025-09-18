@@ -13,7 +13,7 @@ export default function ContactPage() {
 
   return (
     <div className="p-8 max-w-2xl mx-auto relative">
-      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-black-500 to-black-600 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-extrabold mb-6 rounded bg-gradient-to-r from-black to-gray-800 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-900 transition">
         Contact Us
       </h1>
       <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
@@ -51,7 +51,7 @@ export default function ContactPage() {
           required
         />
         <button
-          className="px-6 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold hover:from-blue-600 hover:to-purple-600 transition"
+          className="px-6 py-2 rounded bg-gradient-to-r from-black to-gray-800 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-900 transition"
           type="submit"
           disabled={submitted}
         >
@@ -118,7 +118,7 @@ export default function ContactPage() {
             >
               &#10005;
             </button>
-            <h2 className="text-2xl font-semibold mb-4 text-white">
+            <h2 className="text-2xl font-semibold mb-4 px-4 py-2 rounded bg-gradient-to-r from-black to-gray-800 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-900 transition">
               Contact Us
             </h2>
             <p className="mb-4 text-gray-300">
