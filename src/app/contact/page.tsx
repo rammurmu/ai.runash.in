@@ -13,7 +13,7 @@ export default function ContactPage() {
 
   return (
     <div className="p-8 max-w-2xl mx-auto relative">
-      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-black-500 to-black-600 bg-clip-text text-transparent">
         Contact Us
       </h1>
       <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div className="mb-1">
               Email:{" "}
               <a
-                href="mailto:hello@runash.ai"
+                href="mailto:hello@ai.runash.ai"
                 className="text-blue-500 hover:underline"
               >
                 hello@ai.runash.in
@@ -79,16 +79,16 @@ export default function ContactPage() {
             <div className="mb-1">
               Twitter:{" "}
               <a
-                href="https://twitter.com/runashai"
+                href="https://twitter.com/runash_ai"
                 className="text-blue-500 hover:underline"
               >
-                @runashai
+                @runash_ai
               </a>
             </div>
             <div className="mb-1">
               GitHub:{" "}
               <a
-                href="https://github.com/runash-ai-community"
+                href="https://github.com/runash-ai"
                 className="text-blue-500 hover:underline"
               >
                 runash-ai-community
@@ -128,7 +128,7 @@ export default function ContactPage() {
               href="mailto:hi@runash.in"
               className="text-blue-400 underline font-medium"
             >
-              hi@cursor.com
+              hi@runash.in
             </a>
           </div>
         </div>
