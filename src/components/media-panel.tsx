@@ -2,6 +2,8 @@ import { db } from "@/data/db";
 import { queryKeys } from "@/data/queries";
 import type { MediaItem } from "@/data/schema";
 import { useProjectId, useVideoProjectStore } from "@/data/store";
+import { useOfflineStore } from "@/lib/stores/offline-store";
+import { useOfflineMedia } from "@/hooks/use-offline-media";
 import { getFalClient } from "@/lib/fal";
 import { cn, resolveMediaUrl, trackIcons } from "@/lib/utils";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -43,6 +45,8 @@ export function MediaItemRow({
   const queryClient = useQueryClient();
   const projectId = useProjectId();
   const { toast } = useToast();
+  const { isOffline } = useOfflineStore();
+  const { getOfflineMedia } = useOfflineMedia([data]);
   useQuery({
     queryKey: queryKeys.projectMedia(projectId, data.id),
     queryFn: async () => {
@@ -118,10 +122,17 @@ export function MediaItemRow({
   });
   const mediaUrl = resolveMediaUrl(data) ?? "";
   const mediaId = data.id.split("-")[0];
-  const handleOnDragStart: DragEventHandler<HTMLDivElement> = (event) => {
-    event.dataTransfer.setData("job", JSON.stringify(data));
+  
+  const handleOnDragStart: DragEventHandler<HTMLDivElement> = async (event) => {
+    if (isOffline && data.status === 'completed') {
+      const offlineMedia = await getOfflineMedia(data.id);
+      if (offlineMedia) {
+        event.dataTransfer.setData("job", JSON.stringify(offlineMedia));
+      }
+    } else {
+      event.dataTransfer.setData("job", JSON.stringify(data));
+    }
     return true;
-    // event.dataTransfer.dropEffect = "copy";
   };
 
   const coverImage =
@@ -247,8 +258,18 @@ export function MediaItemPanel({
   mediaType,
 }: MediaItemsPanelProps) {
   const setSelectedMediaId = useVideoProjectStore((s) => s.setSelectedMediaId);
-  const handleOnOpen = (item: MediaItem) => {
-    setSelectedMediaId(item.id);
+  const { isOffline } = useOfflineStore();
+  const { getOfflineMedia } = useOfflineMedia(data);
+  
+  const handleOnOpen = async (item: MediaItem) => {
+    if (isOffline && item.status === 'completed') {
+      const offlineMedia = await getOfflineMedia(item.id);
+      if (offlineMedia) {
+        setSelectedMediaId(offlineMedia.id);
+      }
+    } else {
+      setSelectedMediaId(item.id);
+    }
   };
 
   return (

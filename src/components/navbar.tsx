@@ -12,6 +12,8 @@ import {
   ToastDescription,
   ToastViewport,
 } from "@/components/ui/toast";
+import { OfflineIndicator } from "@/components/ui/offline-indicator";
+import { useOfflineManager } from "@/hooks/use-offline-manager";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -21,6 +23,9 @@ export default function Navbar() {
   const router = useRouter();
   const [showToast, setShowToast] = useState(false);
   useEffect(() => setMounted(true), []);
+  
+  // Initialize offline manager
+  useOfflineManager();
 
   const navLinks = [
     { href: "/features", label: "Features" },
@@ -49,7 +54,8 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
+          <OfflineIndicator />
           {session ? (
             <button
               onClick={async () => {
