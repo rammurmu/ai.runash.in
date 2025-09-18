@@ -13,8 +13,8 @@ export default function ContactPage() {
 
   return (
     <div className="p-8 max-w-2xl mx-auto relative">
-      <h1 className="text-4xl font-extrabold mb-6 rounded bg-gradient-to-r from-black to-gray-800 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-900 transition">
-        Contact Us
+      <h1 className="text-3xl font-extrabold mb-6  text-black dark:text-white">
+        Contact
       </h1>
       <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
         We'd love to hear from you! Fill out the form below or use the popover
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 href="https://github.com/runash-ai"
                 className="text-blue-500 hover:underline"
               >
-                runash-ai-community
+                runash-ai
               </a>
             </div>
             <div className="mt-2 text-xs text-gray-500">
@@ -100,7 +100,7 @@ export default function ContactPage() {
           </PopoverContent>
         </Popover>
         <button
-          className="px-4 py-2 rounded bg-gradient-to-r from-black to-gray-800 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-900 transition"
+          className="px-4 py-2 rounded bg-gradient-to-r from-gray-800 to-gray-600 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-700 transition"
           onClick={() => setModalOpen(true)}
         >
           Support Contact
@@ -118,7 +118,7 @@ export default function ContactPage() {
             >
               &#10005;
             </button>
-            <h2 className="text-2xl font-semibold mb-4 px-4 py-2 rounded bg-gradient-to-r from-black to-gray-800 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-900 transition">
+            <h2 className="text-2xl font-semibold mb-4 px-4 py-2 text-gray-400">
               Contact Us
             </h2>
             <p className="mb-4 text-gray-300">
