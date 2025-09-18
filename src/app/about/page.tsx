@@ -31,7 +31,7 @@ export default function AboutPage() {
           This hybrid creator will have effortless control over their contents and no low-entropy keystrokes. They will iterate at the speed of their judgment, even in the most complex systems. Using a combination of AI and human ingenuity, they will out-smart and out-creator the best pure-AI system.
         </p>
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
-          We are a group of researchers and engineers. We build software and models to invent at the edge of what's useful and what's possible. Our <Link href="/work" className="underline text-blue-400 hover:text-blue-600">work</Link> has already improved the lives of millions of programmers.
+          We are a group of researchers and engineers. We build software and models to invent at the edge of what's useful and what's possible. Our <Link href="/work" className="underline text-blue-400 hover:text-blue-600">work</Link> has already improved the lives of thousands of creators.
         </p>
         <p className="mb-8">
           If this excites you, we'd love to hear from you.
