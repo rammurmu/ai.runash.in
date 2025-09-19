@@ -244,7 +244,7 @@ export default function SettingsPage() {
                 <datalist id="spoken-langs">
                   <option value="Hindi" />
                   <option value="English" />
-                  <option value="Spanish" />
+                  <option value="" />
                 </datalist>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                   For best results, select the language you mainly speak. If it's not listed, it may still be supported via auto-detection.
