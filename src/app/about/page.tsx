@@ -129,9 +129,10 @@ export default function AboutPage() {
             github="https://github.com/vaibhavmurmu"
           />
           <TeamCard
-            name="P K Murmu"
-            role="Product Designer"
-            image="/pkmurmu.png"
+            name="v0"
+            role="Agent"
+            image="/v0.png"
+            github="https://github.com/vercel"
           />
         </div>
       </section>
