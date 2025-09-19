@@ -1,3 +1,4 @@
+"use client";
 import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 type CustomDialogProps = {
