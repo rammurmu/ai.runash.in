@@ -51,7 +51,7 @@ export default function Sidebar() {
           onClick={() => setMobileOpen(false)}
           aria-label="Close sidebar"
         >
-          <✕ />
+          ✕ 
         </button>
         <nav className="mt-16 flex flex-col gap-2">
           {navLinks.map((link) => {
@@ -77,7 +77,7 @@ export default function Sidebar() {
         onClick={() => setMobileOpen(true)}
         aria-label="Open sidebar"
       >
-        <Equal />
+        ☰
       </button>
     </>
   );
