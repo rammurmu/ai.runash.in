@@ -10,16 +10,19 @@ import {
   Info,
   Phone,
   Star,
+  PanelLeft,
+  Equal,
+  X,
 } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/dashboard", label: "Dashboard", icon: BarChart3 },
-  { href: "/", label: "Profile", icon: User },
-  { href: "/", label: "Settings", icon: Settings },
+  { href: "/profile", label: "Profile", icon: User },
+  { href: "/settings", label: "Settings", icon: Settings },
   { href: "/features", label: "Features", icon: Star },
-  { href: "/", label: "About", icon: Info },
-  { href: "/", label: "Contact", icon: Phone },
+  { href: "/about", label: "About", icon: Info },
+  { href: "/contact", label: "Contact", icon: Phone },
 ];
 
 export default function Sidebar() {
@@ -48,7 +51,7 @@ export default function Sidebar() {
           onClick={() => setMobileOpen(false)}
           aria-label="Close sidebar"
         >
-          ✕
+          ✕ 
         </button>
         <nav className="mt-16 flex flex-col gap-2">
           {navLinks.map((link) => {
