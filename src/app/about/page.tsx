@@ -4,17 +4,17 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#15181E] text-gray-100 font-serif">
+    <div className="min-h-screen bg-black text-white font-serif">
       {/* Hero Section */}
       <div className="relative w-full h-[420px] md:h-[540px] overflow-hidden">
         <Image
-          src="/about-hero.jpg" // Place your uploaded hero image in public/about-hero.jpg
+          src="/about-hero.png" // Place your uploaded hero image in public/about-hero.jpg
           alt="RunAsh AI Hero"
           fill
           priority
           className="object-cover object-top brightness-75"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#15181E]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
         <div className="absolute w-full bottom-12 flex justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Retail Automation 
@@ -131,7 +131,7 @@ export default function AboutPage() {
           <TeamCard
             name="P K Murmu"
             role="Product Designer"
-            image="/default.png"
+            image="/pkmurmu.png"
           />
         </div>
       </section>
