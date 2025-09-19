@@ -33,7 +33,13 @@ const SECTIONS = [
   { key: "account", label: "Account" },
 ];
 
-function ThemeSwitcher({ theme, setTheme }) {
+// Fix: Add typing for ThemeSwitcher props
+type ThemeSwitcherProps = {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+};
+
+function ThemeSwitcher({ theme, setTheme }: ThemeSwitcherProps) {
   useEffect(() => {
     if (theme === "system") {
       document.documentElement.classList.toggle(
@@ -57,7 +63,13 @@ function ThemeSwitcher({ theme, setTheme }) {
   );
 }
 
-function AccentColorPicker({ accentColor, setAccentColor }) {
+// Fix: Add typing for AccentColorPicker props
+type AccentColorPickerProps = {
+  accentColor: string;
+  setAccentColor: React.Dispatch<React.SetStateAction<string>>;
+};
+
+function AccentColorPicker({ accentColor, setAccentColor }: AccentColorPickerProps) {
   return (
     <div className="flex gap-4 items-center">
       {ACCENT_COLORS.map((color) => (
@@ -78,7 +90,13 @@ function AccentColorPicker({ accentColor, setAccentColor }) {
   );
 }
 
-function LanguagePicker({ language, setLanguage }) {
+// Fix: Add typing for LanguagePicker props
+type LanguagePickerProps = {
+  language: string;
+  setLanguage: React.Dispatch<React.SetStateAction<string>>;
+};
+
+function LanguagePicker({ language, setLanguage }: LanguagePickerProps) {
   return (
     <select
       className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
@@ -94,7 +112,13 @@ function LanguagePicker({ language, setLanguage }) {
   );
 }
 
-function ProfileImageUpload({ image, setImage }) {
+// Fix: Add typing for ProfileImageUpload props
+type ProfileImageUploadProps = {
+  image: string;
+  setImage: React.Dispatch<React.SetStateAction<string>>;
+};
+
+function ProfileImageUpload({ image, setImage }: ProfileImageUploadProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   function handleImageUpload(e: React.ChangeEvent<HTMLInputElement>) {
@@ -161,11 +185,11 @@ export default function SettingsPage() {
   const [section, setSection] = useState("general");
   const [username, setUsername] = useState("runash-user");
   const [email, setEmail] = useState("user@email.com");
-  const [theme, setTheme] = useState("system");
-  const [accentColor, setAccentColor] = useState("blue");
-  const [language, setLanguage] = useState("auto");
-  const [spokenLanguage, setSpokenLanguage] = useState("hi");
-  const [voice, setVoice] = useState("play");
+  const [theme, setTheme] = useState<string>("system");
+  const [accentColor, setAccentColor] = useState<string>("blue");
+  const [language, setLanguage] = useState<string>("auto");
+  const [spokenLanguage, setSpokenLanguage] = useState<string>("hi");
+  const [voice, setVoice] = useState<string>("play");
   const [image, setImage] = useState<string>("");
 
   useEffect(() => {
@@ -376,4 +400,5 @@ export default function SettingsPage() {
       </main>
     </div>
   );
-}
+    }
+   
