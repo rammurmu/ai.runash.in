@@ -7,7 +7,7 @@ import TalkToLive from "@/components/talk-to-live";
 import PromptEnhance from "@/components/prompt-enhance";
 import StreamRealTime from "@/components/stream-real-time";
 import Chat from "@/components/chat";
-
+import Footer from "@/components/landing-footer";
 export default function IndexPage() {
   return (
     <main className="flex flex-col gap-12 px-4 md:px-8 lg:px-16 py-8 md:py-16 w-full max-w-7xl mx-auto">
@@ -29,7 +29,7 @@ export default function IndexPage() {
       </section>
       <section>
         <Community />
-        
+        <Footer />
       </section>
     </main>
   );
