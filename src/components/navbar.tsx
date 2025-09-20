@@ -65,7 +65,7 @@ export default function Navbar() {
             </button>
           ) : (
             <button
-              onClick={() => logIn()}
+              onClick={() => signIn()}
               className="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600"
             >
               Login
