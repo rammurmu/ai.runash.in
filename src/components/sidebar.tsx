@@ -16,7 +16,7 @@ import {
   CreditCard,
   Github,
   Slack,
-  Linear,
+  Bot,
   Menu,
   X,
 } from "lucide-react";
