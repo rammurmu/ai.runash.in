@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Slack, } from "lucide-react";
+import { Github, Slack } from "lucide-react";
 
 interface IntegrationProps {
   name: string;
