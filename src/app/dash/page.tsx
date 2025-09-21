@@ -1,6 +1,6 @@
 import DashboardCard from "@/components/DashboardCard";
 
-export default function ChatDashboardPage() {
+export default function DashPage() {
   return (
     <div className="grid gap-6 md:grid-cols-3 mt-6">
       <DashboardCard
