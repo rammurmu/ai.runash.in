@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Slack, Equal } from "lucide-react";
+import { Github, Slack, } from "lucide-react";
 
 interface IntegrationProps {
   name: string;
@@ -11,7 +11,6 @@ interface IntegrationProps {
 const integrations: IntegrationProps[] = [
   { name: "GitHub", icon: <Github size={16} />, status: "Connected", link: "/manage/github" },
   { name: "Slack", icon: <Slack size={16} />, status: "Connect", link: "/manage/slack" },
-  { name: "Equal", icon: <Equal size={16} />, status: "Connect", link: "/manage/equal" },
 ];
 
 export default function IntegrationStatus() {
