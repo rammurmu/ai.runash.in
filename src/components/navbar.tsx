@@ -2,6 +2,48 @@
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import ThemeSwitcher from "@/components/ui/theme-switcher";
+
+export default function Navbar() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const navLinks = [
+    { href: "/dashboard", label: "Dashboard" },
+    { href: "/features", label: "Features" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  return (
+    <header className="w-full fixed top-0 left-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-6 h-16">
+      <Link href="/" className="font-bold text-xl">
+        Runash AI
+      </Link>
+      <nav className="flex gap-4">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="transition-colors hover:underline"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
+      <div className="flex items-center gap-2">
+        <ThemeSwitcher />
+      </div>
+    </header>
+  );
+    }
+
+{/* "use client";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -89,4 +131,4 @@ export default function Navbar() {
       <ToastViewport />
     </ToastProvider>
   );
-}
+} */}
