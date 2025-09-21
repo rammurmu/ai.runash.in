@@ -13,7 +13,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 
-export default function DashboardPage() {
+export default function DashboardContentPage() {
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedAction, setSelectedAction] = useState<string | null>(null);
 
