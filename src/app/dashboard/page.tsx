@@ -60,7 +60,7 @@ export default function DashboardPage() {
             📤 Uploaded <b>"demo.mp4"</b> (1 day ago)
           </li>
           <li>
-            🔴 Went live: <b>"AI Live Coding"</b> (3 days ago)
+            🔴 Went live: <b>"AI Live Stream"</b> (3 days ago)
           </li>
         </ul>
       </div>
