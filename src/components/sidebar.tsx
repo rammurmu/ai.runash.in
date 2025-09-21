@@ -16,7 +16,7 @@ import {
   CreditCard,
   Github,
   Slack,
-  Bot,
+  Equal,
   Menu,
   X,
 } from "lucide-react";
@@ -36,7 +36,7 @@ const navLinks = [
 const integrations = [
   { name: "GitHub", icon: Github, status: "Connected", link: "/manage/github" },
   { name: "Slack", icon: Slack, status: "Connect", link: "/manage/slack" },
-  { name: "Linear", icon: Linear, status: "Connect", link: "/manage/linear" },
+  { name: "Equal", icon: Equal, status: "Connect", link: "/manage/equal" },
 ];
 
 export default function Sidebar() {
