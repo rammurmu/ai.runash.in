@@ -1,5 +1,5 @@
-import PlanCard from "@/components/PlanCard";
-import IntegrationStatus from "@/components/IntegrationStatus";
+import PlanCard from "@/components/plan-card";
+import IntegrationStatus from "@/components/integration-status";
 
 export default function DashboardPage() {
   return (
