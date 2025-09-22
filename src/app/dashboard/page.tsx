@@ -36,7 +36,7 @@ export default function DashboardPage() {
           "Early access to features",
           "Enterprise-grade security",
         ]}
-        cta={{ label: "Upgrade to Ultra", url: "/upgrade/ultra" }}
+        cta={{ label: "Upgrade to Ultra", url: "/upgrade/pro" }}
       />
     </div>
     <div className="mt-8">
