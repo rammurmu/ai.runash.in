@@ -1,4 +1,51 @@
-"use client";
+import PlanCard from "@/components/PlanCard";
+import IntegrationStatus from "@/components/IntegrationStatus";
+
+export default function DashboardPage() {
+  return (
+    <div className="grid gap-6 md:grid-cols-3 mt-6">
+      <PlanCard
+        plan="Free"
+        title="Free Plan"
+        description="Limited Tab completions and Agent requests."
+        features={[
+          "Basic tab completions",
+          "Community support",
+          "Limited agent requests",
+        ]}
+      />
+      <PlanCard
+        plan="Pro"
+        title="Pro Plan"
+        description="Extended limits, unlimited completions, more."
+        features={[
+          "Unlimited tab completions",
+          "Priority support",
+          "Extended agent requests",
+          "Max context windows",
+        ]}
+        cta={{ label: "Upgrade to Pro", url: "/upgrade/pro" }}
+        highlight
+      />
+      <PlanCard
+        plan="Ultra"
+        title="Ultra Plan"
+        description="20x higher limits, advanced models, early access."
+        features={[
+          "20x higher limits",
+          "Early access to features",
+          "Enterprise-grade security",
+        ]}
+        cta={{ label: "Upgrade to Ultra", url: "/upgrade/ultra" }}
+      />
+    </div>
+    <div className="mt-8">
+      <IntegrationStatus />
+    </div>
+  );
+      }
+
+{/* "use client";
 import { useState } from "react";
 import {
   Popover,
@@ -115,4 +162,4 @@ export default function DashboardPage() {
       </div>
     </div>
   );
-}
+} */}
