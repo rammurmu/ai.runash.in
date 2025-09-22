@@ -1,4 +1,4 @@
-"use client";
+{/* "use client";
 import { useState, useEffect, FormEvent } from "react";
 import {
   Popover,
@@ -206,9 +206,9 @@ export default function DashboardPage() {
 
   // --- Render ---
   return (
-    <>
-      {/* PLAN CARDS */}
-      <div className="grid gap-6 md:grid-cols-3 mt-6">
+    <> */}
+   {/* PLAN CARDS */}
+{/*    <div className="grid gap-6 md:grid-cols-3 mt-6">
         <PlanCard
           plan="Free"
           title="Free Plan"
@@ -249,13 +249,13 @@ export default function DashboardPage() {
         <IntegrationStatus />
       </div>
 
-      <div className="max-w-4xl mx-auto mt-16 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
+      <div className="max-w-4xl mx-auto mt-16 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg"> */}
         {/* HEADER */}
-        <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+{/*   <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
           Dashboard
-        </h1>
+        </h1> */}
         {/* STATS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+{/*     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <div className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-xl p-6 flex flex-col items-center">
             <div className="text-3xl font-bold mb-2">{projects.length}</div>
             <div className="text-gray-500">Projects</div>
@@ -268,9 +268,9 @@ export default function DashboardPage() {
             <div className="text-3xl font-bold mb-2">{media.length}</div>
             <div className="text-gray-500">Media Uploads</div>
           </div>
-        </div>
+        </div> */}
         {/* RECENT ACTIVITY */}
-        <div className="mb-10">
+{/*    <div className="mb-10">
           <h2 className="text-xl font-semibold mb-4">Recent Activity</h2>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             {projects.map((p) => (
@@ -322,9 +322,9 @@ export default function DashboardPage() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
         {/* QUICK ACTIONS */}
-        <div className="mb-10">
+{/*    <div className="mb-10">
           <div className="flex items-center gap-2 mb-2">
             <h2 className="text-xl font-semibold">Quick Actions</h2>
             <Popover>
@@ -352,9 +352,9 @@ export default function DashboardPage() {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
         {/* DIALOG */}
-        <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+{/*  <Dialog open={openDialog} onOpenChange={setOpenDialog}>
           <DialogContent>
             <DialogTitle>
               {selectedAction}
@@ -368,4 +368,4 @@ export default function DashboardPage() {
       </div>
     </>
   );
-}
+} */}
