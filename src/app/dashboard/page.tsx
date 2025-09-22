@@ -1,7 +1,37 @@
+"use client";
+import { useState } from "react";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import PlanCard from "@/components/plan-card";
 import IntegrationStatus from "@/components/integration-status";
 
 export default function DashboardPage() {
+  const [openDialog, setOpenDialog] = useState(false);
+  const [selectedAction, setSelectedAction] = useState<string | null>(null);
+
+  const quickActions = [
+    { label: "New Project", description: "Start a new AI video project." },
+    {
+      label: "Upload Media",
+      description: "Upload images or videos to your library.",
+    },
+    { label: "Go Live", description: "Start a live streaming session." },
+  ];
+
+  const handleAction = (action: string) => {
+    setSelectedAction(action);
+    setOpenDialog(true);
+  };
   return (
     <div className="grid gap-6 md:grid-cols-3 mt-6">
       <PlanCard
@@ -24,7 +54,7 @@ export default function DashboardPage() {
           "Extended agent requests",
           "Max context windows",
         ]}
-        cta={{ label: "Upgrade to Pro", url: "/" }}
+        cta={{ label: "Upgrade to Pro", url: "/upgrade/pro" }}
         highlight
       />
       <PlanCard
@@ -36,49 +66,13 @@ export default function DashboardPage() {
           "Early access to features",
           "Enterprise-grade security",
         ]}
-        cta={{ label: "Upgrade to Ultra", url: "/" }}
+        cta={{ label: "Upgrade to Ultra", url: "/upgrade/ultra" }}
       />
     </div>
     <div className="mt-8">
       <IntegrationStatus />
     </div>
-  );
-      }
 
-{/* "use client";
-import { useState } from "react";
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-} from "@/components/ui/popover";
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
-
-export default function DashboardPage() {
-  const [openDialog, setOpenDialog] = useState(false);
-  const [selectedAction, setSelectedAction] = useState<string | null>(null);
-
-  const quickActions = [
-    { label: "New Project", description: "Start a new AI video project." },
-    {
-      label: "Upload Media",
-      description: "Upload images or videos to your library.",
-    },
-    { label: "Go Live", description: "Start a live streaming session." },
-  ];
-
-  const handleAction = (action: string) => {
-    setSelectedAction(action);
-    setOpenDialog(true);
-  };
-
-  return (
     <div className="max-w-4xl mx-auto mt-16 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
       <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
         Dashboard
@@ -162,4 +156,4 @@ export default function DashboardPage() {
       </div>
     </div>
   );
-} */}
+} 
