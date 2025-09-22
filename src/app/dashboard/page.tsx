@@ -1,5 +1,5 @@
-use client;
-import { useState, useEffect } from "react";
+use client";
+import { useState, useEffect, FormEvent } from "react";
 import {
   Popover,
   PopoverTrigger,
@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/popover";
 import {
   Dialog,
-  DialogTrigger,
   DialogContent,
   DialogTitle,
   DialogDescription,
@@ -15,57 +14,63 @@ import {
 import PlanCard from "@/components/plan-card";
 import IntegrationStatus from "@/components/integration-status";
 
-// ---- MOCK API ----
-// Replace these with your real API endpoints!
-const fetchData = async (type: string) => {
-  // Simulate API call
-  if (type === "projects") return [
-    { id: 1, name: "AI Demo Reel", updated: "2 hours ago" },
-    { id: 2, name: "Marketing Video", updated: "1 day ago" },
-  ];
-  if (type === "streams") return [
-    { id: 1, name: "AI Live Stream", updated: "3 days ago" },
-    { id: 2, name: "Product Launch", updated: "5 days ago" },
-  ];
-  if (type === "media") return [
-    { id: 1, name: "demo.mp4", updated: "1 day ago" },
-    { id: 2, name: "banner.png", updated: "2 days ago" },
-  ];
+// --- Types ---
+interface DashboardItem {
+  id: number;
+  name: string;
+  updated: string;
+}
+type ItemType = "project" | "stream" | "media";
+type FormMode = "create" | "edit" | "delete" | null;
+
+// --- Mock API ---
+const fetchData = async (type: ItemType): Promise<DashboardItem[]> => {
+  if (type === "project")
+    return [
+      { id: 1, name: "AI Demo Reel", updated: "2 hours ago" },
+      { id: 2, name: "Marketing Video", updated: "1 day ago" },
+    ];
+  if (type === "stream")
+    return [
+      { id: 1, name: "AI Live Stream", updated: "3 days ago" },
+      { id: 2, name: "Product Launch", updated: "5 days ago" },
+    ];
+  if (type === "media")
+    return [
+      { id: 1, name: "demo.mp4", updated: "1 day ago" },
+      { id: 2, name: "banner.png", updated: "2 days ago" },
+    ];
   return [];
 };
+const createData = async (type: ItemType, item: DashboardItem) => ({
+  ...item,
+  id: Math.floor(Math.random() * 100000),
+  updated: "just now",
+});
+const updateData = async (type: ItemType, id: number, item: DashboardItem) => ({
+  ...item,
+  id,
+  updated: "just now",
+});
+const deleteData = async (type: ItemType, id: number) => true;
 
-const createData = async (type: string, item: any) => {
-  // Simulate API call
-  return { ...item, id: Math.random() };
-};
-
-const updateData = async (type: string, id: number, item: any) => {
-  // Simulate API call
-  return { ...item, id };
-};
-
-const deleteData = async (type: string, id: number) => {
-  // Simulate API call
-  return true;
-};
-// ---- END MOCK API ----
-
+// --- Main Component ---
 export default function DashboardPage() {
   // State
-  const [projects, setProjects] = useState<any[]>([]);
-  const [streams, setStreams] = useState<any[]>([]);
-  const [media, setMedia] = useState<any[]>([]);
+  const [projects, setProjects] = useState<DashboardItem[]>([]);
+  const [streams, setStreams] = useState<DashboardItem[]>([]);
+  const [media, setMedia] = useState<DashboardItem[]>([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedAction, setSelectedAction] = useState<string | null>(null);
-  const [formType, setFormType] = useState<string | null>(null); // project, stream, media
-  const [formMode, setFormMode] = useState<"create"|"edit"|"delete"|null>(null);
-  const [formData, setFormData] = useState<any>({});
-  const [editId, setEditId] = useState<number|null>(null);
+  const [formType, setFormType] = useState<ItemType | null>(null);
+  const [formMode, setFormMode] = useState<FormMode>(null);
+  const [formData, setFormData] = useState<Partial<DashboardItem>>({});
+  const [editId, setEditId] = useState<number | null>(null);
 
-  // Load data
+  // Load data on mount
   useEffect(() => {
-    fetchData("projects").then(setProjects);
-    fetchData("streams").then(setStreams);
+    fetchData("project").then(setProjects);
+    fetchData("stream").then(setStreams);
     fetchData("media").then(setMedia);
   }, []);
 
@@ -77,49 +82,58 @@ export default function DashboardPage() {
   ];
 
   // Handlers
-  const handleAction = (action: string, type: string) => {
+  function handleAction(action: string, type: ItemType) {
     setSelectedAction(action);
     setFormType(type);
     setFormMode("create");
     setFormData({});
     setOpenDialog(true);
     setEditId(null);
-  };
+  }
 
-  const handleEdit = (type: string, item: any) => {
+  function handleEdit(type: ItemType, item: DashboardItem) {
     setSelectedAction(`Edit ${type.charAt(0).toUpperCase() + type.slice(1)}`);
     setFormType(type);
     setFormMode("edit");
-    setFormData(item);
+    setFormData({ name: item.name });
     setOpenDialog(true);
     setEditId(item.id);
-  };
+  }
 
-  const handleDelete = (type: string, item: any) => {
+  function handleDelete(type: ItemType, item: DashboardItem) {
     setSelectedAction(`Delete ${type.charAt(0).toUpperCase() + type.slice(1)}`);
     setFormType(type);
     setFormMode("delete");
-    setFormData(item);
+    setFormData({ name: item.name });
     setOpenDialog(true);
     setEditId(item.id);
-  };
+  }
 
-  // Form submission
-  const handleSubmit = async () => {
+  async function handleSubmit(e?: FormEvent) {
+    if (e) e.preventDefault();
     if (!formType) return;
+
     if (formMode === "create") {
-      const newItem = await createData(formType, formData);
+      const newItem = await createData(formType, {
+        id: 0,
+        name: formData.name || "",
+        updated: "just now",
+      });
       if (formType === "project") setProjects([...projects, newItem]);
       if (formType === "stream") setStreams([...streams, newItem]);
       if (formType === "media") setMedia([...media, newItem]);
     }
-    if (formMode === "edit" && editId) {
-      const updatedItem = await updateData(formType, editId, formData);
+    if (formMode === "edit" && editId !== null) {
+      const updatedItem = await updateData(formType, editId, {
+        id: editId,
+        name: formData.name || "",
+        updated: "just now",
+      });
       if (formType === "project") setProjects(projects.map(p => p.id === editId ? updatedItem : p));
       if (formType === "stream") setStreams(streams.map(s => s.id === editId ? updatedItem : s));
       if (formType === "media") setMedia(media.map(m => m.id === editId ? updatedItem : m));
     }
-    if (formMode === "delete" && editId) {
+    if (formMode === "delete" && editId !== null) {
       await deleteData(formType, editId);
       if (formType === "project") setProjects(projects.filter(p => p.id !== editId));
       if (formType === "stream") setStreams(streams.filter(s => s.id !== editId));
@@ -130,10 +144,9 @@ export default function DashboardPage() {
     setEditId(null);
     setFormMode(null);
     setFormType(null);
-  };
+  }
 
-  // Form UI
-  const renderForm = () => {
+  function renderForm() {
     if (!formType) return null;
     if (formMode === "delete") {
       return (
@@ -145,12 +158,14 @@ export default function DashboardPage() {
             <button
               className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 mr-2"
               onClick={() => setOpenDialog(false)}
+              type="button"
             >
               Cancel
             </button>
             <button
               className="px-4 py-2 rounded bg-red-500 text-white"
-              onClick={handleSubmit}
+              onClick={() => handleSubmit()}
+              type="button"
             >
               Delete
             </button>
@@ -159,12 +174,7 @@ export default function DashboardPage() {
       );
     }
     return (
-      <form
-        onSubmit={e => {
-          e.preventDefault();
-          handleSubmit();
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <div className="space-y-4">
           <input
             className="border rounded px-3 py-2 w-full"
@@ -191,8 +201,9 @@ export default function DashboardPage() {
         </div>
       </form>
     );
-  };
+  }
 
+  // --- Render ---
   return (
     <>
       {/* PLAN CARDS */}
@@ -262,8 +273,7 @@ export default function DashboardPage() {
           <h2 className="text-xl font-semibold mb-4">Recent Activity</h2>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             {projects.map((p) => (
-              <li key={p.id}>
-                🎬 Project <b>{p.name}</b> ({p.updated})
+              <li key={`p${p.id}`}>🎬 Project <b>{p.name}</b> ({p.updated})
                 <button
                   className="ml-2 text-xs text-blue-500"
                   onClick={() => handleEdit("project", p)}
@@ -279,8 +289,7 @@ export default function DashboardPage() {
               </li>
             ))}
             {media.map((m) => (
-              <li key={m.id}>
-                📤 Uploaded <b>{m.name}</b> ({m.updated})
+              <li key={`m${m.id}`}>📤 Uploaded <b>{m.name}</b> ({m.updated})
                 <button
                   className="ml-2 text-xs text-blue-500"
                   onClick={() => handleEdit("media", m)}
@@ -296,8 +305,7 @@ export default function DashboardPage() {
               </li>
             ))}
             {streams.map((s) => (
-              <li key={s.id}>
-                🔴 Stream <b>{s.name}</b> ({s.updated})
+              <li key={`s${s.id}`}>🔴 Stream <b>{s.name}</b> ({s.updated})
                 <button
                   className="ml-2 text-xs text-blue-500"
                   onClick={() => handleEdit("stream", s)}
@@ -337,7 +345,7 @@ export default function DashboardPage() {
               <button
                 key={action.label}
                 className="px-4 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold shadow hover:from-blue-600 hover:to-purple-600 transition"
-                onClick={() => handleAction(action.label, action.type)}
+                onClick={() => handleAction(action.label, action.type as ItemType)}
               >
                 {action.label}
               </button>
