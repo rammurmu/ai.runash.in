@@ -1,6 +1,6 @@
-import DashboardCard from "@/components/DashboardCard";
+import DashboardCard from "@/components/ui/dashboard-card";
 
-export default function DashPage() {
+export default function DashboardPage() {
   return (
     <div className="grid gap-6 md:grid-cols-3 mt-6">
       <DashboardCard
