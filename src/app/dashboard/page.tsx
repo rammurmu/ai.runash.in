@@ -24,7 +24,7 @@ export default function DashboardPage() {
           "Extended agent requests",
           "Max context windows",
         ]}
-        cta={{ label: "Upgrade to Pro", url: "/upgrade/pro" }}
+        cta={{ label: "Upgrade to Pro", url: "/" }}
         highlight
       />
       <PlanCard
@@ -36,7 +36,7 @@ export default function DashboardPage() {
           "Early access to features",
           "Enterprise-grade security",
         ]}
-        cta={{ label: "Upgrade to Ultra", url: "/upgrade/pro" }}
+        cta={{ label: "Upgrade to Ultra", url: "/" }}
       />
     </div>
     <div className="mt-8">
