@@ -44,7 +44,7 @@ function ThemeSwitcher({ theme, setTheme }: ThemeSwitcherProps) {
     if (theme === "system") {
       document.documentElement.classList.toggle(
         "dark",
-        window.matchMedia("(prefers-color-scheme: dark)").matches
+        window.matchMedia("(prefers-color-scheme: dark)").matches,
       );
     } else {
       document.documentElement.classList.toggle("dark", theme === "dark");
@@ -69,7 +69,10 @@ type AccentColorPickerProps = {
   setAccentColor: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function AccentColorPicker({ accentColor, setAccentColor }: AccentColorPickerProps) {
+function AccentColorPicker({
+  accentColor,
+  setAccentColor,
+}: AccentColorPickerProps) {
   return (
     <div className="flex gap-4 items-center">
       {ACCENT_COLORS.map((color) => (
@@ -85,7 +88,9 @@ function AccentColorPicker({ accentColor, setAccentColor }: AccentColorPickerPro
           onClick={() => setAccentColor(color)}
         />
       ))}
-      <span className="text-sm ml-2">Accent: <b className={`text-${accentColor}-500`}>{accentColor}</b></span>
+      <span className="text-sm ml-2">
+        Accent: <b className={`text-${accentColor}-500`}>{accentColor}</b>
+      </span>
     </div>
   );
 }
@@ -229,7 +234,9 @@ export default function SettingsPage() {
             <form className="space-y-6">
               <ProfileImageUpload image={image} setImage={setImage} />
               <div>
-                <label className="block text-sm font-semibold mb-1">Username</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Username
+                </label>
                 <input
                   className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
                   value={username}
@@ -237,7 +244,9 @@ export default function SettingsPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Email</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Email
+                </label>
                 <input
                   className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
                   value={email}
@@ -246,19 +255,30 @@ export default function SettingsPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Theme</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Theme
+                </label>
                 <ThemeSwitcher theme={theme} setTheme={setTheme} />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Accent color</label>
-                <AccentColorPicker accentColor={accentColor} setAccentColor={setAccentColor} />
+                <label className="block text-sm font-semibold mb-1">
+                  Accent color
+                </label>
+                <AccentColorPicker
+                  accentColor={accentColor}
+                  setAccentColor={setAccentColor}
+                />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Language</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Language
+                </label>
                 <LanguagePicker language={language} setLanguage={setLanguage} />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Spoken language</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Spoken language
+                </label>
                 <input
                   className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
                   value={spokenLanguage}
@@ -271,11 +291,14 @@ export default function SettingsPage() {
                   <option value="" />
                 </datalist>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  For best results, select the language you mainly speak. If it's not listed, it may still be supported via auto-detection.
+                  For best results, select the language you mainly speak. If
+                  it's not listed, it may still be supported via auto-detection.
                 </p>
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Voice</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Voice
+                </label>
                 <select
                   className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
                   value={voice}
@@ -296,7 +319,9 @@ export default function SettingsPage() {
                     </button>
                   </PopoverTrigger>
                   <PopoverContent className="text-sm max-w-xs">
-                    <div className="font-bold mb-2 text-blue-600">Theme Options</div>
+                    <div className="font-bold mb-2 text-blue-600">
+                      Theme Options
+                    </div>
                     <ul className="list-disc pl-4 text-left text-gray-700 dark:text-gray-300">
                       <li>
                         <b>System</b>: Follows your device's theme
@@ -323,7 +348,8 @@ export default function SettingsPage() {
                   <DialogContent>
                     <DialogTitle>Delete Account</DialogTitle>
                     <DialogDescription>
-                      Are you sure you want to delete your account? This action cannot be undone.
+                      Are you sure you want to delete your account? This action
+                      cannot be undone.
                     </DialogDescription>
                     <div className="flex justify-end gap-2 mt-6">
                       <button
@@ -400,5 +426,4 @@ export default function SettingsPage() {
       </main>
     </div>
   );
-    }
-   
+}

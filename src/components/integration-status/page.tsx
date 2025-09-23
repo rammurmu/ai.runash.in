@@ -9,9 +9,24 @@ interface IntegrationProps {
 }
 
 const integrations: IntegrationProps[] = [
-  { name: "GitHub", icon: <Github size={16} />, status: "Connected", link: "/manage/github" },
-  { name: "Slack", icon: <Slack size={16} />, status: "Connect", link: "/manage/slack" },
-  { name: "Bot", icon: <Bot size={16} />, status: "Connect", link: "/manage/bot" },
+  {
+    name: "GitHub",
+    icon: <Github size={16} />,
+    status: "Connected",
+    link: "/manage/github",
+  },
+  {
+    name: "Slack",
+    icon: <Slack size={16} />,
+    status: "Connect",
+    link: "/manage/slack",
+  },
+  {
+    name: "Bot",
+    icon: <Bot size={16} />,
+    status: "Connect",
+    link: "/manage/bot",
+  },
 ];
 
 export default function IntegrationStatus() {

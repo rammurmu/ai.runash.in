@@ -41,13 +41,19 @@ export default function LoginPage() {
         </h1>
         <div className="text-center text-gray-700 dark:text-gray-300 mb-4 text-sm">
           Don&apos;t have an account?{" "}
-          <Link href="/get-started" className="underline text-blue-600 hover:text-purple-600">
+          <Link
+            href="/get-started"
+            className="underline text-blue-600 hover:text-purple-600"
+          >
             Sign Up
           </Link>
         </div>
-        
+
         <form className="w-full flex flex-col gap-3" onSubmit={handleLogin}>
-          <label htmlFor="userOrEmail" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label
+            htmlFor="userOrEmail"
+            className="text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Username or Email address
           </label>
           <input
@@ -56,12 +62,15 @@ export default function LoginPage() {
             autoComplete="username"
             required
             value={userOrEmail}
-            onChange={e => setUserOrEmail(e.target.value)}
+            onChange={(e) => setUserOrEmail(e.target.value)}
             className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Username or Email address"
           />
 
-          <label htmlFor="password" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label
+            htmlFor="password"
+            className="text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Password
           </label>
           <input
@@ -70,7 +79,7 @@ export default function LoginPage() {
             autoComplete="current-password"
             required
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400"
             placeholder="Password"
           />
@@ -84,13 +93,20 @@ export default function LoginPage() {
           </button>
         </form>
         <div className="mt-2 w-full text-right text-xs">
-          <Link href="/forgot-password" className="text-gray-500 underline hover:text-blue-600">
+          <Link
+            href="/forgot-password"
+            className="text-gray-500 underline hover:text-blue-600"
+          >
             Forgot your password?
           </Link>
         </div>
         {/* SSO note */}
         <div className="mt-6 text-xs text-gray-400 text-center">
-          SSO is available for <a href="#" className="underline">Team & Enterprise</a> accounts.
+          SSO is available for{" "}
+          <a href="#" className="underline">
+            Team & Enterprise
+          </a>{" "}
+          accounts.
         </div>
       </div>
     </div>

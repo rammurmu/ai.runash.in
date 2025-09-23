@@ -76,9 +76,21 @@ export default function DashboardPage() {
 
   // Quick actions
   const quickActions = [
-    { label: "New Project", description: "Start a new AI video project.", type: "project" },
-    { label: "Upload Media", description: "Upload images or videos to your library.", type: "media" },
-    { label: "Go Live", description: "Start a live streaming session.", type: "stream" },
+    {
+      label: "New Project",
+      description: "Start a new AI video project.",
+      type: "project",
+    },
+    {
+      label: "Upload Media",
+      description: "Upload images or videos to your library.",
+      type: "media",
+    },
+    {
+      label: "Go Live",
+      description: "Start a live streaming session.",
+      type: "stream",
+    },
   ];
 
   // Handlers
@@ -129,15 +141,20 @@ export default function DashboardPage() {
         name: formData.name || "",
         updated: "just now",
       });
-      if (formType === "project") setProjects(projects.map(p => p.id === editId ? updatedItem : p));
-      if (formType === "stream") setStreams(streams.map(s => s.id === editId ? updatedItem : s));
-      if (formType === "media") setMedia(media.map(m => m.id === editId ? updatedItem : m));
+      if (formType === "project")
+        setProjects(projects.map((p) => (p.id === editId ? updatedItem : p)));
+      if (formType === "stream")
+        setStreams(streams.map((s) => (s.id === editId ? updatedItem : s)));
+      if (formType === "media")
+        setMedia(media.map((m) => (m.id === editId ? updatedItem : m)));
     }
     if (formMode === "delete" && editId !== null) {
       await deleteData(formType, editId);
-      if (formType === "project") setProjects(projects.filter(p => p.id !== editId));
-      if (formType === "stream") setStreams(streams.filter(s => s.id !== editId));
-      if (formType === "media") setMedia(media.filter(m => m.id !== editId));
+      if (formType === "project")
+        setProjects(projects.filter((p) => p.id !== editId));
+      if (formType === "stream")
+        setStreams(streams.filter((s) => s.id !== editId));
+      if (formType === "media") setMedia(media.filter((m) => m.id !== editId));
     }
     setOpenDialog(false);
     setFormData({});
@@ -180,7 +197,7 @@ export default function DashboardPage() {
             className="border rounded px-3 py-2 w-full"
             placeholder={`Name of ${formType}`}
             value={formData.name || ""}
-            onChange={e => setFormData({ ...formData, name: e.target.value })}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
           />
         </div>
@@ -336,9 +353,12 @@ export default function DashboardPage() {
                 </button>
               </PopoverTrigger>
               <PopoverContent className="text-sm max-w-xs">
-                <div className="font-bold mb-2 text-blue-600">Quick Actions</div>
+                <div className="font-bold mb-2 text-blue-600">
+                  Quick Actions
+                </div>
                 <div>
-                  Use these shortcuts to quickly start a new project, upload media, or go live with AI streaming.
+                  Use these shortcuts to quickly start a new project, upload
+                  media, or go live with AI streaming.
                 </div>
               </PopoverContent>
             </Popover>
@@ -348,7 +368,9 @@ export default function DashboardPage() {
               <button
                 key={action.label}
                 className="px-4 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold shadow hover:from-blue-600 hover:to-purple-600 transition"
-                onClick={() => handleAction(action.label, action.type as ItemType)}
+                onClick={() =>
+                  handleAction(action.label, action.type as ItemType)
+                }
               >
                 {action.label}
               </button>
@@ -358,11 +380,11 @@ export default function DashboardPage() {
         {/* DIALOG */}
         <Dialog open={openDialog} onOpenChange={setOpenDialog}>
           <DialogContent>
-            <DialogTitle>
-              {selectedAction}
-            </DialogTitle>
+            <DialogTitle>{selectedAction}</DialogTitle>
             <DialogDescription>
-              {formMode === "create" && quickActions.find(a => a.label === selectedAction)?.description}
+              {formMode === "create" &&
+                quickActions.find((a) => a.label === selectedAction)
+                  ?.description}
             </DialogDescription>
             {renderForm()}
           </DialogContent>
@@ -370,4 +392,4 @@ export default function DashboardPage() {
       </div>
     </>
   );
-  }
+}

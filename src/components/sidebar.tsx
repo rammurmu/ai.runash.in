@@ -49,7 +49,9 @@ export default function Sidebar() {
       {/* Mobile overlay */}
       <div
         className={`fixed inset-0 z-40 bg-black/40 md:hidden transition-opacity ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          mobileOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMobileOpen(false)}
       />
@@ -80,7 +82,9 @@ export default function Sidebar() {
           {!collapsed && (
             <div>
               <div className="font-semibold">Ram Murmu</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Free Plan · runashinc@outl...</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">
+                Free Plan · runashinc@outl...
+              </div>
             </div>
           )}
         </div>
@@ -94,7 +98,9 @@ export default function Sidebar() {
                 key={link.href}
                 href={link.href}
                 className={`flex items-center gap-3 px-4 py-2 rounded transition-colors ${
-                  active ? "bg-gray-200 dark:bg-gray-800 font-semibold" : "hover:bg-gray-100 dark:hover:bg-gray-800"
+                  active
+                    ? "bg-gray-200 dark:bg-gray-800 font-semibold"
+                    : "hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -145,4 +151,4 @@ export default function Sidebar() {
       </button>
     </>
   );
-   }
+}
