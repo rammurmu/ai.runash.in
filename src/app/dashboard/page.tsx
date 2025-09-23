@@ -1,3 +1,19 @@
+"use client";
+import { useState, useEffect, FormEvent } from "react";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import PlanCard from "@/components/plan-card";
+import IntegrationStatus from "@/components/integration-status";
+
 
 "use client";
 import { useState, useEffect, FormEvent } from "react";
@@ -14,6 +30,7 @@ import {
 } from "@/components/ui/dialog";
 import PlanCard from "@/components/plan-card";
 import IntegrationStatus from "@/components/integration-status";
+
 
 // --- Types ---
 interface DashboardItem {
