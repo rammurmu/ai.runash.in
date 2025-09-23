@@ -12,7 +12,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import PlanCard from "@/components/plan-card";
-import IntegrationStatus from "@/components/integration-status";
+{/* import IntegrationStatus from "@/components/integration-status"; */}
 
 
 "use client";
