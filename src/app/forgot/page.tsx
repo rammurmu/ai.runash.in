@@ -13,11 +13,21 @@ export default function ForgotPasswordPage() {
   const [submitted, setSubmitted] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
     setShowToast(true);
-    // Here you would trigger your forgot password API
+    // Trigger forgot password API and send email
+    await fetch("/api/auth/reset-password", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email,
+        resetUrl: `${window.location.origin}/reset?email=${encodeURIComponent(
+          email
+        )}`,
+      }),
+    });
   };
 
   return (

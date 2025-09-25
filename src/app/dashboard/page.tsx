@@ -66,6 +66,10 @@ export default function DashboardPage() {
   const [formMode, setFormMode] = useState<FormMode>(null);
   const [formData, setFormData] = useState<Partial<DashboardItem>>({});
   const [editId, setEditId] = useState<number | null>(null);
+  const [showDialog, setShowDialog] = useState(false);
+  const [dialogMode, setDialogMode] = useState<FormMode>(null);
+  const [dialogType, setDialogType] = useState<ItemType>("project");
+  const [dialogItem, setDialogItem] = useState<DashboardItem | null>(null);
 
   // Load data on mount
   useEffect(() => {
@@ -220,6 +224,14 @@ export default function DashboardPage() {
     );
   }
 
+  // Example dialog trigger for creating a project
+  const handleCreateProject = () => {
+    setDialogMode("create");
+    setDialogType("project");
+    setDialogItem(null);
+    setShowDialog(true);
+  };
+
   // --- Render ---
   return (
     <>
@@ -267,9 +279,17 @@ export default function DashboardPage() {
 
       <div className="max-w-4xl mx-auto mt-16 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
         {/* HEADER */}
-        <h1 className="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-          Dashboard
-        </h1>
+        <div className="flex justify-between items-center mb-6">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Dashboard
+          </h1>
+          <button
+            className="px-4 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:from-blue-600 hover:to-purple-600 transition"
+            onClick={handleCreateProject}
+          >
+            New Project
+          </button>
+        </div>
         {/* STATS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <div className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-xl p-6 flex flex-col items-center">
@@ -387,6 +407,60 @@ export default function DashboardPage() {
                   ?.description}
             </DialogDescription>
             {renderForm()}
+          </DialogContent>
+        </Dialog>
+
+        {/* Copilot-style Dialog */}
+        <Dialog open={showDialog} onOpenChange={setShowDialog}>
+          <DialogContent>
+            <DialogTitle>
+              {dialogMode === "create"
+                ? `Create ${dialogType}`
+                : dialogMode === "edit"
+                ? `Edit ${dialogType}`
+                : `Delete ${dialogType}`}
+            </DialogTitle>
+            <DialogDescription>
+              {dialogMode === "create" && (
+                <form className="space-y-4">
+                  <input
+                    className="w-full border rounded px-3 py-2"
+                    placeholder={`Name your ${dialogType}`}
+                  />
+                  <button className="w-full py-2 rounded bg-blue-600 text-white font-semibold">
+                    Create
+                  </button>
+                </form>
+              )}
+              {dialogMode === "edit" && dialogItem && (
+                <form className="space-y-4">
+                  <input
+                    className="w-full border rounded px-3 py-2"
+                    defaultValue={dialogItem.name}
+                  />
+                  <button className="w-full py-2 rounded bg-purple-600 text-white font-semibold">
+                    Save Changes
+                  </button>
+                </form>
+              )}
+              {dialogMode === "delete" && dialogItem && (
+                <div className="space-y-4">
+                  <div className="text-red-600 font-semibold">
+                    Are you sure you want to delete{" "}
+                    <b>{dialogItem.name}</b>?
+                  </div>
+                  <button className="w-full py-2 rounded bg-red-600 text-white font-semibold">
+                    Delete
+                  </button>
+                </div>
+              )}
+              <button
+                className="w-full py-2 rounded bg-gray-300 text-gray-700 font-semibold mt-4"
+                onClick={() => setShowDialog(false)}
+              >
+                Cancel
+              </button>
+            </DialogDescription>
           </DialogContent>
         </Dialog>
       </div>

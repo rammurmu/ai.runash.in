@@ -3,23 +3,38 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [userOrEmail, setUserOrEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const [loginMessage, setLoginMessage] = useState<string | null>(null);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await signIn("credentials", {
-      redirect: true, // or false if you want to handle manually
+    const result = await signIn("credentials", {
+      redirect: false,
       username: userOrEmail,
       email: userOrEmail,
       password,
       callbackUrl: "/",
     });
     setLoading(false);
+    if (result?.ok) {
+      setLoginMessage("Login successful! Check your email for a login notification.");
+      // Trigger custom login email notification
+      await fetch("/api/auth/email-notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: userOrEmail, type: "login" }),
+      });
+      router.push("/");
+    } else {
+      setLoginMessage("Login failed. Please check your credentials.");
+    }
   };
 
   return (
@@ -92,6 +107,9 @@ export default function LoginPage() {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
+        {loginMessage && (
+          <div className="mt-2 text-center text-xs text-blue-600 dark:text-blue-400">{loginMessage}</div>
+        )}
         <div className="mt-2 w-full text-right text-xs">
           <Link
             href="/forgot-password"
