@@ -11,9 +11,16 @@ export async function POST(req: NextRequest) {
   const buf = Buffer.from(await req.arrayBuffer());
   let event;
   try {
-    event = stripe.webhooks.constructEvent(buf, sig!, process.env.STRIPE_WEBHOOK_SECRET!);
+    event = stripe.webhooks.constructEvent(
+      buf,
+      sig!,
+      process.env.STRIPE_WEBHOOK_SECRET!,
+    );
   } catch (err) {
-    return NextResponse.json({ error: "Webhook Error", details: String(err) }, { status: 400 });
+    return NextResponse.json(
+      { error: "Webhook Error", details: String(err) },
+      { status: 400 },
+    );
   }
 
   // Handle subscription events

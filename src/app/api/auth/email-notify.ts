@@ -4,7 +4,10 @@ import { sendEmail } from "../../../../lib/email";
 export async function POST(req: NextRequest) {
   const body = await req.json();
   if (!body.email || !body.type) {
-    return NextResponse.json({ error: "Missing email or type" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing email or type" },
+      { status: 400 },
+    );
   }
   let subject = "";
   let html = "";

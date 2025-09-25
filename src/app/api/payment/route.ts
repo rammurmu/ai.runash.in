@@ -15,7 +15,10 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { email, plan } = body;
   if (!email || !plan || !PLANS[plan]) {
-    return NextResponse.json({ error: "Missing email or plan" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing email or plan" },
+      { status: 400 },
+    );
   }
   try {
     const session = await stripe.checkout.sessions.create({
@@ -33,6 +36,9 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json({ success: true, checkoutUrl: session.url });
   } catch (err) {
-    return NextResponse.json({ error: "Stripe error", details: String(err) }, { status: 500 });
+    return NextResponse.json(
+      { error: "Stripe error", details: String(err) },
+      { status: 500 },
+    );
   }
 }

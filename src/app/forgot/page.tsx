@@ -24,7 +24,7 @@ export default function ForgotPasswordPage() {
       body: JSON.stringify({
         email,
         resetUrl: `${window.location.origin}/reset?email=${encodeURIComponent(
-          email
+          email,
         )}`,
       }),
     });

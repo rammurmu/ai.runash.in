@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { getUserPlan } from "@/data/user-plan";
 
 export default function SidebarFooter() {
@@ -42,7 +48,10 @@ export default function SidebarFooter() {
     const res = await fetch("/api/invite", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: inviteEmail, invitedBy: session.user.email }),
+      body: JSON.stringify({
+        email: inviteEmail,
+        invitedBy: session.user.email,
+      }),
     });
     if (res.ok) {
       setInviteStatus("Invite sent!");
@@ -65,7 +74,12 @@ export default function SidebarFooter() {
           <DialogDescription>
             <div className="mb-2 text-sm text-blue-600 font-semibold">
               Hi, {session?.user?.name || session?.user?.email || "User"}!<br />
-              <span className="text-xs text-gray-500">Current Plan: <span className="font-bold text-green-600">{userPlan || "Free"}</span></span>
+              <span className="text-xs text-gray-500">
+                Current Plan:{" "}
+                <span className="font-bold text-green-600">
+                  {userPlan || "Free"}
+                </span>
+              </span>
             </div>
             <ul className="list-disc pl-4 text-left text-gray-700 dark:text-gray-300 mb-4">
               <li>Copilot-inspired sidebar and navbar</li>
@@ -77,12 +91,35 @@ export default function SidebarFooter() {
             <div className="mb-4">
               <div className="font-bold mb-2">Upgrade Plans</div>
               <div className="flex flex-col gap-2">
-                <button className="px-4 py-2 rounded bg-purple-600 text-white font-semibold" onClick={() => handleUpgrade('Pro')}>Upgrade to Pro</button>
-                <button className="px-4 py-2 rounded bg-blue-600 text-white font-semibold" onClick={() => handleUpgrade('Ultra')}>Upgrade to Ultra</button>
-                <button className="px-4 py-2 rounded bg-green-600 text-white font-semibold" onClick={() => handleUpgrade('Enterprise')}>Upgrade to Enterprise</button>
+                <button
+                  className="px-4 py-2 rounded bg-purple-600 text-white font-semibold"
+                  onClick={() => handleUpgrade("Pro")}
+                >
+                  Upgrade to Pro
+                </button>
+                <button
+                  className="px-4 py-2 rounded bg-blue-600 text-white font-semibold"
+                  onClick={() => handleUpgrade("Ultra")}
+                >
+                  Upgrade to Ultra
+                </button>
+                <button
+                  className="px-4 py-2 rounded bg-green-600 text-white font-semibold"
+                  onClick={() => handleUpgrade("Enterprise")}
+                >
+                  Upgrade to Enterprise
+                </button>
               </div>
-              {paymentStatus && <div className="mt-2 text-xs text-blue-600 dark:text-blue-400">{paymentStatus}</div>}
-              {userPlan && <div className="mt-2 text-xs text-green-600 dark:text-green-400">Your current plan: {userPlan}</div>}
+              {paymentStatus && (
+                <div className="mt-2 text-xs text-blue-600 dark:text-blue-400">
+                  {paymentStatus}
+                </div>
+              )}
+              {userPlan && (
+                <div className="mt-2 text-xs text-green-600 dark:text-green-400">
+                  Your current plan: {userPlan}
+                </div>
+              )}
             </div>
             <div className="mt-4">
               <div className="font-bold mb-2">Invite Team Members</div>
@@ -90,7 +127,7 @@ export default function SidebarFooter() {
                 <input
                   type="email"
                   value={inviteEmail}
-                  onChange={e => setInviteEmail(e.target.value)}
+                  onChange={(e) => setInviteEmail(e.target.value)}
                   placeholder="Enter team member's email"
                   className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
                 />
@@ -98,9 +135,15 @@ export default function SidebarFooter() {
                   className="px-4 py-2 rounded bg-blue-500 text-white font-semibold"
                   onClick={handleInvite}
                   disabled={!inviteEmail}
-                >Send Invite</button>
+                >
+                  Send Invite
+                </button>
               </div>
-              {inviteStatus && <div className="text-xs text-green-600 dark:text-green-400 mb-2">{inviteStatus}</div>}
+              {inviteStatus && (
+                <div className="text-xs text-green-600 dark:text-green-400 mb-2">
+                  {inviteStatus}
+                </div>
+              )}
             </div>
             <div className="mt-4">
               <div className="font-bold mb-2">Additional Features</div>

@@ -25,21 +25,30 @@ import {
 } from "lucide-react";
 
 const navLinks = [
-  { section: "Main", links: [
-    { href: "/", label: "Overview", icon: Home },
-    { href: "/usage", label: "Usage", icon: BarChart3 },
-    { href: "/background-agents", label: "Background Agents", icon: Bot },
-    { href: "/bugbot", label: "Bugbot", icon: HelpCircle },
-  ]},
-  { section: "Account", links: [
-    { href: "/settings", label: "Settings", icon: Settings },
-    { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
-    { href: "/contact", label: "Contact Us", icon: FileText },
-  ]},
-  { section: "Resources", links: [
-    { href: "/docs", label: "Docs", icon: BookOpen },
-    { href: "/integrations", label: "Integrations", icon: Zap },
-  ]},
+  {
+    section: "Main",
+    links: [
+      { href: "/", label: "Overview", icon: Home },
+      { href: "/usage", label: "Usage", icon: BarChart3 },
+      { href: "/background-agents", label: "Background Agents", icon: Bot },
+      { href: "/bugbot", label: "Bugbot", icon: HelpCircle },
+    ],
+  },
+  {
+    section: "Account",
+    links: [
+      { href: "/settings", label: "Settings", icon: Settings },
+      { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
+      { href: "/contact", label: "Contact Us", icon: FileText },
+    ],
+  },
+  {
+    section: "Resources",
+    links: [
+      { href: "/docs", label: "Docs", icon: BookOpen },
+      { href: "/integrations", label: "Integrations", icon: Zap },
+    ],
+  },
 ];
 
 const integrations = [
@@ -94,7 +103,11 @@ export default function Sidebar() {
         {/* User info */}
         <div className="mt-6 px-4 flex items-center gap-3">
           {avatar ? (
-            <img src={avatar} alt="Avatar" className="w-10 h-10 rounded-full object-cover border-2 border-blue-500" />
+            <img
+              src={avatar}
+              alt="Avatar"
+              className="w-10 h-10 rounded-full object-cover border-2 border-blue-500"
+            />
           ) : (
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow">
               {session?.user?.name?.[0] || "U"}
@@ -102,9 +115,15 @@ export default function Sidebar() {
           )}
           {!collapsed && (
             <div>
-              <div className="font-semibold">{session?.user?.name || "User"}</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Free Plan</div>
-              <div className="text-xs text-gray-400">{session?.user?.email || "user@email.com"}</div>
+              <div className="font-semibold">
+                {session?.user?.name || "User"}
+              </div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">
+                Free Plan
+              </div>
+              <div className="text-xs text-gray-400">
+                {session?.user?.email || "user@email.com"}
+              </div>
             </div>
           )}
         </div>
@@ -113,7 +132,9 @@ export default function Sidebar() {
           {navLinks.map((section) => (
             <div key={section.section} className="flex flex-col gap-1">
               {!collapsed && (
-                <div className="text-xs font-bold text-gray-400 uppercase px-4 mb-1 tracking-wider">{section.section}</div>
+                <div className="text-xs font-bold text-gray-400 uppercase px-4 mb-1 tracking-wider">
+                  {section.section}
+                </div>
               )}
               {section.links.map((link) => {
                 const Icon = link.icon;
@@ -185,8 +206,8 @@ export default function Sidebar() {
             </div>
           </div>
         )}
-      <SidebarFooter />
-    </aside>
+        <SidebarFooter />
+      </aside>
       {/* Mobile open button */}
       <button
         className="fixed top-4 left-4 z-50 bg-gray-200 dark:bg-gray-700 rounded-full p-2 shadow md:hidden"

@@ -44,7 +44,7 @@ export const authOptions: AuthOptions = {
             <p>You have successfully logged in to <b>Runash AI</b>. If this was not you, please reset your password immediately.</p>
             <hr style='margin:32px 0;border:none;border-top:1px solid #eee;'>
             <p style='font-size:12px;color:#888;'>Runash AI Team</p>
-          </div>`
+          </div>`,
         });
         return {
           id: user.id,

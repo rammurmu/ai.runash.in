@@ -1,12 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sendEmail } from "../../../../lib/email";
 
-let invites: { id: number; email: string; invitedBy: string; created: string }[] = [];
+let invites: {
+  id: number;
+  email: string;
+  invitedBy: string;
+  created: string;
+}[] = [];
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
   if (!body.email || !body.invitedBy) {
-    return NextResponse.json({ error: "Missing email or invitedBy" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing email or invitedBy" },
+      { status: 400 },
+    );
   }
   const entry = {
     id: Date.now(),

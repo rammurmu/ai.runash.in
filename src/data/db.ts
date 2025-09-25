@@ -13,9 +13,13 @@ function open() {
         db.createObjectStore("projects", { keyPath: "id" });
         const trackStore = db.createObjectStore("tracks", { keyPath: "id" });
         trackStore.createIndex("by_projectId", "projectId");
-        const keyFrameStore = db.createObjectStore("keyFrames", { keyPath: "id" });
+        const keyFrameStore = db.createObjectStore("keyFrames", {
+          keyPath: "id",
+        });
         keyFrameStore.createIndex("by_trackId", "trackId");
-        const mediaStore = db.createObjectStore("media_items", { keyPath: "id" });
+        const mediaStore = db.createObjectStore("media_items", {
+          keyPath: "id",
+        });
         mediaStore.createIndex("by_projectId", "projectId");
       }
       if (oldVersion < 2) {

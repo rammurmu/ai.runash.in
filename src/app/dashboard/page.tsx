@@ -417,8 +417,8 @@ export default function DashboardPage() {
               {dialogMode === "create"
                 ? `Create ${dialogType}`
                 : dialogMode === "edit"
-                ? `Edit ${dialogType}`
-                : `Delete ${dialogType}`}
+                  ? `Edit ${dialogType}`
+                  : `Delete ${dialogType}`}
             </DialogTitle>
             <DialogDescription>
               {dialogMode === "create" && (
@@ -446,8 +446,7 @@ export default function DashboardPage() {
               {dialogMode === "delete" && dialogItem && (
                 <div className="space-y-4">
                   <div className="text-red-600 font-semibold">
-                    Are you sure you want to delete{" "}
-                    <b>{dialogItem.name}</b>?
+                    Are you sure you want to delete <b>{dialogItem.name}</b>?
                   </div>
                   <button className="w-full py-2 rounded bg-red-600 text-white font-semibold">
                     Delete

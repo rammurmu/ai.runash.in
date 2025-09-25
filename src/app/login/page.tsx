@@ -24,7 +24,9 @@ export default function LoginPage() {
     });
     setLoading(false);
     if (result?.ok) {
-      setLoginMessage("Login successful! Check your email for a login notification.");
+      setLoginMessage(
+        "Login successful! Check your email for a login notification.",
+      );
       // Trigger custom login email notification
       await fetch("/api/auth/email-notify", {
         method: "POST",
@@ -108,7 +110,9 @@ export default function LoginPage() {
           </button>
         </form>
         {loginMessage && (
-          <div className="mt-2 text-center text-xs text-blue-600 dark:text-blue-400">{loginMessage}</div>
+          <div className="mt-2 text-center text-xs text-blue-600 dark:text-blue-400">
+            {loginMessage}
+          </div>
         )}
         <div className="mt-2 w-full text-right text-xs">
           <Link

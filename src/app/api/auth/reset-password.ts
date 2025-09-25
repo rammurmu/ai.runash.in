@@ -4,7 +4,10 @@ import { sendEmail } from "../../../../lib/email";
 export async function POST(req: NextRequest) {
   const body = await req.json();
   if (!body.email || !body.resetUrl) {
-    return NextResponse.json({ error: "Missing email or resetUrl" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing email or resetUrl" },
+      { status: 400 },
+    );
   }
   // TODO: Add password reset logic here
   // Send personalized password reset email
@@ -19,7 +22,7 @@ export async function POST(req: NextRequest) {
       <p style='margin-top:24px;'>If you did not request this, you can safely ignore this email.</p>
       <hr style='margin:32px 0;border:none;border-top:1px solid #eee;'>
       <p style='font-size:12px;color:#888;'>Runash AI Team</p>
-    </div>`
+    </div>`,
   });
   return NextResponse.json({ success: true });
 }
