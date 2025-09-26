@@ -12,7 +12,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import PlanCard from "@/components/plan-card";
-import IntegrationStatus from "@/components/integration-status"; 
+
 
 // --- Types ---
 interface DashboardItem {
@@ -245,7 +245,7 @@ export default function DashboardPage() {
       </div>
 
       <div className="mt-8">
-        <IntegrationStatus />
+        
       </div>
 
       <div className="max-w-4xl mx-auto mt-16 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg">
