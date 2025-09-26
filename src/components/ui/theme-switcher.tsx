@@ -20,12 +20,16 @@ export default function ThemeSwitcher() {
     >
       {currentTheme === "dark" ? (
         <>
-          <span role="img" aria-label="moon">🌙</span>
+          <span role="img" aria-label="moon">
+            🌙
+          </span>
           <span className="hidden md:inline">Dark</span>
         </>
       ) : (
         <>
-          <span role="img" aria-label="sun">☀️</span>
+          <span role="img" aria-label="sun">
+            ☀️
+          </span>
           <span className="hidden md:inline">Light</span>
         </>
       )}

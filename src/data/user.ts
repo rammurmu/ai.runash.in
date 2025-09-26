@@ -6,4 +6,5 @@ export type User = {
   name?: string;
   image?: string;
   createdAt: Date;
+  plan?: string; // Stripe subscription plan
 };

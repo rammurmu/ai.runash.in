@@ -39,7 +39,10 @@ export default function GetStartedPage() {
         </p>
         {/* Registration form */}
         <form className="w-full flex flex-col gap-3" onSubmit={handleRegister}>
-          <label className="text-sm font-medium text-gray-700 dark:text-gray-300" htmlFor="email">
+          <label
+            className="text-sm font-medium text-gray-700 dark:text-gray-300"
+            htmlFor="email"
+          >
             Email Address
           </label>
           <input
@@ -47,15 +50,19 @@ export default function GetStartedPage() {
             type="email"
             required
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
             placeholder="Email Address"
           />
           <span className="text-xs text-gray-500 mb-2">
-            Hint: Use your organization email to easily find and join your company/team org.
+            Hint: Use your organization email to easily find and join your
+            company/team org.
           </span>
 
-          <label className="text-sm font-medium text-gray-700 dark:text-gray-300" htmlFor="password">
+          <label
+            className="text-sm font-medium text-gray-700 dark:text-gray-300"
+            htmlFor="password"
+          >
             Password
           </label>
           <input
@@ -63,7 +70,7 @@ export default function GetStartedPage() {
             type="password"
             required
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-400"
             placeholder="Password"
           />
@@ -89,7 +96,9 @@ export default function GetStartedPage() {
         </p>
         {/* SSO options */}
         <div className="mt-6 w-full">
-          <div className="text-xs text-gray-400 text-center mb-2">Or sign up with</div>
+          <div className="text-xs text-gray-400 text-center mb-2">
+            Or sign up with
+          </div>
           <div className="flex justify-center gap-2">
             <button
               type="button"
@@ -109,9 +118,13 @@ export default function GetStartedPage() {
         </div>
         {/* SSO note */}
         <div className="mt-4 text-xs text-gray-400 text-center">
-          SSO is available for <a href="#" className="underline">Team & Enterprise</a> accounts.
+          SSO is available for{" "}
+          <a href="#" className="underline">
+            Team & Enterprise
+          </a>{" "}
+          accounts.
         </div>
       </div>
     </div>
   );
-      }
+}

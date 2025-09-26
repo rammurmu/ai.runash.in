@@ -17,31 +17,48 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
         <div className="absolute w-full bottom-12 flex justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-            Retail Automation 
+            Retail Automation
           </h1>
         </div>
       </div>
 
       {/* Intro and Story */}
-        <section className="max-w-2xl mx-auto mt-16 px-6">
+      <section className="max-w-2xl mx-auto mt-16 px-6">
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
-          RunAsh AI is an applied research lab working at the frontier of retail and creative automation. Our approach is to build the creator of the future: a human–AI creator that's an order of magnitude more effective than any one creator.
+          RunAsh AI is an applied research lab working at the frontier of retail
+          and creative automation. Our approach is to build the creator of the
+          future: a human–AI creator that's an order of magnitude more effective
+          than any one creator.
         </p>
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
-          This hybrid creator will have effortless control over their contents and no low-entropy keystrokes. They will iterate at the speed of their judgment, even in the most complex systems. Using a combination of AI and human ingenuity, they will out-smart and out-creator the best pure-AI system.
+          This hybrid creator will have effortless control over their contents
+          and no low-entropy keystrokes. They will iterate at the speed of their
+          judgment, even in the most complex systems. Using a combination of AI
+          and human ingenuity, they will out-smart and out-creator the best
+          pure-AI system.
         </p>
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
-          We are a group of researchers and engineers. We build software and models to invent at the edge of what's useful and what's possible. Our <Link href="/work" className="underline text-blue-400 hover:text-blue-600">work</Link> has already improved the lives of thousands of creators.
+          We are a group of researchers and engineers. We build software and
+          models to invent at the edge of what's useful and what's possible. Our{" "}
+          <Link
+            href="/work"
+            className="underline text-blue-400 hover:text-blue-600"
+          >
+            work
+          </Link>{" "}
+          has already improved the lives of thousands of creators.
         </p>
-        <p className="mb-8">
-          If this excites you, we'd love to hear from you.
-        </p>
+        <p className="mb-8">If this excites you, we'd love to hear from you.</p>
         <p className="mb-16 text-gray-400">
-          — <Link href="https://github.com/rammurmu" className="underline">Ram Murmu</Link>, Vaibhav Murmu, P K Murmu, and the entire RunAsh AI team
+          —{" "}
+          <Link href="https://github.com/rammurmu" className="underline">
+            Ram Murmu
+          </Link>
+          , Vaibhav Murmu, P K Murmu, and the entire RunAsh AI team
         </p>
-        <hr className="border-gray-800 mb-8"/>
-      </section> 
-      
+        <hr className="border-gray-800 mb-8" />
+      </section>
+
       {/* Inspired intro and story from previous contents */}
       {/*  <section className="max-w-2xl mx-auto mt-16 px-6">
         <p className="text-lg mb-6 leading-relaxed text-gray-300">
@@ -94,20 +111,35 @@ export default function AboutPage() {
         <div className="mb-10">
           <h3 className="text-lg font-semibold mb-2">Engineering</h3>
           <div className="divide-y divide-gray-800">
-            <CareerRow title="Infrastructure Engineer" location="Remote / Global" />
+            <CareerRow
+              title="Infrastructure Engineer"
+              location="Remote / Global"
+            />
             <CareerRow title="Research Engineer" location="Remote / Global" />
             <CareerRow title="Product Engineer" location="Remote / Global" />
-            <CareerRow title="Enterprise Product Engineer" location="Remote / Global" />
-            <CareerRow title="Growth Data Scientist" location="Remote / Global" />
+            <CareerRow
+              title="Enterprise Product Engineer"
+              location="Remote / Global"
+            />
+            <CareerRow
+              title="Growth Data Scientist"
+              location="Remote / Global"
+            />
           </div>
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-2">Go-to-Market</h3>
           <div className="divide-y divide-gray-800">
             <CareerRow title="Account Executive" location="Remote / Global" />
-            <CareerRow title="Technical Account Manager" location="Remote / Global" />
+            <CareerRow
+              title="Technical Account Manager"
+              location="Remote / Global"
+            />
             <CareerRow title="Field Engineer" location="Remote / Global" />
-            <CareerRow title="Technical Support Engineer" location="Remote / Global" />
+            <CareerRow
+              title="Technical Support Engineer"
+              location="Remote / Global"
+            />
           </div>
         </div>
       </section>
@@ -141,7 +173,12 @@ export default function AboutPage() {
 }
 
 // Team card component
-function TeamCard({ name, role, image, github }: { name: string, role: string, image: string, github?: string }) {
+function TeamCard({
+  name,
+  role,
+  image,
+  github,
+}: { name: string; role: string; image: string; github?: string }) {
   return (
     <div className="flex flex-col items-center bg-[#171A23] rounded-xl shadow p-6 border border-gray-800">
       <Image
@@ -154,18 +191,30 @@ function TeamCard({ name, role, image, github }: { name: string, role: string, i
       <div className="font-semibold text-lg">{name}</div>
       <div className="text-sm text-gray-400 mb-2">{role}</div>
       {github && (
-        <a href={github} target="_blank" rel="noopener" className="text-blue-400 hover:underline text-sm">GitHub</a>
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener"
+          className="text-blue-400 hover:underline text-sm"
+        >
+          GitHub
+        </a>
       )}
     </div>
   );
 }
 
 // Career row component
-function CareerRow({ title, location }: { title: string, location: string }) {
+function CareerRow({ title, location }: { title: string; location: string }) {
   return (
     <div className="flex justify-between py-2">
-      <Link href={`/careers/${title.toLowerCase().replace(/ /g, "-")}`} className="text-gray-200 hover:underline">{title}</Link>
+      <Link
+        href={`/careers/${title.toLowerCase().replace(/ /g, "-")}`}
+        className="text-gray-200 hover:underline"
+      >
+        {title}
+      </Link>
       <span className="text-gray-400 text-sm">{location}</span>
     </div>
   );
-        }
+}

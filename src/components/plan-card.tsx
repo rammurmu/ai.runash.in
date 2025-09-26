@@ -21,8 +21,8 @@ export default function PlanCard({
     plan === "Ultra"
       ? "border-blue-600 bg-blue-900"
       : plan === "Pro"
-      ? "border-indigo-600 bg-indigo-900"
-      : "border-gray-700 bg-gray-900";
+        ? "border-indigo-600 bg-indigo-900"
+        : "border-gray-700 bg-gray-900";
 
   return (
     <div

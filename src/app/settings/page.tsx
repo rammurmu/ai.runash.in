@@ -44,7 +44,7 @@ function ThemeSwitcher({ theme, setTheme }: ThemeSwitcherProps) {
     if (theme === "system") {
       document.documentElement.classList.toggle(
         "dark",
-        window.matchMedia("(prefers-color-scheme: dark)").matches
+        window.matchMedia("(prefers-color-scheme: dark)").matches,
       );
     } else {
       document.documentElement.classList.toggle("dark", theme === "dark");
@@ -69,7 +69,10 @@ type AccentColorPickerProps = {
   setAccentColor: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function AccentColorPicker({ accentColor, setAccentColor }: AccentColorPickerProps) {
+function AccentColorPicker({
+  accentColor,
+  setAccentColor,
+}: AccentColorPickerProps) {
   return (
     <div className="flex gap-4 items-center">
       {ACCENT_COLORS.map((color) => (
@@ -85,7 +88,9 @@ function AccentColorPicker({ accentColor, setAccentColor }: AccentColorPickerPro
           onClick={() => setAccentColor(color)}
         />
       ))}
-      <span className="text-sm ml-2">Accent: <b className={`text-${accentColor}-500`}>{accentColor}</b></span>
+      <span className="text-sm ml-2">
+        Accent: <b className={`text-${accentColor}-500`}>{accentColor}</b>
+      </span>
     </div>
   );
 }
@@ -192,6 +197,10 @@ export default function SettingsPage() {
   const [voice, setVoice] = useState<string>("play");
   const [image, setImage] = useState<string>("");
 
+  const [showProfileDialog, setShowProfileDialog] = useState(false);
+  const [showThemeDialog, setShowThemeDialog] = useState(false);
+  const [showAccountDialog, setShowAccountDialog] = useState(false);
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedImage = localStorage.getItem("profileImage");
@@ -229,7 +238,9 @@ export default function SettingsPage() {
             <form className="space-y-6">
               <ProfileImageUpload image={image} setImage={setImage} />
               <div>
-                <label className="block text-sm font-semibold mb-1">Username</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Username
+                </label>
                 <input
                   className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
                   value={username}
@@ -237,7 +248,9 @@ export default function SettingsPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold mb-1">Email</label>
+                <label className="block text-sm font-semibold mb-1">
+                  Email
+                </label>
                 <input
                   className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
                   value={email}
@@ -245,160 +258,114 @@ export default function SettingsPage() {
                   type="email"
                 />
               </div>
-              <div>
-                <label className="block text-sm font-semibold mb-1">Theme</label>
-                <ThemeSwitcher theme={theme} setTheme={setTheme} />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold mb-1">Accent color</label>
-                <AccentColorPicker accentColor={accentColor} setAccentColor={setAccentColor} />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold mb-1">Language</label>
-                <LanguagePicker language={language} setLanguage={setLanguage} />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold mb-1">Spoken language</label>
-                <input
-                  className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
-                  value={spokenLanguage}
-                  onChange={(e) => setSpokenLanguage(e.target.value)}
-                  list="spoken-langs"
-                />
-                <datalist id="spoken-langs">
-                  <option value="Hindi" />
-                  <option value="English" />
-                  <option value="" />
-                </datalist>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  For best results, select the language you mainly speak. If it's not listed, it may still be supported via auto-detection.
-                </p>
-              </div>
-              <div>
-                <label className="block text-sm font-semibold mb-1">Voice</label>
-                <select
-                  className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-gray-50 dark:bg-gray-800 text-black dark:text-white"
-                  value={voice}
-                  onChange={(e) => setVoice(e.target.value)}
-                >
-                  <option value="play">Play</option>
-                  <option value="cover">Cover</option>
-                </select>
-              </div>
-              <div className="flex gap-4 mt-6">
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <button
-                      type="button"
-                      className="px-4 py-2 rounded bg-gradient-to-r from-gray-800 to-gray-600 text-white font-semibold shadow hover:from-gray-900 hover:to-gray-700 transition"
-                    >
-                      What is theme?
-                    </button>
-                  </PopoverTrigger>
-                  <PopoverContent className="text-sm max-w-xs">
-                    <div className="font-bold mb-2 text-blue-600">Theme Options</div>
-                    <ul className="list-disc pl-4 text-left text-gray-700 dark:text-gray-300">
-                      <li>
-                        <b>System</b>: Follows your device's theme
-                      </li>
-                      <li>
-                        <b>Light</b>: Always light mode
-                      </li>
-                      <li>
-                        <b>Dark</b>: Always dark mode
-                      </li>
-                    </ul>
-                  </PopoverContent>
-                </Popover>
-                <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-                  <DialogTrigger asChild>
-                    <button
-                      type="button"
-                      className="px-4 py-2 rounded bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold shadow hover:from-blue-600 hover:to-purple-600 transition"
-                      onClick={() => setOpenDialog(true)}
-                    >
-                      Delete Account
-                    </button>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogTitle>Delete Account</DialogTitle>
-                    <DialogDescription>
-                      Are you sure you want to delete your account? This action cannot be undone.
-                    </DialogDescription>
-                    <div className="flex justify-end gap-2 mt-6">
-                      <button
-                        className="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 text-black dark:text-white font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition"
-                        onClick={() => setOpenDialog(false)}
-                      >
-                        Cancel
-                      </button>
-                      <button className="px-4 py-2 rounded bg-red-600 text-white font-semibold hover:bg-red-700 transition">
-                        Confirm Delete
-                      </button>
-                    </div>
-                  </DialogContent>
-                </Dialog>
-              </div>
+              <button
+                type="button"
+                className="w-full py-2 rounded bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow hover:from-blue-600 hover:to-purple-600 transition"
+                onClick={() => setShowProfileDialog(true)}
+              >
+                Edit Profile
+              </button>
             </form>
           )}
-          {/* Other sections can be expanded with relevant form fields, toggles, etc. */}
-          {section === "notifications" && (
-            <div>
-              <h2 className="font-semibold mb-2">Notifications</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Manage your notification preferences here.
-              </p>
-              {/* Add notification settings UI */}
-            </div>
-          )}
           {section === "personalization" && (
-            <div>
-              <h2 className="font-semibold mb-2">Personalization</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Personalize your experience.
-              </p>
-              {/* Add personalization settings UI */}
-            </div>
-          )}
-          {section === "connected" && (
-            <div>
-              <h2 className="font-semibold mb-2">Connected Apps</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Manage your connected apps here.
-              </p>
-              {/* Add connected apps UI */}
-            </div>
-          )}
-          {section === "data" && (
-            <div>
-              <h2 className="font-semibold mb-2">Data Controls</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Control your data settings here.
-              </p>
-              {/* Add data controls UI */}
-            </div>
-          )}
-          {section === "security" && (
-            <div>
-              <h2 className="font-semibold mb-2">Security</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Manage your security settings here.
-              </p>
-              {/* Add security settings UI */}
+            <div className="space-y-6">
+              <AccentColorPicker
+                accentColor={accentColor}
+                setAccentColor={setAccentColor}
+              />
+              <LanguagePicker language={language} setLanguage={setLanguage} />
+              <button
+                type="button"
+                className="w-full py-2 rounded bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold shadow hover:from-purple-600 hover:to-blue-600 transition"
+                onClick={() => setShowThemeDialog(true)}
+              >
+                Edit Theme
+              </button>
             </div>
           )}
           {section === "account" && (
-            <div>
-              <h2 className="font-semibold mb-2">Account</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Manage your account settings here.
-              </p>
-              {/* Add account settings UI */}
+            <div className="space-y-6">
+              <button
+                type="button"
+                className="w-full py-2 rounded bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold shadow hover:from-red-600 hover:to-orange-600 transition"
+                onClick={() => setShowAccountDialog(true)}
+              >
+                Account Actions
+              </button>
             </div>
           )}
         </div>
+        {/* Profile Edit Dialog */}
+        <Dialog open={showProfileDialog} onOpenChange={setShowProfileDialog}>
+          <DialogContent>
+            <DialogTitle>Edit Profile</DialogTitle>
+            <DialogDescription>
+              <div className="space-y-4">
+                <ProfileImageUpload image={image} setImage={setImage} />
+                <input
+                  className="w-full border rounded px-3 py-2"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Username"
+                />
+                <input
+                  className="w-full border rounded px-3 py-2"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                />
+                <button
+                  className="w-full py-2 rounded bg-blue-600 text-white font-semibold"
+                  onClick={() => setShowProfileDialog(false)}
+                >
+                  Save Changes
+                </button>
+              </div>
+            </DialogDescription>
+          </DialogContent>
+        </Dialog>
+        {/* Theme Edit Dialog */}
+        <Dialog open={showThemeDialog} onOpenChange={setShowThemeDialog}>
+          <DialogContent>
+            <DialogTitle>Edit Theme</DialogTitle>
+            <DialogDescription>
+              <ThemeSwitcher theme={theme} setTheme={setTheme} />
+              <AccentColorPicker
+                accentColor={accentColor}
+                setAccentColor={setAccentColor}
+              />
+              <button
+                className="w-full py-2 rounded bg-purple-600 text-white font-semibold mt-4"
+                onClick={() => setShowThemeDialog(false)}
+              >
+                Apply
+              </button>
+            </DialogDescription>
+          </DialogContent>
+        </Dialog>
+        {/* Account Actions Dialog */}
+        <Dialog open={showAccountDialog} onOpenChange={setShowAccountDialog}>
+          <DialogContent>
+            <DialogTitle>Account Actions</DialogTitle>
+            <DialogDescription>
+              <div className="space-y-4">
+                <button className="w-full py-2 rounded bg-red-600 text-white font-semibold">
+                  Delete Account
+                </button>
+                <button className="w-full py-2 rounded bg-orange-500 text-white font-semibold">
+                  Sign Out
+                </button>
+                <button
+                  className="w-full py-2 rounded bg-blue-600 text-white font-semibold"
+                  onClick={() => setShowAccountDialog(false)}
+                >
+                  Cancel
+                </button>
+              </div>
+            </DialogDescription>
+          </DialogContent>
+        </Dialog>
       </main>
     </div>
   );
-    }
-   
+}

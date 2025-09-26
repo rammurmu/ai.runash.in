@@ -122,7 +122,8 @@ export default function ContactPage() {
               Contact Us
             </h2>
             <p className="mb-4 text-gray-300">
-              For all support inquiries, including billing issues, receipts, and general assistance, please email
+              For all support inquiries, including billing issues, receipts, and
+              general assistance, please email
             </p>
             <a
               href="mailto:hi@runash.in"
@@ -135,4 +136,4 @@ export default function ContactPage() {
       )}
     </div>
   );
-          }
+}
