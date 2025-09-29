@@ -12,7 +12,7 @@ export default function NotificationSettings() {
           <input
             type="checkbox"
             checked={emailNotif}
-            onChange={e => setEmailNotif(e.target.checked)}
+            onChange={(e) => setEmailNotif(e.target.checked)}
           />
           Email Notifications
         </label>
@@ -20,11 +20,11 @@ export default function NotificationSettings() {
           <input
             type="checkbox"
             checked={pushNotif}
-            onChange={e => setPushNotif(e.target.checked)}
+            onChange={(e) => setPushNotif(e.target.checked)}
           />
           Push Notifications
         </label>
       </div>
     </div>
   );
-      }
+}

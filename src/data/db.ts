@@ -7,22 +7,26 @@ import type {
 } from "./schema";
 
 function open() {
-  return openDB("ai-vstudio-db-v2", 1, {
-    upgrade(db) {
-      db.createObjectStore("projects", { keyPath: "id" });
-
-      const trackStore = db.createObjectStore("tracks", { keyPath: "id" });
-      trackStore.createIndex("by_projectId", "projectId");
-
-      const keyFrameStore = db.createObjectStore("keyFrames", {
-        keyPath: "id",
-      });
-      keyFrameStore.createIndex("by_trackId", "trackId");
-
-      const mediaStore = db.createObjectStore("media_items", {
-        keyPath: "id",
-      });
-      mediaStore.createIndex("by_projectId", "projectId");
+  return openDB("ai-vstudio-db-v2", 2, {
+    upgrade(db, oldVersion) {
+      if (oldVersion < 1) {
+        db.createObjectStore("projects", { keyPath: "id" });
+        const trackStore = db.createObjectStore("tracks", { keyPath: "id" });
+        trackStore.createIndex("by_projectId", "projectId");
+        const keyFrameStore = db.createObjectStore("keyFrames", {
+          keyPath: "id",
+        });
+        keyFrameStore.createIndex("by_trackId", "trackId");
+        const mediaStore = db.createObjectStore("media_items", {
+          keyPath: "id",
+        });
+        mediaStore.createIndex("by_projectId", "projectId");
+      }
+      if (oldVersion < 2) {
+        db.createObjectStore("users", { keyPath: "id" });
+        const userStore = db.createObjectStore("users", { keyPath: "id" });
+        userStore.createIndex("by_email", "email", { unique: true });
+      }
     },
   });
 }
@@ -184,6 +188,19 @@ export const db = {
       );
       await tx.objectStore("media_items").delete(id);
       await tx.done;
+    },
+  },
+  users: {
+    async findByEmail(email: string) {
+      const db = await open();
+      const idx = db.transaction("users").store.index("by_email");
+      return idx.get(email);
+    },
+    async update(id: string, user: Partial<import("./user").User>) {
+      const db = await open();
+      const existing = await db.get("users", id);
+      if (!existing) return;
+      return db.put("users", { ...existing, ...user, id });
     },
   },
 } as const;
