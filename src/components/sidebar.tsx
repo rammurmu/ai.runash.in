@@ -21,11 +21,11 @@ import {
 } from "lucide-react";
 
 const navLinks = [
-  { href: "/lending-page", label: "Overview", icon: Home },
-  { href: "/app", label: "AI Studio", icon: Settings },
-  { href: "/app", label: "AI Editor", icon: Zap },
-  { href: "/landing-page", label: "Agents AI", icon: Bot },
-  { href: "/langing-page", label: "RunAshChat", icon: HelpCircle },
+  { href: "/home", label: "Overview", icon: Home },
+  { href: "/app", label: "Studio", icon: Settings },
+  { href: "/app", label: "Editor", icon: Zap },
+  { href: "/home", label: "Agents", icon: Bot },
+  { href: "/home", label: "Chat", icon: HelpCircle },
   { href: "/home", label: "Usage", icon: BarChart3 },
   { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
   { href: "/docs", label: "Docs", icon: BookOpen },
@@ -61,7 +61,7 @@ export default function Sidebar() {
           onClick={() => setCollapsed((c) => !c)}
           aria-label="Toggle sidebar"
         >
-          {collapsed ? ">" : "<"}
+          {collapsed ? "→" : "←"}
         </button>
         <button
           className="absolute top-4 left-4 bg-gray-200 dark:bg-gray-700 rounded-full p-1 shadow md:hidden"
