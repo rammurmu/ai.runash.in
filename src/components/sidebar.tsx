@@ -21,12 +21,12 @@ import {
 } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Overview", icon: Home },
+  { href: "/home", label: "Overview", icon: Home },
   { href: "/app", label: "Studio", icon: Settings },
   { href: "/app", label: "Editor", icon: Zap },
-  { href: "/", label: "Agents", icon: Bot },
-  { href: "/", label: "Chat", icon: HelpCircle },
-  { href: "/", label: "Usage", icon: BarChart3 },
+  { href: "/home", label: "Agents", icon: Bot },
+  { href: "/home", label: "Chat", icon: HelpCircle },
+  { href: "/home", label: "Usage", icon: BarChart3 },
   { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
   { href: "/docs", label: "Docs", icon: BookOpen },
   { href: "/contact", label: "Contact Us", icon: FileText },
