@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 
 const navLinks = [
+
   {
     section: "Main",
     links: [
@@ -48,10 +49,21 @@ const navLinks = [
       { href: "/integrations", label: "Integrations", icon: Zap },
     ],
   },
+
+  { href: "/lending-page", label: "Overview", icon: Home },
+  { href: "/app", label: "AI Studio", icon: Settings },
+  { href: "/app", label: "AI Editor", icon: Zap },
+  { href: "/landing-page", label: "Agents AI", icon: Bot },
+  { href: "/langing-page", label: "RunAshChat", icon: HelpCircle },
+  { href: "/home", label: "Usage", icon: BarChart3 },
+  { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
+  { href: "/docs", label: "Docs", icon: BookOpen },
+  { href: "/contact", label: "Contact Us", icon: FileText },
+
 ];
 
 const integrations = [
-  { name: "GitHub", icon: Github, status: "Connected", link: "/manage/github" },
+  { name: "GitHub", icon: Github, status: "Connect", link: "/manage/github" },
   { name: "Slack", icon: Slack, status: "Connect", link: "/manage/slack" },
 ];
 
@@ -89,7 +101,7 @@ export default function Sidebar() {
           onClick={() => setCollapsed((c) => !c)}
           aria-label="Toggle sidebar"
         >
-          {collapsed ? "→" : "←"}
+          {collapsed ? ">" : "<"}
         </button>
         <button
           className="absolute top-4 left-4 bg-gray-200 dark:bg-gray-700 rounded-full p-1 shadow md:hidden"
@@ -99,6 +111,7 @@ export default function Sidebar() {
           <X size={20} />
         </button>
         {/* User info */}
+
         <div className="mt-6 px-4 flex items-center gap-3">
           {avatar ? (
             <img
@@ -122,6 +135,16 @@ export default function Sidebar() {
               <div className="text-xs text-gray-400">
                 {session?.user?.email || "user@email.com"}
               </div>
+
+        <div className="mt-6 px-4 flex items-center gap-2">
+          <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">
+            U
+          </div>
+          {!collapsed && (
+            <div>
+              <div className="font-semibold">user</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Free Plan · user@email.com...</div>
+
             </div>
           )}
         </div>
