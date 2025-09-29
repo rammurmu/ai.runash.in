@@ -22,18 +22,18 @@ import {
 
 const navLinks = [
   { href: "/", label: "Overview", icon: Home },
-  { href: "/settings", label: "Settings", icon: Settings },
-  { href: "/integrations", label: "Integrations", icon: Zap },
-  { href: "/background-agents", label: "Background Agents", icon: Bot },
-  { href: "/bugbot", label: "Bugbot", icon: HelpCircle },
-  { href: "/usage", label: "Usage", icon: BarChart3 },
+  { href: "/app", label: "Studio", icon: Settings },
+  { href: "/app", label: "Editor", icon: Zap },
+  { href: "/", label: "Agents", icon: Bot },
+  { href: "/", label: "Chat", icon: HelpCircle },
+  { href: "/", label: "Usage", icon: BarChart3 },
   { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
   { href: "/docs", label: "Docs", icon: BookOpen },
   { href: "/contact", label: "Contact Us", icon: FileText },
 ];
 
 const integrations = [
-  { name: "GitHub", icon: Github, status: "Connected", link: "/manage/github" },
+  { name: "GitHub", icon: Github, status: "Connect", link: "/manage/github" },
   { name: "Slack", icon: Slack, status: "Connect", link: "/manage/slack" },
 ];
 
@@ -73,12 +73,12 @@ export default function Sidebar() {
         {/* User info */}
         <div className="mt-6 px-4 flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">
-            RM
+            U
           </div>
           {!collapsed && (
             <div>
-              <div className="font-semibold">Ram Murmu</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Free Plan · runashinc@outl...</div>
+              <div className="font-semibold">user</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Free Plan · user@email.com...</div>
             </div>
           )}
         </div>
