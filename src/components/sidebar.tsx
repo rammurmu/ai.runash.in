@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const navLinks = [
-  { href: "/lending-page", label: "Overview", icon: Home },
+  { href: "/home", label: "Overview", icon: Home },
   { href: "/app", label: "AI Studio", icon: Settings },
   { href: "/app", label: "AI Editor", icon: Zap },
   { href: "/pricing", label: "Pricing", icon: CreditCard },
