@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const navLinks = [
-  { href: "/home", label: "Overview", icon: Home },
+  { href: "/index", label: "Overview", icon: Home },
   { href: "/app", label: "AI Studio", icon: Settings },
   { href: "/app", label: "AI Editor", icon: Zap },
   { href: "/pricing", label: "Pricing", icon: CreditCard },
@@ -109,7 +109,7 @@ export default function Sidebar() {
                   <Link
                     key={integration.name}
                     href={integration.link}
-                    className="flex items-center gap-3 px-3 py-2 rounded transition-colors bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800"
+                    className="flex items-center gap-3 px-3 py-2 rounded transition-colors bg-gray-50 dark:bg-gray-50 hover:bg-gray-50 dark:hover:bg-gray-50"
                   >
                     <Icon className="w-4 h-4" />
                     <span className="flex-1">{integration.name}</span>
@@ -117,7 +117,7 @@ export default function Sidebar() {
                       className={`text-xs px-2 py-1 rounded ${
                         integration.status === "Connected"
                           ? "bg-green-100 text-green-700"
-                          : "bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-gray-300"
+                          : "bg-gray-200 text-gray-600 dark:bg-gray-50 dark:text-gray-50"
                       }`}
                     >
                       {integration.status}
