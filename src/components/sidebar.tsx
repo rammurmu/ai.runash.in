@@ -24,17 +24,13 @@ const navLinks = [
   { href: "/lending-page", label: "Overview", icon: Home },
   { href: "/app", label: "AI Studio", icon: Settings },
   { href: "/app", label: "AI Editor", icon: Zap },
-  { href: "/landing-page", label: "Agents AI", icon: Bot },
-  { href: "/langing-page", label: "RunAshChat", icon: HelpCircle },
-  { href: "/home", label: "Usage", icon: BarChart3 },
-  { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
+  { href: "/pricing", label: "Pricing", icon: CreditCard },
   { href: "/docs", label: "Docs", icon: BookOpen },
   { href: "/contact", label: "Contact Us", icon: FileText },
 ];
 
 const integrations = [
   { name: "GitHub", icon: Github, status: "Connect", link: "/manage/github" },
-  { name: "Slack", icon: Slack, status: "Connect", link: "/manage/slack" },
 ];
 
 export default function Sidebar() {
