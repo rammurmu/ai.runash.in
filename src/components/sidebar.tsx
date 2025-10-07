@@ -16,25 +16,21 @@ import {
   CreditCard,
   Github,
   Slack,
-  Menu,
+  Equal,
   X,
 } from "lucide-react";
 
 const navLinks = [
-  { href: "/lending-page", label: "Overview", icon: Home },
+  { href: "/index", label: "Overview", icon: Home },
   { href: "/app", label: "AI Studio", icon: Settings },
   { href: "/app", label: "AI Editor", icon: Zap },
-  { href: "/landing-page", label: "Agents AI", icon: Bot },
-  { href: "/langing-page", label: "RunAshChat", icon: HelpCircle },
-  { href: "/home", label: "Usage", icon: BarChart3 },
-  { href: "/billing", label: "Billing & Invoices", icon: CreditCard },
+  { href: "/pricing", label: "Pricing", icon: CreditCard },
   { href: "/docs", label: "Docs", icon: BookOpen },
   { href: "/contact", label: "Contact Us", icon: FileText },
 ];
 
 const integrations = [
   { name: "GitHub", icon: Github, status: "Connect", link: "/manage/github" },
-  { name: "Slack", icon: Slack, status: "Connect", link: "/manage/slack" },
 ];
 
 export default function Sidebar() {
@@ -73,12 +69,12 @@ export default function Sidebar() {
         {/* User info */}
         <div className="mt-6 px-4 flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">
-            U
+            R
           </div>
           {!collapsed && (
             <div>
-              <div className="font-semibold">user</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Free Plan · user@email.com...</div>
+              <div className="font-semibold">RunAsh AI</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400"></div>
             </div>
           )}
         </div>
@@ -103,9 +99,9 @@ export default function Sidebar() {
           })}
         </nav>
         {/* Integrations Panel */}
-        {!collapsed && (
+          {/*    {!collapsed && (
           <div className="mt-8 px-4">
-            <div className="font-bold mb-2">Integrations</div>
+            <div className="font-bold mb-2"></div>
             <div className="flex flex-col gap-2">
               {integrations.map((integration) => {
                 const Icon = integration.icon;
@@ -113,7 +109,7 @@ export default function Sidebar() {
                   <Link
                     key={integration.name}
                     href={integration.link}
-                    className="flex items-center gap-3 px-3 py-2 rounded transition-colors bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800"
+                    className="flex items-center gap-3 px-3 py-2 rounded transition-colors bg-gray-50 dark:bg-gray-50 hover:bg-gray-50 dark:hover:bg-gray-50"
                   >
                     <Icon className="w-4 h-4" />
                     <span className="flex-1">{integration.name}</span>
@@ -121,7 +117,7 @@ export default function Sidebar() {
                       className={`text-xs px-2 py-1 rounded ${
                         integration.status === "Connected"
                           ? "bg-green-100 text-green-700"
-                          : "bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-gray-300"
+                          : "bg-gray-200 text-gray-600 dark:bg-gray-50 dark:text-gray-50"
                       }`}
                     >
                       {integration.status}
@@ -131,15 +127,15 @@ export default function Sidebar() {
               })}
             </div>
           </div>
-        )}
+        )} */}
       </aside>
       {/* Mobile open button */}
       <button
-        className="fixed top-4 left-4 z-50 bg-gray-200 dark:bg-gray-700 rounded-full p-2 shadow md:hidden"
+        className="fixed top-4 left-3 z-50 bg-gray-200 dark:bg-gray-700 rounded-sm p-2 shadow md:hidden"
         onClick={() => setMobileOpen(true)}
         aria-label="Open sidebar"
       >
-        <Menu size={20} />
+        <Equal size={20} />
       </button>
     </>
   );
