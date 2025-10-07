@@ -8,8 +8,8 @@ import { ThemeProvider } from "next-themes";
 import { NextAuthProvider } from "@/components/next-auth-provider";
 
 export const metadata: Metadata = {
-  title: "AI Video Developer Starter Kit | fal.ai",
-  description: "Open-source AI video editor built for developers.",
+  title: "RunAsh AI",
+  description: "Agentic AI live video streaming generation model and studio",
 };
 
 export default function RootLayout({
