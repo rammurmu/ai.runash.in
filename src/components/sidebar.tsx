@@ -99,9 +99,9 @@ export default function Sidebar() {
           })}
         </nav>
         {/* Integrations Panel */}
-        {!collapsed && (
+          {/*    {!collapsed && (
           <div className="mt-8 px-4">
-            <div className="font-bold mb-2">Integrations</div>
+            <div className="font-bold mb-2"></div>
             <div className="flex flex-col gap-2">
               {integrations.map((integration) => {
                 const Icon = integration.icon;
@@ -127,7 +127,7 @@ export default function Sidebar() {
               })}
             </div>
           </div>
-        )}
+        )} */}
       </aside>
       {/* Mobile open button */}
       <button
