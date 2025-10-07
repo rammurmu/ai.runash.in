@@ -16,7 +16,7 @@ import {
   CreditCard,
   Github,
   Slack,
-  Menu,
+  Equal,
   X,
 } from "lucide-react";
 
@@ -69,7 +69,7 @@ export default function Sidebar() {
         {/* User info */}
         <div className="mt-6 px-4 flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">
-            U
+            R
           </div>
           {!collapsed && (
             <div>
@@ -131,11 +131,11 @@ export default function Sidebar() {
       </aside>
       {/* Mobile open button */}
       <button
-        className="fixed top-4 left-4 z-50 bg-gray-200 dark:bg-gray-700 rounded-full p-2 shadow md:hidden"
+        className="fixed top-4 left-3 z-50 bg-gray-200 dark:bg-gray-700 rounded-sm p-2 shadow md:hidden"
         onClick={() => setMobileOpen(true)}
         aria-label="Open sidebar"
       >
-        <Menu size={20} />
+        <Equal size={20} />
       </button>
     </>
   );
