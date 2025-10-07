@@ -73,8 +73,8 @@ export default function Sidebar() {
           </div>
           {!collapsed && (
             <div>
-              <div className="font-semibold">user</div>
-              <div className="text-xs text-gray-500 dark:text-gray-400">Free Plan · user@email.com...</div>
+              <div className="font-semibold">RunAsh AI</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400"></div>
             </div>
           )}
         </div>
